@@ -1,0 +1,1177 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 2
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 2
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: targetSize
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Target Size
+        Tooltip:
+          String: ""
+      PositionX: -771
+      PositionY: -358
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Target Size
+    Node1:
+      DependencyIndex: 1
+      LevelID: 3
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: cornerRadius
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Corner Radius
+        Tooltip:
+          String: ""
+      PositionX: -775
+      PositionY: -267
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Corner Radius
+    Node10:
+      DependencyIndex: 10
+      LevelID: 17
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: master2
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Master 2
+        Tooltip:
+          String: ""
+      PositionX: -766
+      PositionY: 465
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Master 2
+    Node11:
+      DependencyIndex: 11
+      LevelID: 18
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: accent0
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Accent 0
+        Tooltip:
+          String: ""
+      PositionX: -766
+      PositionY: 554
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Accent 0
+    Node12:
+      DependencyIndex: 12
+      LevelID: 19
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: accent1
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Accent 1
+        Tooltip:
+          String: ""
+      PositionX: -771
+      PositionY: 638
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Accent 1
+    Node13:
+      DependencyIndex: 13
+      LevelID: 20
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: accent2
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Accent 2
+        Tooltip:
+          String: ""
+      PositionX: -768
+      PositionY: 720
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Accent 2
+    Node14:
+      DependencyIndex: 14
+      LevelID: 21
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: accent3
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Accent 3
+        Tooltip:
+          String: ""
+      PositionX: -766
+      PositionY: 809
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Accent 3
+    Node15:
+      DependencyIndex: 15
+      LevelID: 0
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4  Value1;
+            input_vec4  Value2;
+            output_vec4 Result; 
+            
+            void main()
+            {
+            	Result = Value1 * Value2;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: "5164869571727607937:11786298412699967819"
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Errors:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        ID:
+          Variable: 0
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: 3DBeveledSquircleVertShader
+        UseExternalFile:
+          Variable: true
+        accent0:
+          Connection0:
+            NodeLevelID: 18
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        accent1:
+          Connection0:
+            NodeLevelID: 19
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        accent2:
+          Connection0:
+            NodeLevelID: 20
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        accent3:
+          Connection0:
+            NodeLevelID: 21
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        baseCursorOffset:
+          Variable: [0.5, 0.0]
+        bevelRadius:
+          Connection0:
+            NodeLevelID: 5
+            PortID: Output
+          Variable: 0.5
+        computedNormal:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        cornerHl:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        cornerRadii:
+          Connection0:
+            NodeLevelID: 3
+            PortID: Output
+          Variable: [0.5, 0.5, 0.5, 0.5]
+        cursorOffset:
+          Connection0:
+            NodeLevelID: 6
+            PortID: Output
+          Variable: [0.0, 0.0]
+        edgeHighlightFacePos:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        faceBreathRotation:
+          Connection0:
+            NodeLevelID: 22
+            PortID: Output
+          Variable: 0.0
+        frontExtrusion:
+          Connection0:
+            NodeLevelID: 7
+            PortID: Output
+          Variable: 0.0
+        idleFaceMask:
+          IOType: 1
+          Variable: 0.0
+        master0:
+          Connection0:
+            NodeLevelID: 11
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        master1:
+          Connection0:
+            NodeLevelID: 12
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        master2:
+          Connection0:
+            NodeLevelID: 17
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        newPos:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        rayAxis:
+          Connection0:
+            NodeLevelID: 23
+            PortID: Output
+          Variable: [0.0, 0.0]
+        rayCoord:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        reflScale:
+          IOType: 1
+          Variable: 0.0
+        reflUV:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        rotation:
+          Connection0:
+            NodeLevelID: 8
+            PortID: Output
+          Variable: 10.0
+        targetSize:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [8.0, 4.0, 2.200000047683716]
+        vertexAccentColor:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        vertexBaseColor:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        vertexEdgeMask:
+          IOType: 1
+          Variable: 0.0
+      PositionX: -318
+      PositionY: -49
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: 3DBeveledSquircleVertShader
+    Node16:
+      DependencyIndex: 16
+      LevelID: 15
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: opacity
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: opacity
+        Tooltip:
+          String: ""
+      PositionX: -101
+      PositionY: 505
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: opacity
+    Node17:
+      DependencyIndex: 17
+      LevelID: 16
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: reflIntensity
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: reflectionIntensity
+        Tooltip:
+          String: ""
+      PositionX: -95
+      PositionY: 591
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: reflectionIntensity
+    Node18:
+      DependencyIndex: 18
+      LevelID: 13
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: edgeHighlightAngle
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: edgeHighlightAngle
+        Tooltip:
+          String: ""
+      PositionX: -89
+      PositionY: 680
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: edgeHighlightAngle
+    Node19:
+      DependencyIndex: 19
+      LevelID: 14
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: edgeHighlightStrength
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: edgeHighlightStrength
+        Tooltip:
+          String: ""
+      PositionX: -91
+      PositionY: 761
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: edgeHighlightStrength
+    Node2:
+      DependencyIndex: 2
+      LevelID: 5
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: bevelRadius
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Bevel Radius
+        Tooltip:
+          String: ""
+      PositionX: -778
+      PositionY: -185
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Bevel Radius
+    Node20:
+      DependencyIndex: 20
+      LevelID: 10
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        DepthMap:
+          Variable: false
+        ExtraOutputs:
+          Variable: false
+        Group:
+          String: ""
+        PixelSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        ScriptName:
+          String: reflTex
+        SortIndex:
+          Variable: 0
+        Texture:
+          ClassType2: TEXTURE_OBJECT_2D
+          IOType: 1
+        TextureSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        Title:
+          String: reflTex
+        Tooltip:
+          String: ""
+      PositionX: -90
+      PositionY: 851
+      TemplateID: nodes_inputs_parameters_texture2d_object
+      TemplateVersionMinor: 1
+      Title1: Texture 2D Object Parameter
+      Title2: reflTex
+    Node21:
+      DependencyIndex: 21
+      LevelID: 9
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4  Value1;
+            input_vec4  Value2;
+            output_vec4 Result; 
+            
+            void main()
+            {
+            	Result = Value1 * Value2;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: "13427002747890061171:9575280118991231404"
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Errors:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        FinalColor:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ID:
+          Variable: 9
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Fragment
+        UseExternalFile:
+          Variable: true
+        computedNormal:
+          Connection0:
+            NodeLevelID: 0
+            PortID: computedNormal
+          Variable: [0.0, 0.0, 0.0]
+        cornerHl:
+          Connection0:
+            NodeLevelID: 0
+            PortID: cornerHl
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        edgeHighlightAngle:
+          Connection0:
+            NodeLevelID: 13
+            PortID: Output
+          Variable: 0.0
+        edgeHighlightFacePos:
+          Connection0:
+            NodeLevelID: 0
+            PortID: edgeHighlightFacePos
+          Variable: [0.0, 0.0]
+        edgeHighlightStrength:
+          Connection0:
+            NodeLevelID: 14
+            PortID: Output
+          Variable: 0.0
+        idleFaceMask:
+          Connection0:
+            NodeLevelID: 0
+            PortID: idleFaceMask
+          Variable: 0.0
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        opacity:
+          Connection0:
+            NodeLevelID: 15
+            PortID: Output
+          Variable: 0.0
+        rayCoord:
+          Connection0:
+            NodeLevelID: 0
+            PortID: rayCoord
+          Variable: [0.0, 0.0]
+        reflIntensity:
+          Connection0:
+            NodeLevelID: 16
+            PortID: Output
+          Variable: 0.0
+        reflScale:
+          Connection0:
+            NodeLevelID: 0
+            PortID: reflScale
+          Variable: 0.0
+        reflTex:
+          ClassType2: TEXTURE_OBJECT_2D
+          Connection0:
+            NodeLevelID: 10
+            PortID: Texture
+        reflUV:
+          Connection0:
+            NodeLevelID: 0
+            PortID: reflUV
+          Variable: [0.0, 0.0]
+        vertexAccentColor:
+          Connection0:
+            NodeLevelID: 0
+            PortID: vertexAccentColor
+          Variable: [0.0, 0.0, 0.0]
+        vertexBaseColor:
+          Connection0:
+            NodeLevelID: 0
+            PortID: vertexBaseColor
+          Variable: [0.0, 0.0, 0.0]
+        vertexEdgeMask:
+          Connection0:
+            NodeLevelID: 0
+            PortID: vertexEdgeMask
+          Variable: 0.0
+      PositionX: 343
+      PositionY: 345
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Fragment
+    Node22:
+      DependencyIndex: 22
+      LevelID: 1
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ApplyRotation:
+          Variable: true
+        ApplyTranslation:
+          Variable: true
+        From:
+          ItemIndex: 1
+          ItemList: "Tangent Space : Object Space : World Space : Camera Space : Screen Space ( NDC )"
+        To:
+          ItemIndex: 1
+          ItemList: "Object Space : World Space : Camera Space : Screen Space ( NDC )"
+        VectorIn:
+          Connection0:
+            NodeLevelID: 0
+            PortID: newPos
+          Variable: [0.0, 0.0, 0.0]
+        VectorOut:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: 92
+      PositionY: -112
+      TemplateID: node_math_transform
+      TemplateVersionMinor: 1
+      Title1: Transform Vector
+      Title2: Object to World
+    Node23:
+      CommentSizeX: 0
+      CommentSizeY: 0
+      DependencyIndex: 23
+      LevelID: 4
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Depth:
+          Variable: 1.0
+        DepthMode:
+          ItemIndex: 0
+          ItemList: "Non-Linear - Normalized [0 to 1] : Linear - Normalized [-1 to 1] : View Space - Non-Normalized [-near to -far]"
+        DontFreezeSpec:
+          Variable: false
+        FinalColor:
+          ClassType1: COLOR
+          Connection0:
+            NodeLevelID: 9
+            PortID: FinalColor
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor1:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor2:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor3:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        GSplatPointSize:
+          Variable: 0.0
+        GSplatRotation:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        GSplatScale:
+          Variable: [0.0, 0.0, 0.0]
+        Motion Vector Pass:
+          ItemIndex: 0
+          ItemList: "Write Velocity and Depth : Discard Velocity but Write Depth : Discard Velocity and Depth"
+        Negative:
+          Variable: false
+        PrevWorldPosition:
+          Variable: [0.0, 0.0, 0.0]
+        RayDirection:
+          Variable: [0.0, 1.0, 0.0]
+        RayOrigin:
+          Variable: [0.0, 0.0, 0.0]
+        ShowPrevPos:
+          Variable: false
+        Targets:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : 4"
+        Type:
+          ItemIndex: 0
+          ItemList: "3D : Post Effect : Hair : Gaussian Splatting"
+        WorldNormal:
+          Variable: [0.0, 1.0, 0.0]
+        WorldPosition:
+          Connection0:
+            NodeLevelID: 1
+            PortID: VectorOut
+          Variable: [0.0, 0.0, 0.0]
+        WorldTangent:
+          Variable: [0.0, 0.0, 1.0]
+        WriteDepth:
+          Variable: false
+      PositionX: 606
+      PositionY: 157
+      TemplateID: nodes_main_graph
+      Title1: Shader
+      Title2: 3D
+    Node3:
+      DependencyIndex: 3
+      LevelID: 8
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: rotation
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: rotation
+        Tooltip:
+          String: ""
+      PositionX: -782
+      PositionY: -101
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: rotation
+    Node4:
+      DependencyIndex: 4
+      LevelID: 6
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: cursorOffset
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: cursorOffset
+        Tooltip:
+          String: ""
+      PositionX: -796
+      PositionY: 9
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: cursorOffset
+    Node5:
+      DependencyIndex: 5
+      LevelID: 7
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: frontExtrusion
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: frontExtrusion
+        Tooltip:
+          String: ""
+      PositionX: -782
+      PositionY: 104
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: frontExtrusion
+    Node6:
+      DependencyIndex: 6
+      LevelID: 23
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: rayAxis
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: rayAxis
+        Tooltip:
+          String: ""
+      PositionX: -796
+      PositionY: 60
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: rayAxis
+    Node7:
+      DependencyIndex: 7
+      LevelID: 22
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: faceBreathRotation
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: faceBreathRotation
+        Tooltip:
+          String: ""
+      PositionX: -776
+      PositionY: 211
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: faceBreathRotation
+    Node8:
+      DependencyIndex: 8
+      LevelID: 11
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: master0
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Master 0
+        Tooltip:
+          String: ""
+      PositionX: -769
+      PositionY: 300
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Master 0
+    Node9:
+      DependencyIndex: 9
+      LevelID: 12
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: master1
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Master 1
+        Tooltip:
+          String: ""
+      PositionX: -771
+      PositionY: 383
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Master 1
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+SystemID: dev.snap.shaders

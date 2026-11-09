@@ -1,0 +1,102 @@
+- !<AssetImportMetadata/b756c8c3-b927-83d6-56bd-43ef6c885e7a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6c4d2fe9-fbab-446c-9ace-61d46a74ccbe
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6c4d2fe9-fbab-446c-9ace-61d46a74ccbe
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5fbd5d32-bff9-4106-94af-6ac7562aa853
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5fbd5d32-bff9-4106-94af-6ac7562aa853>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 2914966b-f033-4402-9fb9-9077e27f08bb
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _contentOrigin: false
+    _edgeFade: false
+    _edgeFadeColor: false
+    _edgeMode: false
+    _feel: false
+    _horizontal: false
+    _maxSnapStepsPerFling: false
+    _pagingSnapCapMode: false
+    _renderOrder: false
+    _scrollDimensions: false
+    _scrollPosition: false
+    _scrollSnapping: false
+    _snapMode: false
+    _snapRegion: false
+    _vertical: false
+    _windowSize: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _vertical: true
+      _horizontal: false
+      _windowSize: !<Vec2> {x: 32.000000, y: 32.000000}
+      _scrollDimensions: !<Vec2> {x: 32.000000, y: 100.000000}
+      _scrollPosition: !<Vec2> {x: 0.000000, y: 0.000000}
+      _contentOrigin: Center
+      _scrollSnapping: false
+      _snapMode: paging
+      _snapRegion: !<Vec2> {x: -1.000000, y: 20.000000}
+      _pagingSnapCapMode: gestureStart
+      _maxSnapStepsPerFling: 0
+      _edgeMode: elastic
+      _feel: smooth
+      _edgeFade: false
+      _edgeFadeColor: !<Vec3> {x: 0.125490, y: 0.125490, z: 0.125490}
+      _renderOrder: 0
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Scrolling</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Axes, viewport, content size, and start position</span>"}'
+    - '// @input bool _vertical = true {"hint":"Enable Vertical Scrolling"}'
+    - '// @input bool _horizontal {"hint":"Enable Horizontal Scrolling"}'
+    - '// @input vec2 _windowSize = "{32,32}" {"hint":"Size of masked window viewport in local space. <br><br>Note: to set dynamically, use the <code>windowSize</code> property"}'
+    - '// @input vec2 _scrollDimensions = "{32,100}" {"hint":"Size of total scrollable area. Use -1 on an axis for unbounded scrolling. <br><br>Note: to set dynamically, use <code>setScrollDimensions</code>"}'
+    - '// @input vec2 _scrollPosition = "{0,0}" {"label":"Scroll Position", "hint":"Initial scroll position in raw local units, top-left anchored: the default (0,0) shows the content top-left (the authored view). y grows scrolling down through content; x shrinks scrolling right."}'
+    - "// @input string _contentOrigin = \"Center\" {\"label\":\"Content Origin\", \"hint\":\"Init-only. Where content-space (0,0) sits in the viewport. <code>Center</code> = classic authored-view frame (what you lay out around the origin is the initial view). <code>TopLeft</code> = (0,0) is the viewport's top-left corner (the scroll engine's page origin), so top-left-anchored layouts drop in at (0,0) with no half-window offset; content flows +x/−y.\", \"widget\":\"combobox\", \"values\":[{\"label\":\"Top Left\", \"value\":\"TopLeft\"}, {\"label\":\"Center\", \"value\":\"Center\"}]}"
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Snapping</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Rest-position policy: free scrolling, page snapping, or per-item detents</span>"}'
+    - '// @input bool _scrollSnapping {"label":"Scroll Snapping", "hint":"Enable snapping to Snap Region multiples. Off = free momentum scrolling."}'
+    - '// @input string _snapMode = "paging" {"hint":"Paging projects the continuous release position through its fling. Detent advances by gesture direction after the deadzone and re-snaps at idle, so the view always rests on a snap point.", "widget":"combobox", "values":[{"label":"Paging", "value":"paging"}, {"label":"Detent", "value":"detent"}], "showIf":"_scrollSnapping"}'
+    - '// @input vec2 _snapRegion = "{8,8}" {"label":"Snap Region", "hint":"Per-axis size of each snap segment in local units.", "showIf":"_scrollSnapping"}'
+    - '// @input string _pagingSnapCapMode = "gestureStart" {"label":"Paging Cap Mode", "hint":"Paging only: Gesture Start caps the final target from the gesture start (legacy maxSnapOne behavior). Release Page anchors the cap at the page nearest release, so the cap does not truncate drag travel; an opposing fling can still settle behind the release page.", "widget":"combobox", "values":[{"label":"Gesture Start (Legacy)", "value":"gestureStart"}, {"label":"Release Page (Cap at Release)", "value":"releasePage"}], "showIf":"_scrollSnapping"}'
+    - '// @input int _maxSnapStepsPerFling = "0" {"label":"Max Snap Steps Per Fling", "hint":"Maximum snap steps. 0 = unlimited. Paging uses Paging Cap Mode; Detent preserves detents crossed by dragging.", "showIf":"_scrollSnapping"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Behavior</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Edge response and scroll feel</span>"}'
+    - '// @input string _edgeMode = "elastic" {"hint":"Edge behavior: Elastic = rubber-band overscroll with spring-back; Clamped = hard stop at bounds. For an unbounded axis, set that axis of Scroll Dimensions to -1.", "widget":"combobox", "values":[{"label":"Elastic", "value":"elastic"}, {"label":"Clamped", "value":"clamped"}]}'
+    - '// @input string _feel = "smooth" {"hint":"Deceleration/tuning bundle: Smooth = classic long glide; Crisp = short glide, firm feel.", "widget":"combobox", "values":[{"label":"Smooth", "value":"smooth"}, {"label":"Crisp", "value":"crisp"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Rendering</span>"}'
+    - '// @input bool _edgeFade {"hint":"Fade the content out at the edges toward Edge Fade Color <code>(rendering trick for transparency)</code>"}'
+    - '// @input vec3 _edgeFadeColor = "{0.1254902,0.1254902,0.1254902}" {"hint":"Color the edge fade blends to. Defaults to the standard panel background; match your own backing panel color to fade over it.", "widget":"color", "showIf":"_edgeFade"}'
+    - '// @input int _renderOrder = "0" {"hint":"Render order for the edge fade overlay. Leave at 0 unless you need the fade in a specific band relative to other chrome — it already layers over its own content via a depth bias plus hierarchy order.", "showIf":"_edgeFade"}'

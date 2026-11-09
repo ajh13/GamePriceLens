@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/d0b628fb-070a-8f09-60d6-fa25cd28f768>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5f4c70c8-90dc-4b7d-8ead-89cc46fd8a63
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5f4c70c8-90dc-4b7d-8ead-89cc46fd8a63
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e7847e94-bfe9-486c-b4cc-8a32d046a997
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e7847e94-bfe9-486c-b4cc-8a32d046a997>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 719b9e58-4ad6-4654-a317-5dd51e326c77
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _defaultValue: false
+    _size: false
+    _themeOverride: false
+    addCallbacks: false
+    onProgressFinishedCallbacks: false
+    onValueChangeCallbacks: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _size: !<Vec3> {x: 6.000000, y: 0.300000, z: 0.300000}
+      _defaultValue: !<float> 0.000000
+      _themeOverride: Inherited
+      addCallbacks: false
+      onValueChangeCallbacks:
+        []
+      onProgressFinishedCallbacks:
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input vec3 _size = {6,1,1} {"hint":"Size of the progress bar in centimeters"}'
+    - '// @input float _defaultValue {"hint":"The default value of the progress bar, between 0 and 1", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] onValueChangeCallbacks = {} {"label":"On Value Changed Callbacks", "showIf":"addCallbacks"}'
+    - '// @input Callback[] onProgressFinishedCallbacks = {} {"label":"On Progress Finished Callbacks", "showIf":"addCallbacks"}'

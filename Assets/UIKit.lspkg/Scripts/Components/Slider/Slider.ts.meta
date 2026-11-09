@@ -1,0 +1,100 @@
+- !<AssetImportMetadata/3581659b-da46-ac14-efc1-86068c574969>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 455180d3-f2c0-4919-b33c-c04843a74155
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 455180d3-f2c0-4919-b33c-c04843a74155
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e6168889-557c-45b7-8211-013c40161ca1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e6168889-557c-45b7-8211-013c40161ca1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a10f9c08-0b67-46ca-9c66-796308f254cd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _defaultValue: false
+    _hasShadow: true
+    _inactive: false
+    _knobIcon: false
+    _knobSize: false
+    _numberOfSegments: false
+    _playAudio: false
+    _renderOrder: false
+    _segmented: false
+    _shadowPositionOffset: true
+    _size: false
+    _themeOverride: false
+    addCallbacks: false
+    customKnobSize: false
+    hasTrackVisual: false
+    onValueChangeCallbacks: false
+    snapToTriggerPosition: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _inactive: false
+      _playAudio: false
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      _themeOverride: Inherited
+      _size: !<Vec3> {x: 6.000000, y: 3.000000, z: 1.000000}
+      _defaultValue: !<float> 0.000000
+      snapToTriggerPosition: false
+      _segmented: false
+      _numberOfSegments: !<float> 5.000000
+      hasTrackVisual: true
+      customKnobSize: false
+      _knobSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      _knobIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      addCallbacks: false
+      onValueChangeCallbacks:
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Enable interaction audio feedback"}'
+    - // @input bool _hasShadow
+    - '// @input vec3 _shadowPositionOffset = "{0.05,-0.05,-0.01}" {"showIf":"_hasShadow"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - '// @input vec3 _size = {6,3,1} {"hint":"Size of the element in centimeters"}'
+    - '// @input float _defaultValue {"hint":"The default value of the slider, should be between 0 and 1", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input bool snapToTriggerPosition {"hint":"Enable triggering anywhere on the slider track to snap the knob to that position"}'
+    - '// @input bool _segmented {"hint":"Enable this to make the slider segmented, with a fixed number of segments"}'
+    - '// @input float _numberOfSegments = 5 {"hint":"The number of segments for the segmented slider, must be at least 2", "showIf":"_segmented"}'
+    - '// @input bool hasTrackVisual = true {"hint":"Enable this to show a fill on the track up to the knob position"}'
+    - '// @input bool customKnobSize {"hint":"Enable this to customize the knob size"}'
+    - '// @input vec2 _knobSize = {3,3} {"showIf":"customKnobSize"}'
+    - '// @input Asset.Texture _knobIcon {"hint":"Optional icon rendered on the knob (moves with it). Leave empty for no knob icon."}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] onValueChangeCallbacks = {} {"label":"On Value Changed Callbacks", "showIf":"addCallbacks"}'

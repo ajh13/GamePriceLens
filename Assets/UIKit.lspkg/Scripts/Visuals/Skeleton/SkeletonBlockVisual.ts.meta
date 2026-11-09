@@ -1,0 +1,52 @@
+- !<AssetImportMetadata/20bc88c1-a4a0-a55c-0337-6cd0f02a554f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d5a38163-dcc8-4184-91b4-cf2134bf4a1b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d5a38163-dcc8-4184-91b4-cf2134bf4a1b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d76ff832-8b5f-473a-9d27-096ca387189d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d76ff832-8b5f-473a-9d27-096ca387189d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: df493433-7906-43f0-9d46-a4579f617ec0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _depth: false
+    _renderOrder: false
+    _size: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: !<float> 0.000000
+      _size: !<Vec2> {x: 1.000000, y: 1.000000}
+      _depth: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input number _renderOrder = "0"'
+    - '// @input vec2 _size = "{1,1}" {"hint":"Size of Shape In Local Space Centimeters"}'
+    - // @input float _depth = 1

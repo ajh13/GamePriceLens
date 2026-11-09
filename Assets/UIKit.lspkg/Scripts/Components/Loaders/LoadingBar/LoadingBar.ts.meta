@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/2fb3c2f9-8f5f-6081-552f-95e1dad4a0ba>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 44de92ee-b38d-46ab-89ac-cb485433b976
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 44de92ee-b38d-46ab-89ac-cb485433b976
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f2bbbe5c-13ef-4fe9-a6c8-557ef928ff77
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f2bbbe5c-13ef-4fe9-a6c8-557ef928ff77>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: be509605-e03b-4aa5-9193-1c3c9d7b05f9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _autoStart: false
+    _size: false
+    _themeOverride: false
+    _variant: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _size: !<Vec3> {x: 6.000000, y: 0.120000, z: 1.000000}
+      _variant: Line
+      _autoStart: true
+      _themeOverride: Inherited
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input vec3 _size = {6,0.12,1} {"hint":"Size of the bar in centimeters (x = swept width, y = bar height)"}'
+    - '// @input string _variant = "Line" {"label":"Variant", "widget":"combobox", "values":[{"label":"Line", "value":"Line"}, {"label":"Comet", "value":"Comet"}]}'
+    - '// @input bool _autoStart = true {"hint":"Start the indeterminate sweep automatically on start"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'

@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/e69bc4cf-55e5-eae6-d757-5016f9d49f28>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f00a9058-9844-491f-9e83-de2e90b7867f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f00a9058-9844-491f-9e83-de2e90b7867f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 34da8982-5895-4883-a485-a84427e40e99
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/34da8982-5895-4883-a485-a84427e40e99>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: cec37035-3e65-431b-a446-f95aaa2813ef
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _defaultMonth: false
+    _defaultToCurrentDate: false
+    _defaultYear: false
+    _height: false
+    _selectionMode: false
+    _width: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _width: !<float> 28.000000
+      _height: !<float> 30.000000
+      _defaultToCurrentDate: true
+      _defaultYear: 2011
+      _defaultMonth: !<float> 9.000000
+      _selectionMode: Range
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Size</span>"}'
+    - '// @input float _width {"label":"Width"}'
+    - '// @input float _height {"label":"Height"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Maximum height — the calendar shrinks to fit months spanning fewer than six week rows</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Default Date</span>"}'
+    - "// @input bool _defaultToCurrentDate = true {\"label\":\"Current Date\", \"hint\":\"Open the calendar on the device's current month and year.\"}"
+    - '// @input int _defaultYear = 2011 {"label":"Default Year", "showIf":"_defaultToCurrentDate", "showIfValue":false}'
+    - '// @input float _defaultMonth = 9 {"label":"Default Month", "widget":"combobox", "values":[{"label":"January", "value":1}, {"label":"February", "value":2}, {"label":"March", "value":3}, {"label":"April", "value":4}, {"label":"May", "value":5}, {"label":"June", "value":6}, {"label":"July", "value":7}, {"label":"August", "value":8}, {"label":"September", "value":9}, {"label":"October", "value":10}, {"label":"November", "value":11}, {"label":"December", "value":12}], "showIf":"_defaultToCurrentDate", "showIfValue":false}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Selection</span>"}'
+    - '// @input string _selectionMode {"label":"Selection Mode", "hint":"None: dates are not selectable. Single: one date at a time. Range: a start and end date.", "widget":"combobox", "values":[{"label":"None", "value":"None"}, {"label":"Single", "value":"Single"}, {"label":"Range", "value":"Range"}]}'

@@ -1,0 +1,768 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 2
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: arcRot
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: arcRot
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -1270
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: arcRot
+    Node1:
+      DependencyIndex: 1
+      LevelID: 4
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: arcSc
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: arcSc
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -1100
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: arcSc
+    Node10:
+      DependencyIndex: 10
+      LevelID: 0
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4  Value1;
+            input_vec4  Value2;
+            output_vec4 Result; 
+            
+            void main()
+            {
+            	Result = Value1 * Value2;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: "12257431441445962067:11236820451941344521"
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Errors:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        ID:
+          Variable: 0
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Vertex
+        UseExternalFile:
+          Variable: true
+        aaPad:
+          Connection0:
+            NodeLevelID: 7
+            PortID: Output
+          Variable: 0.0
+        arcAperture:
+          Connection0:
+            NodeLevelID: 3
+            PortID: Output
+          Variable: 0.0
+        arcRot:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [0.0, 0.0]
+        halfThickness:
+          Connection0:
+            NodeLevelID: 6
+            PortID: Output
+          Variable: 0.0
+        newPos:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        ringRadius:
+          Connection0:
+            NodeLevelID: 5
+            PortID: Output
+          Variable: 0.0
+      PositionX: -197
+      PositionY: -579
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Vertex
+    Node11:
+      DependencyIndex: 11
+      LevelID: 11
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ApplyBlending:
+          Variable: false
+        ApplyRotation:
+          Variable: true
+        ApplySkinning:
+          Variable: false
+        ApplyTranslation:
+          Variable: true
+        From:
+          ItemIndex: 1
+          ItemList: "Tangent Space : Object Space : World Space : View Space : Screen Space ( NDC )"
+        To:
+          ItemIndex: 1
+          ItemList: "Object Space : World Space : View Space : Screen Space ( NDC )"
+        TransformNormal:
+          Variable: false
+        VectorIn:
+          Connection0:
+            NodeLevelID: 0
+            PortID: newPos
+          Variable: [0.0, 0.0, 0.0]
+        VectorOut:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: 126
+      PositionY: -473
+      TemplateID: node_math_transform
+      TemplateVersionMinor: 2
+      Title1: Transform Vector
+      Title2: Object to World
+    Node12:
+      CommentSizeX: 0
+      CommentSizeY: 0
+      DependencyIndex: 12
+      LevelID: 12
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Depth:
+          Variable: 1.0
+        DepthMode:
+          ItemIndex: 0
+          ItemList: "Non-Linear - Normalized [0 to 1] : Linear - Normalized [-1 to 1] : View Space - Non-Normalized [-near to -far]"
+        DontFreezeSpec:
+          Variable: false
+        FinalColor:
+          ClassType1: COLOR
+          Connection0:
+            NodeLevelID: 1
+            PortID: FinalColor
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor1:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor2:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor3:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        GSplatPointSize:
+          Variable: 0.0
+        GSplatRotation:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        GSplatScale:
+          Variable: [0.0, 0.0, 0.0]
+        Motion Vector Pass:
+          ItemIndex: 0
+          ItemList: "Write Velocity and Depth : Discard Velocity but Write Depth : Discard Velocity and Depth"
+        Negative:
+          Variable: false
+        PrevWorldPosition:
+          Variable: [0.0, 0.0, 0.0]
+        RayDirection:
+          Variable: [0.0, 1.0, 0.0]
+        RayOrigin:
+          Variable: [0.0, 0.0, 0.0]
+        ShowPrevPos:
+          Variable: false
+        Targets:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : 4"
+        Type:
+          ItemIndex: 0
+          ItemList: "3D : Post Effect : Hair : Gaussian Splatting"
+        WorldNormal:
+          Variable: [0.0, 1.0, 0.0]
+        WorldPosition:
+          Connection0:
+            NodeLevelID: 11
+            PortID: VectorOut
+          Variable: [0.0, 0.0, 0.0]
+        WorldTangent:
+          Variable: [0.0, 0.0, 1.0]
+        WriteDepth:
+          Variable: false
+      PositionX: 579
+      PositionY: -465
+      TemplateID: nodes_main_graph
+      Title1: Shader
+      Title2: 3D
+    Node13:
+      DependencyIndex: 13
+      LevelID: 13
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: arcGradInv
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: arcGradInv
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -590
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: arcGradInv
+    Node2:
+      DependencyIndex: 2
+      LevelID: 5
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: ringRadius
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: ringRadius
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -1015
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: ringRadius
+    Node3:
+      DependencyIndex: 3
+      LevelID: 6
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: halfThickness
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: halfThickness
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -930
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: halfThickness
+    Node4:
+      DependencyIndex: 4
+      LevelID: 8
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: edgeSoftness
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: edgeSoftness
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -760
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: edgeSoftness
+    Node5:
+      DependencyIndex: 5
+      LevelID: 9
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: colorTail
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: colorTail
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -675
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: colorTail
+    Node6:
+      DependencyIndex: 6
+      LevelID: 10
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: colorHead
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: colorHead
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -590
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: colorHead
+    Node7:
+      DependencyIndex: 7
+      LevelID: 1
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4  Value1;
+            input_vec4  Value2;
+            output_vec4 Result; 
+            
+            void main()
+            {
+            	Result = Value1 * Value2;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: "8031087406645005353:11009341206703691644"
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Errors:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        FinalColor:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ID:
+          Variable: 1
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Fragment
+        UseExternalFile:
+          Variable: true
+        arcFade:
+          Connection0:
+            NodeLevelID: 14
+            PortID: Output
+          Variable: 0.0
+        arcFadeLift:
+          Connection0:
+            NodeLevelID: 15
+            PortID: Output
+          Variable: 0.0
+        arcGradInv:
+          Connection0:
+            NodeLevelID: 13
+            PortID: Output
+          Variable: 0.0
+        arcRot:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [0.0, 0.0]
+        arcSc:
+          Connection0:
+            NodeLevelID: 4
+            PortID: Output
+          Variable: [0.0, 0.0]
+        colorHead:
+          Connection0:
+            NodeLevelID: 10
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        colorTail:
+          Connection0:
+            NodeLevelID: 9
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        edgeSoftness:
+          Connection0:
+            NodeLevelID: 8
+            PortID: Output
+          Variable: 0.0
+        halfThickness:
+          Connection0:
+            NodeLevelID: 6
+            PortID: Output
+          Variable: 0.0
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        ringRadius:
+          Connection0:
+            NodeLevelID: 5
+            PortID: Output
+          Variable: 0.0
+      PositionX: -83
+      PositionY: -270
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Fragment
+    Node8:
+      DependencyIndex: 8
+      LevelID: 3
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: arcAperture
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: arcAperture
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -1185
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: arcAperture
+    Node9:
+      DependencyIndex: 9
+      LevelID: 7
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: aaPad
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: aaPad
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -845
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: aaPad
+    Node14:
+      DependencyIndex: 14
+      LevelID: 14
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: arcFade
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: arcFade
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -505
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: arcFade
+    Node15:
+      DependencyIndex: 15
+      LevelID: 15
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: arcFadeLift
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: arcFadeLift
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -420
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: arcFadeLift
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+SystemID: dev.snap.shaders

@@ -1,0 +1,40 @@
+//
+// ConfirmationSlider — Shine Effect
+//
+// Animated sine-wave shine band mixed with fill color before border blend.
+// Wire: Base Fragment fillColor_out/borderResult_out/distFromEdge_out → this node
+//       Vertex uv → this node
+//       This node FinalColor → Surface.FinalColor
+//
+
+input_vec4 fillColor;
+input_vec4 borderResult;
+input_float distFromEdge;
+input_vec2 uv;
+input_vec3 shineColor;
+input_float shineFactor;
+input_float opacityFactor;
+
+output_vec4 FinalColor;
+
+void main()
+{
+    // Animated shine band sweeping horizontally
+    mediump float time = system.getTimeElapsed() * 4.0;
+    mediump float shine = sin(uv.x * 1.5 - time) * 0.5 + 0.5;
+    shine *= shine * shine * shine * shine * shine; // 6th power — tight bright band
+    shine *= 0.55;
+
+    // Mix shine into fill color
+    lowp vec4 result = mix(fillColor, vec4(shineColor, 1.0), shine * shineFactor);
+
+    // Border blend
+    if (distFromEdge > 0.0) {
+        result = mix(result, borderResult, distFromEdge);
+    }
+
+    // Opacity
+    result.a *= opacityFactor;
+
+    FinalColor = result;
+}

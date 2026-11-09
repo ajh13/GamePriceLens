@@ -1,0 +1,76 @@
+- !<AssetImportMetadata/e12c7303-a0d4-3b16-d586-7b1acf6c9a9e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 92ceb668-7bc7-4756-b4b5-fb268d655c92
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 92ceb668-7bc7-4756-b4b5-fb268d655c92
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4c3d69a2-4118-489d-90f5-dcd82f8da897
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4c3d69a2-4118-489d-90f5-dcd82f8da897>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: ee1b6d3a-16ea-4c02-b97c-3cfb1db605b0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _cornerRadius: false
+    _fadeBottom: false
+    _fadeColor: false
+    _fadeDistance: false
+    _fadeLeft: false
+    _fadeRight: false
+    _fadeTop: false
+    _inheritRenderOrder: false
+    _matchElementColor: false
+    _renderOrder: false
+    _sizeOverride: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _fadeLeft: false
+      _fadeRight: true
+      _fadeTop: false
+      _fadeBottom: false
+      _fadeColor: !<Vec4> {x: 0.125490, y: 0.125490, z: 0.125490, w: 1.000000}
+      _matchElementColor: false
+      _fadeDistance: !<float> 2.000000
+      _cornerRadius: !<float> 0.000000
+      _inheritRenderOrder: true
+      _renderOrder: !<float> 0.000000
+      _sizeOverride: !<Vec2> {x: 0.000000, y: 0.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input bool _fadeLeft {"label":"Fade Left"}'
+    - '// @input bool _fadeRight = true {"label":"Fade Right"}'
+    - '// @input bool _fadeTop {"label":"Fade Top"}'
+    - '// @input bool _fadeBottom {"label":"Fade Bottom"}'
+    - '// @input vec4 _fadeColor {"label":"Fade Color", "hint":"The color each enabled edge fades to (usually the list-item background).", "widget":"color"}'
+    - "// @input bool _matchElementColor {\"label\":\"Match Element Color\", \"hint\":\"Track the nearest ancestor element's live background color (e.g. the list-item button) instead of the static Fade Color, following hover/press states and their animations. Solid-color styles only.\"}"
+    - '// @input float _fadeDistance = 2 {"label":"Fade Distance (cm)", "hint":"How far the ramp extends in from each enabled edge, in centimeters."}'
+    - "// @input float _cornerRadius {\"label\":\"Corner Radius (cm)\", \"hint\":\"Match the content's corner radius so the fade respects rounded corners. Clamped to the fade strip's half-extent — radii larger than the fade distance can't be represented by the strip.\"}"
+    - "// @input bool _inheritRenderOrder = true {\"label\":\"Inherit Render Order\", \"hint\":\"Use the host content's render order (hierarchy sort then draws the fade above it).\"}"
+    - '// @input float _renderOrder {"label":"Render Order", "showIf":"_inheritRenderOrder", "showIfValue":false}'
+    - '// @input vec2 _sizeOverride = {0,0} {"label":"Size Override", "hint":"Width/height in cm, used only when there is no sibling FlexItem to size to."}'

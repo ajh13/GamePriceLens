@@ -1,0 +1,28 @@
+//
+// DropShadow — Fragment Color
+//
+// The CollapsedSquircle mesh encodes a distance ramp in vertex alpha
+// (0 at the corner hubs -> 1 at the rim). system.getSurfaceColor() reads
+// it as a true varying. Alpha fades out over the outer `spread` fraction
+// of the corner-radius band.
+//
+// IMPORTANT: this node must take NO inputs from the Vertex node. Wiring a
+// vertex output into a pixel-stage custom node does not create a varying —
+// it clones the entire vertex code into the fragment shader, re-evaluated
+// per pixel (including an inverse-model-matrix multiply).
+//
+
+input_vec4 shadowColor;
+input_float spread;
+input_float opacityFactor;
+
+output_vec4 FinalColor;
+
+void main()
+{
+    mediump float dist = system.getSurfaceColor().a;
+    mediump float falloff = 1.0 - smoothstep(1.0 - spread, 1.0, dist);
+    lowp vec4 c = shadowColor;
+    c.a *= falloff * opacityFactor;
+    FinalColor = c; // straight alpha; blend mode premultiplies downstream
+}

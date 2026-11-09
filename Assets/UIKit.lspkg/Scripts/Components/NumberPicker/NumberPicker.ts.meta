@@ -1,0 +1,99 @@
+- !<AssetImportMetadata/0d734c8f-c463-213f-34ca-611ef8ef421e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0a26d1e2-b381-43a0-933c-6c7167d09d7b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0a26d1e2-b381-43a0-933c-6c7167d09d7b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> eabab4c1-0209-4747-ad83-f072dd665dab
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/eabab4c1-0209-4747-ad83-f072dd665dab>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e9d705e9-85eb-42ec-9eff-9db2c6205ea7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _alwaysExpanded: false
+    _fields: false
+    _hasShadow: true
+    _inactive: false
+    _numberOfRowsShown: false
+    _playAudio: true
+    _renderOrder: false
+    _shadowPositionOffset: false
+    _size: false
+    _themeOverride: true
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _size: !<Vec3> {x: 8.000000, y: 2.500000, z: 3.000000}
+      _inactive: false
+      _playAudio: false
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
+      _themeOverride: Inherited
+      _numberOfRowsShown: 5
+      _alwaysExpanded: false
+      _fields:
+        - fieldType: range
+          minRange: 0
+          maxRange: 9
+          step: 1
+          minNumberDigits: 1
+          customValues: !<string[]>
+            []
+          wrapAround: false
+          defaultNumber: 0
+          defaultValue: ""
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input vec3 _size = {6,3,3} {"hint":"Size of the element in centimeters"}'
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Enable interaction audio feedback"}'
+    - // @input bool _hasShadow
+    - '// @input vec3 _shadowPositionOffset = "{0.05,-0.05,-0.01}" {"showIf":"_hasShadow"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Layout</span>"}'
+    - '// @input int _numberOfRowsShown = 5 {"widget":"slider", "min":1, "max":10, "step":1}'
+    - // @input bool _alwaysExpanded
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Fields</span>"}'
+    - /*
+    - "@typedef NumberPickerFieldInput"
+    - '@property {string} fieldType = "range" {"widget":"combobox", "values":[{"label":"Range", "value":"range"}, {"label":"Custom", "value":"custom"}]}'
+    - '@property {int} minRange {"showIf":"fieldType", "showIfValue":"range"}'
+    - '@property {int} maxRange = 9 {"showIf":"fieldType", "showIfValue":"range"}'
+    - '@property {int} step = 1 {"showIf":"fieldType", "showIfValue":"range"}'
+    - '@property {int} minNumberDigits = 1 {"showIf":"fieldType", "showIfValue":"range"}'
+    - '@property {string[]} customValues = {} {"showIf":"fieldType", "showIfValue":"custom"}'
+    - "@property {bool} wrapAround"
+    - '@property {int} defaultNumber {"showIf":"fieldType", "showIfValue":"range"}'
+    - '@property {string} defaultValue {"showIf":"fieldType", "showIfValue":"custom"}'
+    - "*/"
+    - "// @input NumberPickerFieldInput[] _fields"

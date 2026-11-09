@@ -1,0 +1,425 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 3
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.5, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: radius
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: radius
+        Tooltip:
+          String: ""
+      PositionX: -354
+      PositionY: -264
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: radius
+    Node1:
+      DependencyIndex: 1
+      LevelID: 5
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.2, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeSize
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: fadeSize
+        Tooltip:
+          String: Vertical fade reach in normalized UV
+      PositionX: -356
+      PositionY: -104
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: fadeSize
+    Node2:
+      DependencyIndex: 2
+      LevelID: 6
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [0.28, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: maxOpacity
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: maxOpacity
+        Tooltip:
+          String: Maximum edge shade opacity
+      PositionX: -83
+      PositionY: -249
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: maxOpacity
+    Node3:
+      DependencyIndex: 3
+      LevelID: 2
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: windowSize
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: WindowSize
+        Tooltip:
+          String: Local-space size used to clip the fade to rounded corners
+      PositionX: -420
+      PositionY: 185
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: WindowSize
+    Node4:
+      DependencyIndex: 4
+      LevelID: 0
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Index:
+          Variable: 0
+        UVCoord:
+          IOType: 1
+          Variable: [0.0, 0.0]
+      PositionX: -420
+      PositionY: 72
+      TemplateID: node_effect_global_surface_uvcoord0
+      Title1: Surface UV Coord
+    Node5:
+      DependencyIndex: 5
+      LevelID: 104
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_float radius;
+            input_float fadeSize;
+            input_float maxOpacity;
+            input_vec2 windowSize;
+            input_vec2 position;
+            output_float opacity;
+            
+            float saturate(float value) {
+                return clamp(value, 0.0, 1.0);
+            }
+            
+            float smootherstep(float value) {
+                value = saturate(value);
+                return value * value * value * (value * (value * 6.0 - 15.0) + 10.0);
+            }
+            
+            float roundedRectangleCoverage(vec2 uv, vec2 rectangleSize, float cornerRadius) {
+                vec2 safeSize = max(rectangleSize, vec2(0.0001));
+                vec2 halfSize = safeSize * 0.5;
+                float safeRadius = clamp(cornerRadius, 0.0, min(halfSize.x, halfSize.y));
+                vec2 localPosition = (uv - vec2(0.5)) * safeSize;
+                vec2 cornerDistance = abs(localPosition) - (halfSize - vec2(safeRadius));
+                float signedDistance = length(max(cornerDistance, vec2(0.0)))
+                    + min(max(cornerDistance.x, cornerDistance.y), 0.0)
+                    - safeRadius;
+                float antialiasWidth = max(fwidth(signedDistance), 0.0001);
+                return 1.0 - smoothstep(-antialiasWidth, 0.0, signedDistance);
+            }
+            
+            void main()
+            {
+                float edgeDistance = min(position.y, 1.0 - position.y);
+                float verticalFade = 1.0 - smootherstep(edgeDistance / max(fadeSize, 0.0001));
+                float roundedCoverage = roundedRectangleCoverage(position, windowSize, radius);
+                opacity = saturate(maxOpacity) * verticalFade * roundedCoverage;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: ""
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        ID:
+          Variable: 104
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: NumberPickerVerticalFadeMask
+        UseExternalFile:
+          Variable: false
+        fadeSize:
+          Connection0:
+            NodeLevelID: 5
+            PortID: Output
+          Variable: 0.2
+        maxOpacity:
+          Connection0:
+            NodeLevelID: 6
+            PortID: Output
+          Variable: 0.28
+        ngs_Height:
+          Variable: 420
+        ngs_Version:
+          String: 0.2.0
+        opacity:
+          IOType: 1
+          Variable: 0.0
+        position:
+          Connection0:
+            NodeLevelID: 0
+            PortID: UVCoord
+          Variable: [0.0, 0.0]
+        radius:
+          Connection0:
+            NodeLevelID: 3
+            PortID: Output
+          Variable: 0.5
+        windowSize:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [1.0, 1.0]
+      PositionX: 221
+      PositionY: -19
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: NumberPickerVerticalFadeMask
+    Node6:
+      DependencyIndex: 6
+      LevelID: 1
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Dimension1:
+          ItemIndex: 2
+          ItemList: "1 : 2 : 3"
+        Dimension2:
+          ItemIndex: 0
+          ItemList: "1 : disabled"
+        Dimension3:
+          ItemIndex: 0
+          ItemList: disabled
+        Dimension4:
+          ItemIndex: 0
+          ItemList: disabled
+        IsColor:
+          Variable: true
+        Value:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value1:
+          Connection0:
+            NodeLevelID: 7
+            PortID: Output
+          Variable: [0.14901961386203766, 0.14901961386203766, 0.14901961386203766, 1.0]
+        Value2:
+          Connection0:
+            NodeLevelID: 104
+            PortID: opacity
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value3:
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        Value4:
+          Variable: [0.0, 0.0, 0.0, 0.0]
+      PositionX: 501
+      PositionY: -4
+      TemplateID: node_channels_combine
+      Title1: Construct Vector
+    Node7:
+      CommentSizeX: 0
+      CommentSizeY: 0
+      DependencyIndex: 7
+      LevelID: 4
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Depth:
+          Variable: 1.0
+        DepthMode:
+          ItemIndex: 0
+          ItemList: "Non-Linear - Normalized [0 to 1] : Linear - Normalized [-1 to 1] : View Space - Non-Normalized [-near to -far]"
+        DontFreezeSpec:
+          Variable: false
+        FinalColor:
+          ClassType1: COLOR
+          Connection0:
+            NodeLevelID: 1
+            PortID: Value
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor1:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor2:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor3:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        GSplatPointSize:
+          Variable: 0.0
+        GSplatRotation:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        GSplatScale:
+          Variable: [0.0, 0.0, 0.0]
+        Motion Vector Pass:
+          ItemIndex: 0
+          ItemList: "Write Velocity and Depth : Discard Velocity but Write Depth : Discard Velocity and Depth"
+        Negative:
+          Variable: false
+        PrevWorldPosition:
+          Variable: [0.0, 0.0, 0.0]
+        RayDirection:
+          Variable: [0.0, 1.0, 0.0]
+        RayOrigin:
+          Variable: [0.0, 0.0, 0.0]
+        ShowPrevPos:
+          Variable: false
+        Targets:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : 4"
+        Type:
+          ItemIndex: 0
+          ItemList: "3D : Post Effect : Hair : Gaussian Splatting"
+        WorldNormal:
+          Variable: [0.0, 1.0, 0.0]
+        WorldPosition:
+          Variable: [0.0, 0.0, 0.0]
+        WorldTangent:
+          Variable: [0.0, 0.0, 1.0]
+        WriteDepth:
+          Variable: false
+      PositionX: 720
+      PositionY: -8
+      TemplateID: nodes_main_graph
+      Title1: Shader
+      Title2: 3D
+    Node8:
+      DependencyIndex: 8
+      LevelID: 7
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "rgba : rgb"
+        Default:
+          Variable: [0.14901961386203766, 0.14901961386203766, 0.14901961386203766, 1.0]
+        Group:
+          String: ""
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: fadeColor
+        SortIndex:
+          Variable: 0
+        Tooltip:
+          String: Color applied to the vertical edge fade
+        UniqueID:
+          String: Fade Color
+      PositionX: 221
+      PositionY: -264
+      TemplateID: nodes_inputs_parameters_color
+      Title1: Color Parameter
+      Title2: Fade Color
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+SystemID: dev.snap.shaders

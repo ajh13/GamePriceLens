@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-08",
+  "projectStatus": "incomplete",
+  "editor": "5.24.1.26100516",
+  "target": "SPECS 27",
+  "passed": [
+    "Lens Studio TypeScript compilation",
+    "UPC-A and EAN-13 checksum validation",
+    "Barcode scanline fixtures at multiple scales and thresholds",
+    "Horizontal, vertical and reversed synthetic pixel scans",
+    "Single-row detections rejected by multi-row voting",
+    "Blank, invalid-checksum, zero-code and truncated-quiet-zone rejection",
+    "Recognition JSON schema, confidence range and title/platform validation",
+    "Search URL encoding and fixed PriceCharting origin",
+    "Live Gemini integration rejects the Image.png non-game fixture"
+  ],
+  "reproducedFailures": [
+    "WebViewProbe (without UIKit UI) invokes creation callback but does not emit onReady within 15 seconds",
+    "UIKit text renders but panel/button mesh visuals are not visible"
+  ],
+  "unverified": [
+    "Positive recognition accuracy using real case, cartridge and disc photos",
+    "WebView touch coordinate convention and scroll/keyboard behavior",
+    "Interactive PriceCharting navigation inside the Lens",
+    "Physical camera permissions and image quality",
+    "Hardware readability, hand interactions, latency and power usage"
+  ],
+  "commands": ["node Assets/Tests/barcode.test.mjs", "node Assets/Tests/recognition.test.mjs"],
+  "diagnostics": {
+    "WebViewProbe": "Disabled scene object; opt in to reproduce browser readiness failure",
+    "RecognitionProbe": "Disabled scene object; sends only its explicitly wired fixture to Gemini when enabled"
+  },
+  "limitations": [
+    "Barcode decoder supports UPC-A/EAN-13 only, not every barcode format",
+    "Visual recognition is probabilistic and does not confirm a catalog identity",
+    "Prices are displayed by the public website, not extracted through an API",
+    "Experimental API is enabled and the editor flags it as a publication restriction",
+    "The package/editor version difference is an observed mismatch, not a proven root cause"
+  ]
+}

@@ -1,0 +1,170 @@
+//
+// CollapsedSquircle — Fragment Color, FILL variant
+//
+// The middle rung of the RoundedRectangle material variant ladder (see
+// BaseRoundedRectangle): fill gradients and background texture, but NO
+// border logic at all — the border code does not exist in this shader, so
+// borderless gradient/textured content pays no border presence tax
+// (registers/occupancy), not just a skipped branch.
+//
+// Unlike the full material, Rectangle-type background gradients read the
+// mesh-alpha distance directly here instead of piggybacking on the border
+// branch — no forced border uniform.
+//
+// Ported from CollapsedSquircleFragment; keep the gradient/texture helpers
+// in sync with it.
+//
+// Output: FinalColor → connect to Surface.FinalColor
+//
+
+// ─────────────────────────────────────────────
+// UV from vertex (varying — replaces per-fragment matrix inverse)
+// ─────────────────────────────────────────────
+input_vec2 uv;
+
+// ─────────────────────────────────────────────
+// Background
+// ─────────────────────────────────────────────
+input_texture_2d backgroundTexture;
+input_float useTexture;
+input_vec2 textureMode;
+input_float textureWrap;
+input_vec4 backgroundColor;
+
+// ─────────────────────────────────────────────
+// Fill gradient (up to 7 stops)
+// ─────────────────────────────────────────────
+input_float_array colors;
+input_float_array percents;
+input_int stops;
+input_float linearGradientStart;
+input_float linearGradientLength;
+input_float sinLinearGradientAngle;
+input_float cosLinearGradientAngle;
+input_vec2 gradientStartPosition;
+input_float radialGradientLength;
+input_float gradientType;
+
+// ─────────────────────────────────────────────
+// Opacity
+// ─────────────────────────────────────────────
+input_float opacityFactor;
+
+output_vec4 FinalColor;
+
+const float TEXTURE_EPSILON = 0.05;
+
+
+// ═══════════════════════════════════════════════
+// Helper: Sample background (texture or solid)
+// ═══════════════════════════════════════════════
+
+lowp vec4 sampleBackground(mediump vec2 uv)
+{
+    if (useTexture < 1.0) {
+        return backgroundColor;
+    }
+
+    // Map squircle UV [-1,1] to texture UV [0,1] with mode scaling
+    mediump vec2 tUv = uv * 0.5;
+    tUv *= textureMode;
+    tUv += 0.5;
+
+    if (textureWrap < 0.5) {
+        // None (0): backgroundColor outside texture bounds
+        lowp float outside = max(step(1.0 + TEXTURE_EPSILON, tUv.x), step(1.0 + TEXTURE_EPSILON, tUv.y));
+        outside = max(outside, step(tUv.x, 0.0 - TEXTURE_EPSILON));
+        outside = max(outside, step(tUv.y, 0.0 - TEXTURE_EPSILON));
+        return mix(backgroundTexture.sample(tUv), backgroundColor, outside);
+    } else if (textureWrap > 1.5) {
+        // Clamp (2): clamp to edge
+        tUv.x = max(0.0, tUv.x);
+        tUv.x = min(1.0, tUv.x);
+        tUv.y = max(0.0, tUv.y);
+        tUv.y = min(1.0, tUv.y);
+        return backgroundTexture.sample(tUv);
+    } else {
+        // Repeat (1): default
+        return backgroundTexture.sample(tUv);
+    }
+}
+
+
+// ═══════════════════════════════════════════════
+// Helper: Apply fill gradient
+// ═══════════════════════════════════════════════
+// Supports linear (0), radial (1), and rectangle-distance (2) types.
+
+lowp vec4 applyFillGradient(mediump vec2 uv, lowp vec4 bgColor, mediump float rectDist)
+{
+    if (stops <= 0) {
+        return bgColor;
+    }
+
+    int type = int(gradientType);
+
+    // Compute gradient parameter based on type
+    mediump float t;
+    if (type == 0) {
+        t = uv.x * cosLinearGradientAngle - uv.y * sinLinearGradientAngle;
+    } else if (type == 1) {
+        t = distance(uv, gradientStartPosition) * radialGradientLength;
+    } else {
+        t = rectDist;
+    }
+
+    // Blend through gradient stops
+    lowp vec4 result = colors.sample(0);
+
+    if (type == 0) {
+        // Linear: stops mapped to [start, start + length] range
+        result = mix(result, colors.sample(1), smoothstep(
+            linearGradientStart + percents.sample(0) * linearGradientLength,
+            linearGradientStart + percents.sample(1) * linearGradientLength,
+            t));
+        if (stops > 2) {
+            for (int i = 1; i < stops - 1; i++) {
+                result = mix(result, colors.sample(i + 1), smoothstep(
+                    linearGradientStart + percents.sample(i) * linearGradientLength,
+                    linearGradientStart + percents.sample(i + 1) * linearGradientLength,
+                    t));
+            }
+        }
+    } else {
+        // Radial / Rectangle: raw percent positions
+        result = mix(result, colors.sample(1), smoothstep(
+            percents.sample(0), percents.sample(1), t));
+        if (stops > 2) {
+            for (int i = 1; i < stops - 1; i++) {
+                result = mix(result, colors.sample(i + 1), smoothstep(
+                    percents.sample(i), percents.sample(i + 1), t));
+            }
+        }
+    }
+
+    // When texture is active, blend transparent gradient areas with background
+    if (useTexture == 1.0) {
+        result = mix(result, bgColor, 1.0 - result.a);
+    }
+
+    return result;
+}
+
+
+// ═══════════════════════════════════════════════
+// Main
+// ═══════════════════════════════════════════════
+
+void main()
+{
+    // Rectangle-type gradients ride the mesh-alpha distance field directly
+    // (1 at the rim, 0 at cornerRadius deep) — a varying read, no border
+    // machinery required.
+    mediump float dist = system.getSurfaceColor().a;
+
+    lowp vec4 bgColor = sampleBackground(uv);
+    lowp vec4 fillColor = applyFillGradient(uv, bgColor, dist);
+    fillColor.a *= opacityFactor;
+
+    FinalColor = fillColor;
+}

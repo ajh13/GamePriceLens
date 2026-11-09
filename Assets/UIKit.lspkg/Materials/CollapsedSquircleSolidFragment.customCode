@@ -1,0 +1,26 @@
+//
+// CollapsedSquircle — Fragment Color, SOLID variant
+//
+// The bottom rung of the RoundedRectangle material variant ladder (see
+// BaseRoundedRectangle): solid color fill, no border, no gradients, no
+// texture. The features aren't branched off — the code does not exist, so
+// there is no register/occupancy presence tax. Idle solid panels, the
+// overwhelming steady state, run this.
+//
+// Selection is automatic: BaseRoundedRectangle swaps to the leanest variant
+// that can render the current state (SOLID -> FILL -> the full material).
+//
+// Output: FinalColor → connect to Surface.FinalColor
+//
+
+input_vec4 backgroundColor;
+input_float opacityFactor;
+
+output_vec4 FinalColor;
+
+void main()
+{
+    lowp vec4 result = backgroundColor;
+    result.a *= opacityFactor;
+    FinalColor = result;
+}

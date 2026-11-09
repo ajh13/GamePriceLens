@@ -1,0 +1,366 @@
+- !<Material/7e6715fc-6174-4f70-acc9-2bddf740a9c6>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> 78b5ef7f-45ec-436d-99f0-27223319d41f
+- !<PassInfo/78b5ef7f-45ec-436d-99f0-27223319d41f>
+  CachedProperties:
+    - Port_Depth_N004:
+        typeIdx: 1
+        value: 1.000000
+    - Port_FinalColor1_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N004:
+        typeIdx: 1
+        value: 0.000000
+    - Port_GSplatRotation_N004:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_GSplatScale_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_PrevWorldPosition_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RayDirection_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldNormal_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldTangent_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Port_baseOnly_N001:
+        typeIdx: 1
+        value: 1.000000
+    - Port_borderResult_N006:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - background:
+        typeIdx: 9
+        value:
+          id: 56839391-0c54-46af-a9cb-335bac8657eb
+          sampler:
+            filteringMode: Trilinear
+            wrapModeU: Repeat
+            wrapModeV: Repeat
+            wrapModeW: Repeat
+            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+            mipmaps: false
+          type: Texture2D
+    - backgroundColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - backgroundTexture:
+        typeIdx: 9
+        value:
+          id: 00000000-0000-0000-0000-000000000000
+          sampler:
+            filteringMode: Trilinear
+            wrapModeU: Repeat
+            wrapModeV: Repeat
+            wrapModeW: Repeat
+            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+            mipmaps: false
+          type: Texture2D
+    - backgroundTextureTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - backgroundTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - border:
+        typeIdx: 1
+        value: 1.000000
+    - borderColor:
+        typeIdx: 5
+        value: {x: 0.702922, y: 0.702922, z: 0.702922, w: 1.000000}
+    - borderCosLinearGradientAngle:
+        typeIdx: 1
+        value: 1.000000
+    - "borderGradientColors[0]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "borderGradientColors[1]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "borderGradientColors[2]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "borderGradientColors[3]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "borderGradientColors[4]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "borderGradientColors[5]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "borderGradientPercents[0]":
+        typeIdx: 1
+        value: 0.000000
+    - "borderGradientPercents[1]":
+        typeIdx: 1
+        value: 0.000000
+    - "borderGradientPercents[2]":
+        typeIdx: 1
+        value: 0.000000
+    - "borderGradientPercents[3]":
+        typeIdx: 1
+        value: 0.000000
+    - "borderGradientPercents[4]":
+        typeIdx: 1
+        value: 0.000000
+    - "borderGradientPercents[5]":
+        typeIdx: 1
+        value: 0.000000
+    - borderGradientStartPosition:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+    - borderGradientStops:
+        typeIdx: 1
+        value: 1.000000
+    - borderGradientType:
+        typeIdx: 1
+        value: 1.000000
+    - borderLinearGradientLength:
+        typeIdx: 1
+        value: 1.000000
+    - borderLinearGradientStart:
+        typeIdx: 1
+        value: 1.000000
+    - borderOnly:
+        typeIdx: 2
+        value: false
+    - borderRadialGradientLength:
+        typeIdx: 1
+        value: 1.000000
+    - borderSinLinearGradientAngle:
+        typeIdx: 1
+        value: 1.000000
+    - borderSize:
+        typeIdx: 1
+        value: 1.000000
+    - circleTexture:
+        typeIdx: 9
+        value:
+          id: 03b4d640-2176-4b6a-8f77-bfb5d52bd1e9
+          sampler:
+            filteringMode: Trilinear
+            wrapModeU: Repeat
+            wrapModeV: Repeat
+            wrapModeW: Repeat
+            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+            mipmaps: false
+          type: Texture2D
+    - circleTextureTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - "colors[0]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "colors[1]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "colors[2]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "colors[3]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "colors[4]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "colors[5]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - cornerRadius:
+        typeIdx: 1
+        value: 1.000000
+    - cosLinearGradientAngle:
+        typeIdx: 1
+        value: 1.000000
+    - cursorPosition:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+    - cursorRadiusFactor:
+        typeIdx: 1
+        value: 1.000000
+    - cutOutCenter:
+        typeIdx: 2
+        value: false
+    - dotScalar:
+        typeIdx: 1
+        value: 1.000000
+    - dotsHighlightStop1:
+        typeIdx: 1
+        value: 1.000000
+    - dotsHighlightStop2:
+        typeIdx: 1
+        value: 1.000000
+    - dotsScalar:
+        typeIdx: 1
+        value: 1.000000
+    - edgeHighlightStop1:
+        typeIdx: 1
+        value: 1.000000
+    - edgeHighlightStop2:
+        typeIdx: 1
+        value: 1.000000
+    - frameBorder:
+        typeIdx: 1
+        value: 1.000000
+    - glowOpacityFactor:
+        typeIdx: 1
+        value: 1.000000
+    - grabZonesCount:
+        typeIdx: 1
+        value: 1.000000
+    - "grabZones[0]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "grabZones[1]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "grabZones[2]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "grabZones[3]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "grabZones[4]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "grabZones[5]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "grabZones[6]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - "grabZones[7]":
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - gradientStartPosition:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+    - gradientType:
+        typeIdx: 1
+        value: 1.000000
+    - highlightActiveColorStop1:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - highlightActiveColorStop2:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - highlightColorStop1:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - highlightColorStop2:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - highlightStop1:
+        typeIdx: 1
+        value: 1.000000
+    - highlightStop2:
+        typeIdx: 1
+        value: 1.000000
+    - isActive:
+        typeIdx: 1
+        value: 1.000000
+    - isHovered:
+        typeIdx: 1
+        value: 1.000000
+    - linearGradientLength:
+        typeIdx: 1
+        value: 1.000000
+    - linearGradientStart:
+        typeIdx: 1
+        value: 1.000000
+    - opacityFactor:
+        typeIdx: 1
+        value: 1.000000
+    - "percents[0]":
+        typeIdx: 1
+        value: 0.000000
+    - "percents[1]":
+        typeIdx: 1
+        value: 0.000000
+    - "percents[2]":
+        typeIdx: 1
+        value: 0.000000
+    - "percents[3]":
+        typeIdx: 1
+        value: 0.000000
+    - "percents[4]":
+        typeIdx: 1
+        value: 0.000000
+    - "percents[5]":
+        typeIdx: 1
+        value: 0.000000
+    - radialGradientLength:
+        typeIdx: 1
+        value: 1.000000
+    - sinLinearGradientAngle:
+        typeIdx: 1
+        value: 1.000000
+    - size:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+    - stops:
+        typeIdx: 1
+        value: 1.000000
+    - textureMode:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+    - textureWrap:
+        typeIdx: 1
+        value: 1.000000
+    - useTexture:
+        typeIdx: 1
+        value: 1.000000
+    - uvSize:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: Disabled
+  Properties:
+    Port_FinalColor_N004:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_VectorIn_N009:
+      typeIdx: 4
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+  Pass: !<reference> 0e1a6315-4e48-44a6-b0d3-23368ad65fe5

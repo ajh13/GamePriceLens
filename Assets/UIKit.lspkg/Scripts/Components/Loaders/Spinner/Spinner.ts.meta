@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/800a43d9-7470-fb89-9fcb-35fb02021d10>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 4c31ab0c-4ce8-43bc-8fec-33a54ffdc65e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 4c31ab0c-4ce8-43bc-8fec-33a54ffdc65e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e8d48124-50a7-4130-84d8-5e52f01eb0e0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e8d48124-50a7-4130-84d8-5e52f01eb0e0>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 638dd67d-3778-4903-90bb-24c00594da9e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _autoStart: false
+    _size: false
+    _themeOverride: false
+    _thickness: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _size: !<Vec3> {x: 3.000000, y: 3.000000, z: 1.000000}
+      _thickness: 0.150000
+      _autoStart: true
+      _themeOverride: Inherited
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input vec3 _size = {3,3,1} {"hint":"Size of the spinner in centimeters; the ring diameter is min(x, y)"}'
+    - '// @input float _thickness = 0.15 {"hint":"Ring thickness in centimeters"}'
+    - '// @input bool _autoStart = true {"hint":"Start the indeterminate spin automatically on start"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'

@@ -1,0 +1,102 @@
+- !<AssetImportMetadata/1e7c1636-38b6-da30-05b0-b04b7ef90e93>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b0b0827e-bddb-4e7b-9721-5bcbe176f5b7
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b0b0827e-bddb-4e7b-9721-5bcbe176f5b7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2cc55aaa-64dc-4ad2-81e0-edbb8837e161
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2cc55aaa-64dc-4ad2-81e0-edbb8837e161>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 6177526b-a76a-4af0-9ce6-8266b3e3ffe0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _confirmationThreshold: false
+    _defaultValue: true
+    _hasShadow: true
+    _inactive: false
+    _knobIcon: false
+    _numberOfSegments: false
+    _playAudio: false
+    _renderOrder: false
+    _segmented: false
+    _shadowPositionOffset: true
+    _size: false
+    _themeOverride: false
+    addCallbacks: false
+    onConfirmationCallbacks: false
+    onResetCallbacks: false
+    onValueChangeCallbacks: false
+    snapToTriggerPosition: true
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _inactive: false
+      _playAudio: false
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      _themeOverride: Inherited
+      _size: !<Vec3> {x: 12.000000, y: 3.000000, z: 1.000000}
+      _defaultValue: !<float> 0.000000
+      snapToTriggerPosition: false
+      _segmented: false
+      _numberOfSegments: !<float> 5.000000
+      _knobIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      addCallbacks: false
+      onValueChangeCallbacks:
+        []
+      onConfirmationCallbacks:
+        []
+      onResetCallbacks:
+        []
+      _confirmationThreshold: 0.900000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Enable interaction audio feedback"}'
+    - // @input bool _hasShadow
+    - '// @input vec3 _shadowPositionOffset = "{0.05,-0.05,-0.01}" {"showIf":"_hasShadow"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - '// @input vec3 _size = {6,3,1} {"hint":"Size of the element in centimeters"}'
+    - '// @input float _defaultValue {"hint":"The default value of the slider, should be between 0 and 1", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input bool snapToTriggerPosition {"hint":"Enable triggering anywhere on the slider track to snap the knob to that position"}'
+    - '// @input bool _segmented {"hint":"Enable this to make the slider segmented, with a fixed number of segments"}'
+    - '// @input float _numberOfSegments = 5 {"hint":"The number of segments for the segmented slider, must be at least 2", "showIf":"_segmented"}'
+    - '// @input Asset.Texture _knobIcon {"hint":"Optional icon rendered on the knob (moves with it). Leave empty for no knob icon."}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] onValueChangeCallbacks = {} {"label":"On Value Changed Callbacks", "showIf":"addCallbacks"}'
+    - '// @input Callback[] onConfirmationCallbacks = {} {"label":"On Confirmation Callbacks", "showIf":"addCallbacks"}'
+    - '// @input Callback[] onResetCallbacks = {} {"label":"On Reset Callbacks", "showIf":"addCallbacks"}'
+    - '// @input number _confirmationThreshold = "0.9"'

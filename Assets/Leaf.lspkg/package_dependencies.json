@@ -1,0 +1,18 @@
+{
+  "dependencies": [
+    {
+      "assetId": "77pMkoqQPt5MSnQYdckogW",
+      "exportId": "82b29808-b3eb-4a2e-a26a-4f0c91ced343",
+      "name": "Bitmoji 3D",
+      "version": "10.0.1",
+      "id": "0005e0cc-4592-ac28-0000-000000067b6a"
+    },
+    {
+      "assetId": "1aPW5eMfMPeP1615dXiqyN",
+      "exportId": "fca03b4a-b5a7-4a4f-8e5c-dfdbf53aadf4",
+      "name": "InteractionKit",
+      "version": "4.0.0",
+      "id": "0f7a0bbe-777c-41a5-b979-0b0430f25836"
+    }
+  ]
+}

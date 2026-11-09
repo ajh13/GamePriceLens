@@ -1,0 +1,121 @@
+- !<AssetImportMetadata/22125847-e574-5e49-a471-95531bccf28f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 56f73001-e566-4fc5-9087-6fd2f6ebdce5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 56f73001-e566-4fc5-9087-6fd2f6ebdce5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d4988742-19e8-4371-a2c7-0ca1a1a94b0a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d4988742-19e8-4371-a2c7-0ca1a1a94b0a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 67fbb302-96ec-4334-b8ce-d27fea0bd371
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _defaultToOn: false
+    _format: false
+    _hasShadow: false
+    _inactive: false
+    _opacity: false
+    _playAudio: false
+    _renderOrder: false
+    _secondaryLanguages: false
+    _shadowPositionOffset: false
+    _shapeSystem2: false
+    _shapeSystem3: false
+    _silenceUntilTerminationMs: false
+    _size: false
+    _styleSystem2: false
+    _styleSystem3: false
+    _themeOverride: false
+    _toggleable: true
+    addCallbacks: false
+    onFinishedCallbacks: false
+    onValueChangeCallbacks: false
+    triggerDownCallbacks: false
+    triggerUpCallbacks: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _inactive: false
+      _playAudio: false
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
+      _themeOverride: Inherited
+      _toggleable: false
+      _defaultToOn: false
+      addCallbacks: false
+      triggerUpCallbacks:
+        []
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
+      _size: !<Vec3> {x: 3.000000, y: 3.000000, z: 3.000000}
+      _shapeSystem2: Rectangle
+      _shapeSystem3: Rectangle
+      _styleSystem2: PrimaryNeutral
+      _styleSystem3: Primary
+      _opacity: !<float> 1.000000
+      _format: default
+      _silenceUntilTerminationMs: !<float> 1500.000000
+      _secondaryLanguages: !<string[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Enable interaction audio feedback"}'
+    - // @input bool _hasShadow
+    - '// @input vec3 _shadowPositionOffset = "{0.05,-0.05,-0.01}" {"showIf":"_hasShadow"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - // @input bool _toggleable
+    - '// @input bool _defaultToOn {"hint":"The default state of the Toggle", "showIf":"_toggleable"}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - '// @ui {"widget":"group_start", "label":"Callbacks", "showIf":"addCallbacks"}'
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] triggerUpCallbacks = {} {"label":"On Trigger Up Callbacks"}'
+    - '// @input Callback[] triggerDownCallbacks = {} {"label":"On Trigger Down Callbacks"}'
+    - '// @input Callback[] onValueChangeCallbacks = {} {"label":"On Value Changed Callbacks", "showIf":"_toggleable"}'
+    - '// @input Callback[] onFinishedCallbacks = {} {"label":"On Finished Callbacks", "showIf":"_toggleable"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input vec3 _size = {9,3.75,1} {"hint":"Size of the element in centimeters"}'
+    - '// @input string _shapeSystem2 = "Rectangle" {"label":"Shape", "widget":"combobox", "values":[{"label":"Rectangle", "value":"Rectangle"}, {"label":"Capsule", "value":"Capsule"}, {"label":"Round", "value":"Round"}], "showIf":"_themeOverride", "showIfValue":"System2"}'
+    - '// @input string _shapeSystem3 = "Rectangle" {"label":"Shape", "widget":"combobox", "values":[{"label":"Rectangle", "value":"Rectangle"}, {"label":"Capsule", "value":"Capsule"}, {"label":"Round", "value":"Round"}], "showIf":"_themeOverride", "showIfValue":"System3"}'
+    - '// @input string _styleSystem2 = "PrimaryNeutral" {"label":"Style", "widget":"combobox", "values":[{"label":"PrimaryNeutral", "value":"PrimaryNeutral"}, {"label":"Primary", "value":"Primary"}, {"label":"Secondary", "value":"Secondary"}, {"label":"Special", "value":"Special"}, {"label":"Ghost", "value":"Ghost"}], "showIf":"_themeOverride", "showIfValue":"System2"}'
+    - '// @input string _styleSystem3 = "Primary" {"label":"Style", "widget":"combobox", "values":[{"label":"Prism", "value":"Prism"}, {"label":"PrismGhost", "value":"PrismGhost"}, {"label":"Primary", "value":"Primary"}, {"label":"Secondary", "value":"Secondary"}, {"label":"Ghost", "value":"Ghost"}, {"label":"Tag", "value":"Tag"}, {"label":"Chip", "value":"Chip"}], "showIf":"_themeOverride", "showIfValue":"System3"}'
+    - '// @input float _opacity = 1 {"widget":"slider", "min":0, "max":1}'
+    - '// @input string _format = "default" {"widget":"combobox", "values":[{"label":"Default", "value":"default"}, {"label":"Search", "value":"search"}, {"label":"URL", "value":"url"}]}'
+    - '// @input number _silenceUntilTerminationMs = "1500" {"label":"Silence Until Termination (ms)"}'
+    - '// @input string[] _secondaryLanguages = {} {"label":"Secondary Languages", "hint":"Additional BCP-47 language tags speech may switch to alongside the device language, e.g. the languages typical of the place being navigated to."}'

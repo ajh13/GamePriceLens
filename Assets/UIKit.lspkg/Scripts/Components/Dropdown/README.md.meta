@@ -1,0 +1,16 @@
+- !<AssetImportMetadata/09703eb3-cc81-0bf7-5a00-d2c8ccfb2776>
+  ImportedAssetIds:
+    MarkdownAsset: !<reference> 3c707f5f-d9b9-4f91-b3a6-7d8f75022386
+  ImporterName: MarkdownAssetImporter
+  PrimaryAsset: !<reference> 3c707f5f-d9b9-4f91-b3a6-7d8f75022386
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

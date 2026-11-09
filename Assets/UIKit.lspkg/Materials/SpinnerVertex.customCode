@@ -1,0 +1,73 @@
+// Spinner arc-strip vertex stage.
+//
+// Bends the unit RingStrip mesh (64 segments; position.x = u - 0.5 along the
+// strip, position.y = v - 0.5 across it — see ring_strip_generator.py) into
+// exactly the visible arc, in local-space centimeters. The fragment stage
+// cuts the analytic shape from the displaced surface position with an SDF,
+// so this stage only has to COVER it: the band is padded radially by aaPad,
+// the angular span is padded by the rounded-cap extent, and outer-edge
+// vertices are outset to cancel chord sag.
+//
+// IMPORTANT (Lens Studio custom-node semantics): outputs wired from a
+// vertex-stage node into a fragment-stage node are NOT varyings — LS
+// re-evaluates the expression at the fragment stage, where
+// system.getSurfacePositionObjectSpace() is the *displaced* surface
+// position. So this node outputs ONLY newPos; the fragment stage derives
+// everything per pixel from the rendered position instead.
+//
+// Arc space convention (shared with SpinnerFragment.customCode): the arc is
+// symmetric about the +Y axis; theta is measured from +Y, increasing
+// clockwise, spanning [-halfSpan, +halfSpan]. halfSpan is clamped to PI so
+// a full ring's strip ends meet exactly at the seam instead of overlapping
+// (overlap would double-blend the AA fringe). Cap coverage past the clamp
+// wraps around to the strip's other end — the SDF is position-based, so
+// covering fragments render identically no matter which segment covers them.
+
+input_vec2 arcRot;
+input_float arcAperture;
+input_float ringRadius;
+input_float halfThickness;
+input_float aaPad;
+
+output_vec3 newPos;
+
+const mediump float PI = 3.14159265359;
+// Must match SEGMENTS in UIKitResources/ring_strip_generator.py.
+const mediump float SEGMENTS = 64.0;
+
+void main()
+{
+    // At the vertex stage this is the raw position attribute, which encodes
+    // u/v (system.getSurfaceUVCoord() does not exist at the vertex stage).
+    mediump vec3 basePos = system.getSurfacePositionObjectSpace();
+    mediump vec2 stripUv = basePos.xy + 0.5;
+
+    mediump float radius = max(ringRadius, 1.0e-4);
+    mediump float halfBand = halfThickness + aaPad;
+
+    // Angular padding covering the rounded caps (+ AA): the cap disc's
+    // farthest angular reach is where the ray from the ring center grazes
+    // it tangentially — asin(halfBand / radius) past the arc end. (Not
+    // 2*asin(halfBand / (2*radius)), which only covers cap points at the
+    // centerline radius and clips thick caps.)
+    mediump float capPad = asin(clamp(halfBand / radius, 0.0, 1.0));
+    mediump float halfSpan = min(arcAperture + capPad, PI);
+    mediump float theta = (stripUv.x * 2.0 - 1.0) * halfSpan;
+
+    // Chord-sag compensation: an inscribed polygon's chords dip inside the
+    // true circle by factor cos(halfSegmentAngle); outset the outer edge so
+    // chord midpoints still cover radius+halfBand. Inner chords sag toward
+    // the center — extra coverage, already correct.
+    mediump float chordFix = 1.0 / cos(halfSpan / SEGMENTS);
+    mediump float rInner = max(radius - halfBand, 0.0);
+    mediump float rOuter = (radius + halfBand) * chordFix;
+    mediump float r = mix(rInner, rOuter, stripUv.y);
+
+    mediump vec2 p = r * vec2(sin(theta), cos(theta));
+
+    // Rotate arc space so its +Y axis lands on the arc-center direction.
+    // arcRot = (cos, sin) of (arcCenter - PI/2), precomputed on the CPU —
+    // trig of a uniform has no business running per vertex or per pixel
+    // (sin/cos measured ~2.7x a multiply-add each on the Adreno 621).
+    newPos = vec3(arcRot.x * p.x - arcRot.y * p.y, arcRot.y * p.x + arcRot.x * p.y, 0.0);
+}

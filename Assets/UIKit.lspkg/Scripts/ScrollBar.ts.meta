@@ -1,0 +1,61 @@
+- !<AssetImportMetadata/ab241a9e-f1ca-d03c-72bf-00599c86b371>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e4dd53bc-1508-4ccc-be3a-ed2d1449fa10
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e4dd53bc-1508-4ccc-be3a-ed2d1449fa10
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> eb75e86b-471b-48de-a7a1-b133cf22232b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/eb75e86b-471b-48de-a7a1-b133cf22232b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: c4ec55be-629f-4a65-b220-5d6173ae32ac
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _playAudio: false
+    _renderOrder: false
+    _size: false
+    _themeOverride: false
+    orientation: false
+    scrollWindow: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _size: !<Vec2> {x: 20.000000, y: 1.800000}
+      orientation: Vertical
+      _themeOverride: Inherited
+      scrollWindow: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      _playAudio: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input int _renderOrder = "0"'
+    - "// @input vec2 _size = {20,1.8}"
+    - '// @input string orientation = "Vertical" {"widget":"combobox", "values":[{"label":"Horizontal", "value":"Horizontal"}, {"label":"Vertical", "value":"Vertical"}]}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "hint":"Inherited follows the global theme. System 2.0 = classic always-visible gray knob. System 3.0 = magenta→cyan gradient thumb with scroll auto-hide.", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - // @input AssignableType_1 scrollWindow
+    - // @input bool _playAudio

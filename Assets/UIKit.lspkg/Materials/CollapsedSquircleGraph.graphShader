@@ -1,0 +1,1684 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 2
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: size
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: size
+        Tooltip:
+          String: ""
+      PositionX: -1143
+      PositionY: -1270
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: size
+    Node1:
+      DependencyIndex: 1
+      LevelID: 3
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: cornerRadius
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: cornerRadius
+        Tooltip:
+          String: ""
+      PositionX: -1145
+      PositionY: -1191
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: cornerRadius
+    Node10:
+      DependencyIndex: 10
+      LevelID: 14
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: backgroundColor
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: backgroundColor
+        Tooltip:
+          String: ""
+      PositionX: -1130
+      PositionY: -479
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: backgroundColor
+    Node11:
+      DependencyIndex: 11
+      LevelID: 57
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Array:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          IOType: 1
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : xyz : xy : x"
+        Group:
+          String: ""
+        ScriptName:
+          String: colors
+        Size:
+          Variable: 6
+        SizeOut:
+          IOType: 1
+          Variable: 0.0
+        SortIndex:
+          Variable: 0
+        Title:
+          String: colors
+        Tooltip:
+          String: ""
+      PositionX: -1194
+      PositionY: -392
+      TemplateID: nodes_inputs_parameters_array_object
+      Title1: Float Array Object Parameter
+      Title2: colors
+    Node12:
+      DependencyIndex: 12
+      LevelID: 15
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Array:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          IOType: 1
+        Channels:
+          ItemIndex: 3
+          ItemList: "xyzw : xyz : xy : x"
+        Group:
+          String: ""
+        ScriptName:
+          String: percents
+        Size:
+          Variable: 6
+        SizeOut:
+          IOType: 1
+          Variable: 0.0
+        SortIndex:
+          Variable: 0
+        Title:
+          String: percents
+        Tooltip:
+          String: ""
+      PositionX: -1192
+      PositionY: -295
+      TemplateID: nodes_inputs_parameters_array_object
+      Title1: Float Array Object Parameter
+      Title2: percents
+    Node13:
+      DependencyIndex: 13
+      LevelID: 16
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: stops
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: stops
+        Tooltip:
+          String: ""
+      PositionX: -1120
+      PositionY: -202
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: stops
+    Node14:
+      DependencyIndex: 14
+      LevelID: 17
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: linearGradientStart
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: linearGradientStart
+        Tooltip:
+          String: ""
+      PositionX: -1136
+      PositionY: -119
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: linearGradientStart
+    Node15:
+      DependencyIndex: 15
+      LevelID: 18
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: linearGradientLength
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: linearGradientLength
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -36
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: linearGradientLength
+    Node16:
+      DependencyIndex: 16
+      LevelID: 19
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: sinLinearGradientAngle
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: sinLinearGradientAngle
+        Tooltip:
+          String: ""
+      PositionX: -1139
+      PositionY: 49
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: sinLinearGradientAngle
+    Node17:
+      DependencyIndex: 17
+      LevelID: 20
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: cosLinearGradientAngle
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: cosLinearGradientAngle
+        Tooltip:
+          String: ""
+      PositionX: -1130
+      PositionY: 132
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: cosLinearGradientAngle
+    Node18:
+      DependencyIndex: 18
+      LevelID: 21
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: gradientStartPosition
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: gradientStartPosition
+        Tooltip:
+          String: ""
+      PositionX: -1108
+      PositionY: 219
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: gradientStartPosition
+    Node19:
+      DependencyIndex: 19
+      LevelID: 22
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: radialGradientLength
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: radialGradientLength
+        Tooltip:
+          String: ""
+      PositionX: -1114
+      PositionY: 302
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: radialGradientLength
+    Node2:
+      DependencyIndex: 2
+      LevelID: 5
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderSize
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderSize
+        Tooltip:
+          String: ""
+      PositionX: -1148
+      PositionY: -1104
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderSize
+    Node20:
+      DependencyIndex: 20
+      LevelID: 23
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: gradientType
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: gradientType
+        Tooltip:
+          String: ""
+      PositionX: -1071
+      PositionY: 385
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: gradientType
+    Node21:
+      DependencyIndex: 21
+      LevelID: 24
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderColor
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderColor
+        Tooltip:
+          String: ""
+      PositionX: -1065
+      PositionY: 467
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderColor
+    Node22:
+      DependencyIndex: 22
+      LevelID: 6
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderSoftness
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderSoftness
+        Tooltip:
+          String: ""
+      PositionX: -1042
+      PositionY: 560
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderSoftness
+    Node23:
+      DependencyIndex: 23
+      LevelID: 25
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Array:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          IOType: 1
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : xyz : xy : x"
+        Group:
+          String: ""
+        ScriptName:
+          String: borderGradientColors
+        Size:
+          Variable: 6
+        SizeOut:
+          IOType: 1
+          Variable: 0.0
+        SortIndex:
+          Variable: 0
+        Title:
+          String: borderGradientColors
+        Tooltip:
+          String: ""
+      PositionX: -1107
+      PositionY: 657
+      TemplateID: nodes_inputs_parameters_array_object
+      Title1: Float Array Object Parameter
+      Title2: borderGradientColors
+    Node24:
+      DependencyIndex: 24
+      LevelID: 26
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Array:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          IOType: 1
+        Channels:
+          ItemIndex: 3
+          ItemList: "xyzw : xyz : xy : x"
+        Group:
+          String: ""
+        ScriptName:
+          String: borderGradientPercents
+        Size:
+          Variable: 6
+        SizeOut:
+          IOType: 1
+          Variable: 0.0
+        SortIndex:
+          Variable: 0
+        Title:
+          String: borderGradientPercents
+        Tooltip:
+          String: ""
+      PositionX: -1078
+      PositionY: 756
+      TemplateID: nodes_inputs_parameters_array_object
+      Title1: Float Array Object Parameter
+      Title2: borderGradientPercents
+    Node25:
+      DependencyIndex: 25
+      LevelID: 27
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderGradientStops
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderGradientStops
+        Tooltip:
+          String: ""
+      PositionX: -985
+      PositionY: 862
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderGradientStops
+    Node26:
+      DependencyIndex: 26
+      LevelID: 28
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderLinearGradientStart
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderLinearGradientStart
+        Tooltip:
+          String: ""
+      PositionX: -969
+      PositionY: 948
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderLinearGradientStart
+    Node27:
+      DependencyIndex: 27
+      LevelID: 29
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderLinearGradientLength
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderLinearGradientLength
+        Tooltip:
+          String: ""
+      PositionX: -938
+      PositionY: 1036
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderLinearGradientLength
+    Node28:
+      DependencyIndex: 28
+      LevelID: 30
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderSinLinearGradientAngle
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderSinLinearGradientAngle
+        Tooltip:
+          String: ""
+      PositionX: -890
+      PositionY: 1121
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderSinLinearGradientAngle
+    Node29:
+      DependencyIndex: 29
+      LevelID: 31
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderCosLinearGradientAngle
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderCosLinearGradientAngle
+        Tooltip:
+          String: ""
+      PositionX: -871
+      PositionY: 1204
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderCosLinearGradientAngle
+    Node3:
+      DependencyIndex: 3
+      LevelID: 7
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: border
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: border
+        Tooltip:
+          String: ""
+      PositionX: -1145
+      PositionY: -1012
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: border
+    Node30:
+      DependencyIndex: 30
+      LevelID: 32
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderGradientStartPosition
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderGradientStartPosition
+        Tooltip:
+          String: ""
+      PositionX: -796
+      PositionY: 1290
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderGradientStartPosition
+    Node31:
+      DependencyIndex: 31
+      LevelID: 33
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderRadialGradientLength
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderRadialGradientLength
+        Tooltip:
+          String: ""
+      PositionX: -716
+      PositionY: 1372
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderRadialGradientLength
+    Node32:
+      DependencyIndex: 32
+      LevelID: 34
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderGradientType
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderGradientType
+        Tooltip:
+          String: ""
+      PositionX: -648
+      PositionY: 1464
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderGradientType
+    Node33:
+      DependencyIndex: 33
+      LevelID: 74
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: true
+        EnableMin:
+          Variable: true
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: opacityFactor
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Opacity Factor
+        Tooltip:
+          String: Multiplier On Outgoing Opacity (Make Sure To Enable Blending and Alpha on Color Mask)
+      PositionX: -606
+      PositionY: 1557
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Opacity Factor
+    Node34:
+      DependencyIndex: 34
+      LevelID: 1
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4  Value1;
+            input_vec4  Value2;
+            output_vec4 Result; 
+            
+            void main()
+            {
+            	Result = Value1 * Value2;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: "7062163365558962942:12743203639008043213"
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Errors:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        FinalColor:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ID:
+          Variable: 1
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Fragment
+        UseExternalFile:
+          Variable: true
+        backgroundColor:
+          Connection0:
+            NodeLevelID: 14
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        backgroundTexture:
+          ClassType2: TEXTURE_OBJECT_2D
+          Connection0:
+            NodeLevelID: 10
+            PortID: Texture
+        baseOnly:
+          Variable: 0.0
+        border:
+          Connection0:
+            NodeLevelID: 7
+            PortID: Output
+          Variable: 0.0
+        borderColor:
+          Connection0:
+            NodeLevelID: 24
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        borderCosLinearGradientAngle:
+          Connection0:
+            NodeLevelID: 31
+            PortID: Output
+          Variable: 0.0
+        borderGradientColors:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          Connection0:
+            NodeLevelID: 25
+            PortID: Array
+        borderGradientPercents:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          Connection0:
+            NodeLevelID: 26
+            PortID: Array
+        borderGradientStartPosition:
+          Connection0:
+            NodeLevelID: 32
+            PortID: Output
+          Variable: [0.0, 0.0]
+        borderGradientStops:
+          Connection0:
+            NodeLevelID: 27
+            PortID: Output
+          Variable: 0.0
+        borderGradientType:
+          Connection0:
+            NodeLevelID: 34
+            PortID: Output
+          Variable: 0.0
+        borderLinearGradientLength:
+          Connection0:
+            NodeLevelID: 29
+            PortID: Output
+          Variable: 0.0
+        borderLinearGradientStart:
+          Connection0:
+            NodeLevelID: 28
+            PortID: Output
+          Variable: 0.0
+        borderRadialGradientLength:
+          Connection0:
+            NodeLevelID: 33
+            PortID: Output
+          Variable: 0.0
+        borderResult_out:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        borderSinLinearGradientAngle:
+          Connection0:
+            NodeLevelID: 30
+            PortID: Output
+          Variable: 0.0
+        borderSize:
+          Connection0:
+            NodeLevelID: 5
+            PortID: Output
+          Variable: 0.0
+        borderSoftness:
+          Connection0:
+            NodeLevelID: 6
+            PortID: Output
+          Variable: 0.0
+        colors:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          Connection0:
+            NodeLevelID: 57
+            PortID: Array
+        cornerRadius:
+          Connection0:
+            NodeLevelID: 3
+            PortID: Output
+          Variable: 0.0
+        cosLinearGradientAngle:
+          Connection0:
+            NodeLevelID: 20
+            PortID: Output
+          Variable: 0.0
+        distFromEdge_out:
+          IOType: 1
+          Variable: 0.0
+        fillColor_out:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        gradientStartPosition:
+          Connection0:
+            NodeLevelID: 21
+            PortID: Output
+          Variable: [0.0, 0.0]
+        gradientType:
+          Connection0:
+            NodeLevelID: 23
+            PortID: Output
+          Variable: 0.0
+        linearGradientLength:
+          Connection0:
+            NodeLevelID: 18
+            PortID: Output
+          Variable: 0.0
+        linearGradientStart:
+          Connection0:
+            NodeLevelID: 17
+            PortID: Output
+          Variable: 0.0
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        opacityFactor:
+          Connection0:
+            NodeLevelID: 74
+            PortID: Output
+          Variable: 0.0
+        percents:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          Connection0:
+            NodeLevelID: 15
+            PortID: Array
+        radialGradientLength:
+          Connection0:
+            NodeLevelID: 22
+            PortID: Output
+          Variable: 0.0
+        sinLinearGradientAngle:
+          Connection0:
+            NodeLevelID: 19
+            PortID: Output
+          Variable: 0.0
+        size:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [0.0, 0.0]
+        stops:
+          Connection0:
+            NodeLevelID: 16
+            PortID: Output
+          Variable: 0.0
+        textureMode:
+          Connection0:
+            NodeLevelID: 12
+            PortID: Output
+          Variable: [0.0, 0.0]
+        textureWrap:
+          Connection0:
+            NodeLevelID: 13
+            PortID: Output
+          Variable: 0.0
+        useTexture:
+          Connection0:
+            NodeLevelID: 11
+            PortID: Output
+          Variable: 0.0
+        uv:
+          Connection0:
+            NodeLevelID: 0
+            PortID: uv
+          Variable: [0.0, 0.0]
+      PositionX: -83
+      PositionY: -270
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Fragment
+    Node35:
+      DependencyIndex: 35
+      LevelID: 9
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ApplyBlending:
+          Variable: false
+        ApplyRotation:
+          Variable: true
+        ApplySkinning:
+          Variable: false
+        ApplyTranslation:
+          Variable: true
+        From:
+          ItemIndex: 1
+          ItemList: "Tangent Space : Object Space : World Space : View Space : Screen Space ( NDC )"
+        To:
+          ItemIndex: 1
+          ItemList: "Object Space : World Space : View Space : Screen Space ( NDC )"
+        TransformNormal:
+          Variable: false
+        VectorIn:
+          Connection0:
+            NodeLevelID: 0
+            PortID: newPos
+          Variable: [0.0, 0.0, 0.0]
+        VectorOut:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: 126
+      PositionY: -473
+      TemplateID: node_math_transform
+      TemplateVersionMinor: 2
+      Title1: Transform Vector
+      Title2: Object to World
+    Node36:
+      CommentSizeX: 0
+      CommentSizeY: 0
+      DependencyIndex: 36
+      LevelID: 4
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Depth:
+          Variable: 1.0
+        DepthMode:
+          ItemIndex: 0
+          ItemList: "Non-Linear - Normalized [0 to 1] : Linear - Normalized [-1 to 1] : View Space - Non-Normalized [-near to -far]"
+        DontFreezeSpec:
+          Variable: false
+        FinalColor:
+          ClassType1: COLOR
+          Connection0:
+            NodeLevelID: 1
+            PortID: FinalColor
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor1:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor2:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor3:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        GSplatPointSize:
+          Variable: 0.0
+        GSplatRotation:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        GSplatScale:
+          Variable: [0.0, 0.0, 0.0]
+        Motion Vector Pass:
+          ItemIndex: 0
+          ItemList: "Write Velocity and Depth : Discard Velocity but Write Depth : Discard Velocity and Depth"
+        Negative:
+          Variable: false
+        PrevWorldPosition:
+          Variable: [0.0, 0.0, 0.0]
+        RayDirection:
+          Variable: [0.0, 1.0, 0.0]
+        RayOrigin:
+          Variable: [0.0, 0.0, 0.0]
+        ShowPrevPos:
+          Variable: false
+        Targets:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : 4"
+        Type:
+          ItemIndex: 0
+          ItemList: "3D : Post Effect : Hair : Gaussian Splatting"
+        WorldNormal:
+          Variable: [0.0, 1.0, 0.0]
+        WorldPosition:
+          Connection0:
+            NodeLevelID: 9
+            PortID: VectorOut
+          Variable: [0.0, 0.0, 0.0]
+        WorldTangent:
+          Variable: [0.0, 0.0, 1.0]
+        WriteDepth:
+          Variable: false
+      PositionX: 579
+      PositionY: -465
+      TemplateID: nodes_main_graph
+      Title1: Shader
+      Title2: 3D
+    Node4:
+      DependencyIndex: 4
+      LevelID: 8
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: uvSize
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: uvSize
+        Tooltip:
+          String: ""
+      PositionX: -1143
+      PositionY: -925
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: uvSize
+    Node5:
+      DependencyIndex: 5
+      LevelID: 0
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4  Value1;
+            input_vec4  Value2;
+            output_vec4 Result; 
+            
+            void main()
+            {
+            	Result = Value1 * Value2;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: "11057117676718738393:10540014829682391960"
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Errors:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        ID:
+          Variable: 0
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Vertex
+        UseExternalFile:
+          Variable: true
+        border:
+          Connection0:
+            NodeLevelID: 7
+            PortID: Output
+          Variable: 0.0
+        borderSize:
+          Connection0:
+            NodeLevelID: 5
+            PortID: Output
+          Variable: 0.0
+        cornerRadius:
+          Connection0:
+            NodeLevelID: 3
+            PortID: Output
+          Variable: 0.0
+        newPos:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        size:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [0.0, 0.0]
+        uv:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        uvSize:
+          Connection0:
+            NodeLevelID: 8
+            PortID: Output
+          Variable: [0.0, 0.0]
+      PositionX: -197
+      PositionY: -579
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Vertex
+    Node6:
+      DependencyIndex: 6
+      LevelID: 10
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        DepthMap:
+          Variable: false
+        ExtraOutputs:
+          Variable: false
+        Group:
+          String: ""
+        PixelSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        ScriptName:
+          String: backgroundTexture
+        SortIndex:
+          Variable: 0
+        Texture:
+          ClassType2: TEXTURE_OBJECT_2D
+          IOType: 1
+        TextureSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        Title:
+          String: backgroundTexture
+        Tooltip:
+          String: ""
+      PositionX: -1209
+      PositionY: -818
+      TemplateID: nodes_inputs_parameters_texture2d_object
+      TemplateVersionMinor: 1
+      Title1: Texture 2D Object Parameter
+      Title2: backgroundTexture
+    Node7:
+      DependencyIndex: 7
+      LevelID: 11
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: useTexture
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: useTexture
+        Tooltip:
+          String: ""
+      PositionX: -1133
+      PositionY: -727
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: useTexture
+    Node8:
+      DependencyIndex: 8
+      LevelID: 12
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: textureMode
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: textureMode
+        Tooltip:
+          String: ""
+      PositionX: -1132
+      PositionY: -642
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: textureMode
+    Node9:
+      DependencyIndex: 9
+      LevelID: 13
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: textureWrap
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: textureWrap
+        Tooltip:
+          String: ""
+      PositionX: -1131
+      PositionY: -562
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: textureWrap
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+SystemID: dev.snap.shaders

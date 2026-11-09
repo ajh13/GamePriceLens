@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/936ff9f0-7403-507f-0a9a-b351c19c83b1>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d13f602e-6200-43b7-8332-7ec8dc1dffb1
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d13f602e-6200-43b7-8332-7ec8dc1dffb1
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 61f55159-26b7-4508-9d63-56ceb82477b3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/61f55159-26b7-4508-9d63-56ceb82477b3>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: af558426-68f4-4854-8019-8164f1c82ce5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _allowAllTogglesOff: false
+    addCallbacks: false
+    onToggleSelectedCallbacks: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _allowAllTogglesOff: false
+      addCallbacks: false
+      onToggleSelectedCallbacks:
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input bool _allowAllTogglesOff {"hint":"Is it allowed that no toggle is switched on?"}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] onToggleSelectedCallbacks = {} {"label":"On Toggle Selected Callbacks", "showIf":"addCallbacks"}'

@@ -1,0 +1,81 @@
+//
+// FramePanel - Compose Effect
+//
+// Minimal compose node for the System3 panel, the panel analogue of
+// FrameCompose. Composites the base CollapsedSquircle fill + border (the base
+// runs in baseOnly mode, so it does not blend the border itself), then
+// optionally punches a transparent center -- leaving an opaque ring of width
+// frameBorder around the perimeter so content behind the panel (e.g. a
+// WebView surface) shows through. No cursor highlight, dots, or grab zones.
+// Reuses the frame's existing cutOutCenter (bool) / frameBorder (float) params,
+// plus a centerFeather (float) that dials the cutout edge softness (floored
+// above zero in-shader to avoid aliasing).
+//
+// Wire: Base fillColor_out     -> fillColor
+//       Base borderResult_out  -> borderResult
+//       Base distFromEdge_out  -> distFromEdge
+//       Vertex uv              -> uv
+//       This node FinalColor   -> Surface.FinalColor
+//
+
+// From base fragment
+input_vec4 fillColor;
+input_vec4 borderResult;
+input_float distFromEdge;
+
+// From vertex
+input_vec2 uv;
+
+// Shape
+input_vec2 size;
+
+// Center cutout (reuses the frame's existing cutOutCenter / frameBorder params)
+input_bool cutOutCenter;    // true = punch the center transparent
+input_float frameBorder;    // width of the opaque ring kept around the edge
+input_float centerFeather;  // cutout edge softness; floored above zero below
+
+// Opacity
+input_float opacityFactor;
+
+output_vec4 FinalColor;
+
+// Floor the dialed-in feather just above zero so the cutout mask never
+// collapses to a hard (aliased) step.
+const float MIN_CENTER_FEATHER = 0.1;
+
+
+// Returns 1.0 in the interior region, 0.0 in the border ring. centerSize is the
+// interior extent (full size minus the ring width on each side). Matches
+// computeCenterMask in FrameCompose.customCode.
+float computeCenterMask(vec2 frameUv, vec2 centerSize, float feather)
+{
+    float m = smoothstep(centerSize.x * -0.5 - feather, centerSize.x * -0.5 + feather, frameUv.x);
+    m *= smoothstep(centerSize.x * 0.5 + feather, centerSize.x * 0.5 - feather, frameUv.x);
+    m *= smoothstep(centerSize.y * -0.5 - feather, centerSize.y * -0.5 + feather, frameUv.y);
+    m *= smoothstep(centerSize.y * 0.5 + feather, centerSize.y * 0.5 - feather, frameUv.y);
+    return smoothstep(0.0, 1.0, m);
+}
+
+
+void main()
+{
+    lowp vec4 result = fillColor;
+
+    // Base runs in baseOnly mode and does not blend the border, so do it here.
+    if (distFromEdge > 0.0) {
+        result = mix(result, borderResult, distFromEdge);
+    }
+
+    // Center cutout: punch the interior to transparent, keeping an opaque ring
+    // of width frameBorder around the perimeter.
+    if (cutOutCenter) {
+        float feather = max(centerFeather, MIN_CENTER_FEATHER);
+        vec2 centerSize = size + 2.0 - frameBorder * 2.0;
+        vec2 frameUv = uv * (size + 2.0) * 0.5;
+        result.a *= 1.0 - computeCenterMask(frameUv, centerSize, feather);
+    }
+
+    result.a *= opacityFactor;
+
+    FinalColor = result;
+}

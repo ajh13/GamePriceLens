@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/2b513546-71f4-b891-b038-57428725f130>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 344d0b69-9cd1-4559-99b5-4bcf5b628469
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 344d0b69-9cd1-4559-99b5-4bcf5b628469
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ba29c756-50ad-474c-b880-16f9e3a3d5d2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ba29c756-50ad-474c-b880-16f9e3a3d5d2>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: dfb81b3b-d2c6-4c82-8de2-81092cb65a07
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _bevelRadius: false
+    _cornerRadius: false
+    _depth: false
+    _renderOrder: false
+    _size: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: !<float> 0.000000
+      _size: !<Vec2> {x: 8.000000, y: 4.000000}
+      _depth: 2.200000
+      _cornerRadius: 0.500000
+      _bevelRadius: 0.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input number _renderOrder = "0"'
+    - '// @input vec2 _size = "{8,4}" {"hint":"Size of Shape In Local Space Centimeters"}'
+    - // @input float _depth = 2.2
+    - '// @input float _cornerRadius = "0.5" {"hint":"Corner radius applied uniformly to all corners"}'
+    - '// @input float _bevelRadius = "0.5" {"hint":"Bevel curve radius"}'

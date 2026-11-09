@@ -1,0 +1,8 @@
+{
+  "l10nsvc": "sourcefile",
+
+  "@uikit:media-frame:theater-mode": "Theater Mode",
+  "@uikit:media-frame:exit-theater": "Exit Theater",
+  "@uikit:media-frame:mini-mode": "Mini Mode",
+  "@uikit:media-frame:exit-mini-mode": "Exit"
+}

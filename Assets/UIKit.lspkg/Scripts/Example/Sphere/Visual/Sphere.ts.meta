@@ -1,0 +1,61 @@
+- !<AssetImportMetadata/dc0685a9-bb3f-5002-c07a-e903c66bd2d4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 695d9506-dfa6-413e-9a68-33ceb2afa0d2
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 695d9506-dfa6-413e-9a68-33ceb2afa0d2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b54f7061-98eb-43a2-bf9d-8817d236df75
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b54f7061-98eb-43a2-bf9d-8817d236df75>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 891b3f43-fbb0-46a9-b6e6-cb4b4f8f5496
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _backgroundColor: false
+    _depth: false
+    _icon: false
+    _radius: false
+    _renderOrder: false
+    _size: true
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: !<float> 0.000000
+      _size: !<Vec2> {x: 1.000000, y: 1.000000}
+      _depth: !<float> 1.000000
+      _radius: !<float> 4.000000
+      _backgroundColor: !<Vec4> {x: 0.800000, y: 0.800000, z: 0.800000, w: 1.000000}
+      _icon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input number _renderOrder = "0"'
+    - '// @input vec2 _size = "{1,1}" {"hint":"Size of Shape In Local Space Centimeters"}'
+    - // @input float _depth = 1
+    - '// @input float _radius = 4 {"hint":"Size of Sphere In Local Space Units"}'
+    - '// @input vec4 _backgroundColor = "{.8,.8,.8,1.}" {"widget":"color"}'
+    - // @input Asset.Texture _icon

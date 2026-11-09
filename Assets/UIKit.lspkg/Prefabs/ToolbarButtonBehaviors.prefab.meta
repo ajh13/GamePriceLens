@@ -1,0 +1,866 @@
+- !<AssetImportMetadata/d235746e-94f1-f3d7-9ce4-27d70a6edcbd>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 2423f0e9-0a37-47f9-9411-3a32cbb5ae9e
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 2423f0e9-0a37-47f9-9411-3a32cbb5ae9e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 7512a11b-cc30-4716-a121-44c4efe196d8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/116e7be0-0555-462d-ac67-5a9af0c91b89>
+  PrefabRemaps:
+    []
+  Name: Tap Button
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2167eb4d-b1bd-421e-9f95-b70494bfa79b
+- !<ScriptComponent/13a043b7-01d3-428c-866d-6efa9b3c3b09>
+  PrefabRemaps:
+    []
+  Name: ToolbarItemInput
+  Enabled: true
+  ScriptAsset: !<reference> b4d1ee51-b391-42fc-997f-e9fd6ad96fb7
+  ScriptInputsDefault:
+    itemType: true
+    alignment: true
+    customObject: true
+    buttonType: true
+    iconSizeMode: true
+    iconAlignment: true
+    textAlignment: true
+    hideTextWhenTooSmall: true
+    buttonTheme: true
+    buttonStyle: true
+    buttonIsOn: true
+    holdSeconds: true
+    drainSeconds: true
+    holdRepeatable: true
+    voiceFormat: true
+    color: true
+    placeholder: true
+    textFieldTextAlignment: true
+    textFieldIcon: true
+    min: true
+    max: true
+    value: true
+    step: true
+    segmented: true
+    numberOfSegments: true
+    isOn: true
+    buttonSizeMode: true
+    buttonManualSize: true
+    buttonCrossAxisSize: true
+    customSizeMode: true
+    customManualSize: true
+    customCrossAxisSize: true
+    textFieldSizeMode: true
+    textFieldManualSize: true
+    textFieldCrossAxisSize: true
+    sliderSizeMode: true
+    sliderManualSize: true
+    sliderCrossAxisSize: true
+    toggleSizeMode: true
+    toggleManualSize: true
+    toggleCrossAxisSize: true
+    thickness: true
+    height: true
+    isAttachedComponent: true
+    attachTo: true
+    attachmentPosition: true
+    attachmentOffset: true
+    inactive: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      itemType: button
+      id: toggle
+      alignment: left
+      customObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonType: rectangle
+      icon: !<reference.Texture> 2c603a99-aab8-4b77-b1fe-8a3b2a5e0d6a
+      iconSizeMode: fixed
+      text: Toggle
+      iconAlignment: left
+      textAlignment: center
+      hideTextWhenTooSmall: false
+      buttonTheme: Inherited
+      buttonStyle: ""
+      buttonBehavior: toggle
+      buttonIsOn: false
+      holdSeconds: !<float> 0.000000
+      drainSeconds: !<float> 0.000000
+      holdRepeatable: false
+      voiceFormat: default
+      color: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
+      placeholder: ""
+      textFieldTextAlignment: left
+      textFieldIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      min: !<float> 0.000000
+      max: !<float> 100.000000
+      value: !<float> 50.000000
+      step: !<float> 1.000000
+      segmented: false
+      numberOfSegments: !<float> 2.000000
+      isOn: false
+      buttonSizeMode: fill
+      buttonManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      buttonCrossAxisSize: !<float> 3.000000
+      customSizeMode: fill
+      customManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      customCrossAxisSize: !<float> 3.000000
+      textFieldSizeMode: fill
+      textFieldManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      textFieldCrossAxisSize: !<float> 3.000000
+      sliderSizeMode: fill
+      sliderManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      sliderCrossAxisSize: !<float> 3.000000
+      toggleSizeMode: fill
+      toggleManualSize: !<Vec2> {x: 6.000000, y: 3.000000}
+      toggleCrossAxisSize: !<float> 3.000000
+      thickness: 0.100000
+      height: !<float> 3.000000
+      isAttachedComponent: false
+      attachTo: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      attachmentPosition: right
+      attachmentOffset: !<Vec2> {x: 0.000000, y: 0.000000}
+      inactive: false
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/2167eb4d-b1bd-421e-9f95-b70494bfa79b>
+  PrefabRemaps:
+    []
+  Name: ToolbarItemInput
+  Enabled: true
+  ScriptAsset: !<reference> b4d1ee51-b391-42fc-997f-e9fd6ad96fb7
+  ScriptInputsDefault:
+    itemType: true
+    alignment: true
+    customObject: true
+    buttonType: true
+    iconSizeMode: true
+    iconAlignment: true
+    textAlignment: true
+    hideTextWhenTooSmall: true
+    buttonTheme: true
+    buttonStyle: true
+    buttonBehavior: true
+    buttonIsOn: true
+    holdSeconds: true
+    drainSeconds: true
+    holdRepeatable: true
+    voiceFormat: true
+    color: true
+    placeholder: true
+    textFieldTextAlignment: true
+    textFieldIcon: true
+    min: true
+    max: true
+    value: true
+    step: true
+    segmented: true
+    numberOfSegments: true
+    isOn: true
+    buttonSizeMode: true
+    buttonManualSize: true
+    buttonCrossAxisSize: true
+    customSizeMode: true
+    customManualSize: true
+    customCrossAxisSize: true
+    textFieldSizeMode: true
+    textFieldManualSize: true
+    textFieldCrossAxisSize: true
+    sliderSizeMode: true
+    sliderManualSize: true
+    sliderCrossAxisSize: true
+    toggleSizeMode: true
+    toggleManualSize: true
+    toggleCrossAxisSize: true
+    thickness: true
+    height: true
+    isAttachedComponent: true
+    attachTo: true
+    attachmentPosition: true
+    attachmentOffset: true
+    inactive: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      itemType: button
+      id: tap
+      alignment: left
+      customObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonType: rectangle
+      icon: !<reference.Texture> e2a014da-0992-452f-b38d-7dbb28d18dbb
+      iconSizeMode: fixed
+      text: Tap
+      iconAlignment: left
+      textAlignment: center
+      hideTextWhenTooSmall: false
+      buttonTheme: Inherited
+      buttonStyle: ""
+      buttonBehavior: tap
+      buttonIsOn: false
+      holdSeconds: !<float> 0.000000
+      drainSeconds: !<float> 0.000000
+      holdRepeatable: false
+      voiceFormat: default
+      color: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
+      placeholder: ""
+      textFieldTextAlignment: left
+      textFieldIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      min: !<float> 0.000000
+      max: !<float> 100.000000
+      value: !<float> 50.000000
+      step: !<float> 1.000000
+      segmented: false
+      numberOfSegments: !<float> 2.000000
+      isOn: false
+      buttonSizeMode: fill
+      buttonManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      buttonCrossAxisSize: !<float> 3.000000
+      customSizeMode: fill
+      customManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      customCrossAxisSize: !<float> 3.000000
+      textFieldSizeMode: fill
+      textFieldManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      textFieldCrossAxisSize: !<float> 3.000000
+      sliderSizeMode: fill
+      sliderManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      sliderCrossAxisSize: !<float> 3.000000
+      toggleSizeMode: fill
+      toggleManualSize: !<Vec2> {x: 6.000000, y: 3.000000}
+      toggleCrossAxisSize: !<float> 3.000000
+      thickness: 0.100000
+      height: !<float> 3.000000
+      isAttachedComponent: false
+      attachTo: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      attachmentPosition: right
+      attachmentOffset: !<Vec2> {x: 0.000000, y: 0.000000}
+      inactive: false
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/25e9ba66-bd59-4126-8c03-5c22d2fb5cfc>
+  PrefabRemaps:
+    []
+  Name: Toggle Button
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 13a043b7-01d3-428c-866d-6efa9b3c3b09
+- !<SceneObject/47bce5c4-7792-4d6e-bb9e-225f42f6cc61>
+  PrefabRemaps:
+    []
+  Name: ToolbarButtonBehaviors
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -110.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 116e7be0-0555-462d-ac67-5a9af0c91b89
+    - !<own> 25e9ba66-bd59-4126-8c03-5c22d2fb5cfc
+    - !<own> 6dbd77d6-e92d-449b-89a5-e800db2bf12b
+    - !<own> e951026d-15b9-4681-aebe-8aa245799ba1
+    - !<own> b8130a6a-e79a-47c3-ad23-a4643d7fbd7f
+    - !<own> 54471d42-f4b4-4489-b97e-1780722aeb48
+  Components:
+    - !<own> cb19c20c-3278-4508-a418-1ecd244793b8
+- !<SceneObject/54471d42-f4b4-4489-b97e-1780722aeb48>
+  PrefabRemaps:
+    []
+  Name: Voice Button
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 855a7dd5-593f-4579-bc2d-f9d887e1ab2d
+- !<SceneObject/6dbd77d6-e92d-449b-89a5-e800db2bf12b>
+  PrefabRemaps:
+    []
+  Name: Separator
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e57c29f9-0539-4d95-9a2d-6d3cfd51e894
+- !<ObjectPrefabAssetData/7512a11b-cc30-4716-a121-44c4efe196d8>
+  Prototype: !<ObjectOwner/8b04b4aa-70a8-413d-8fa4-73de75821f65>
+    PackagePath: ""
+    objects:
+      - !<own> 47bce5c4-7792-4d6e-bb9e-225f42f6cc61
+- !<ScriptComponent/8555ef30-4fbf-4d4f-bfd1-5c985d3efd33>
+  PrefabRemaps:
+    []
+  Name: ToolbarItemInput
+  Enabled: true
+  ScriptAsset: !<reference> b4d1ee51-b391-42fc-997f-e9fd6ad96fb7
+  ScriptInputsDefault:
+    itemType: true
+    alignment: true
+    customObject: true
+    buttonType: true
+    iconSizeMode: true
+    iconAlignment: true
+    textAlignment: true
+    hideTextWhenTooSmall: true
+    buttonTheme: true
+    buttonStyle: true
+    buttonIsOn: true
+    holdSeconds: true
+    drainSeconds: true
+    voiceFormat: true
+    color: true
+    placeholder: true
+    textFieldTextAlignment: true
+    textFieldIcon: true
+    min: true
+    max: true
+    value: true
+    step: true
+    segmented: true
+    numberOfSegments: true
+    isOn: true
+    buttonSizeMode: true
+    buttonManualSize: true
+    buttonCrossAxisSize: true
+    customSizeMode: true
+    customManualSize: true
+    customCrossAxisSize: true
+    textFieldSizeMode: true
+    textFieldManualSize: true
+    textFieldCrossAxisSize: true
+    sliderSizeMode: true
+    sliderManualSize: true
+    sliderCrossAxisSize: true
+    toggleSizeMode: true
+    toggleManualSize: true
+    toggleCrossAxisSize: true
+    thickness: true
+    height: true
+    isAttachedComponent: true
+    attachTo: true
+    attachmentPosition: true
+    attachmentOffset: true
+    inactive: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      itemType: button
+      id: hold
+      alignment: left
+      customObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonType: rectangle
+      icon: !<reference.Texture> 8a22d2a7-4fe9-4a15-bdaf-c9b834f1f73e
+      iconSizeMode: fixed
+      text: Hold
+      iconAlignment: left
+      textAlignment: center
+      hideTextWhenTooSmall: false
+      buttonTheme: Inherited
+      buttonStyle: ""
+      buttonBehavior: hold
+      buttonIsOn: false
+      holdSeconds: !<float> 0.000000
+      drainSeconds: !<float> 0.000000
+      holdRepeatable: true
+      voiceFormat: default
+      color: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
+      placeholder: ""
+      textFieldTextAlignment: left
+      textFieldIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      min: !<float> 0.000000
+      max: !<float> 100.000000
+      value: !<float> 50.000000
+      step: !<float> 1.000000
+      segmented: false
+      numberOfSegments: !<float> 2.000000
+      isOn: false
+      buttonSizeMode: fill
+      buttonManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      buttonCrossAxisSize: !<float> 3.000000
+      customSizeMode: fill
+      customManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      customCrossAxisSize: !<float> 3.000000
+      textFieldSizeMode: fill
+      textFieldManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      textFieldCrossAxisSize: !<float> 3.000000
+      sliderSizeMode: fill
+      sliderManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      sliderCrossAxisSize: !<float> 3.000000
+      toggleSizeMode: fill
+      toggleManualSize: !<Vec2> {x: 6.000000, y: 3.000000}
+      toggleCrossAxisSize: !<float> 3.000000
+      thickness: 0.100000
+      height: !<float> 3.000000
+      isAttachedComponent: false
+      attachTo: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      attachmentPosition: right
+      attachmentOffset: !<Vec2> {x: 0.000000, y: 0.000000}
+      inactive: false
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/855a7dd5-593f-4579-bc2d-f9d887e1ab2d>
+  PrefabRemaps:
+    []
+  Name: ToolbarItemInput
+  Enabled: true
+  ScriptAsset: !<reference> b4d1ee51-b391-42fc-997f-e9fd6ad96fb7
+  ScriptInputsDefault:
+    itemType: true
+    alignment: true
+    customObject: true
+    buttonType: true
+    icon: true
+    iconSizeMode: true
+    text: true
+    iconAlignment: true
+    textAlignment: true
+    hideTextWhenTooSmall: true
+    buttonTheme: true
+    buttonStyle: true
+    buttonIsOn: true
+    holdSeconds: true
+    drainSeconds: true
+    holdRepeatable: true
+    voiceFormat: true
+    color: true
+    placeholder: true
+    textFieldTextAlignment: true
+    textFieldIcon: true
+    min: true
+    max: true
+    value: true
+    step: true
+    segmented: true
+    numberOfSegments: true
+    isOn: true
+    buttonCrossAxisSize: true
+    customSizeMode: true
+    customManualSize: true
+    customCrossAxisSize: true
+    textFieldSizeMode: true
+    textFieldManualSize: true
+    textFieldCrossAxisSize: true
+    sliderSizeMode: true
+    sliderManualSize: true
+    sliderCrossAxisSize: true
+    toggleSizeMode: true
+    toggleManualSize: true
+    toggleCrossAxisSize: true
+    thickness: true
+    height: true
+    isAttachedComponent: true
+    attachTo: true
+    attachmentPosition: true
+    attachmentOffset: true
+    inactive: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      itemType: button
+      id: voice
+      alignment: left
+      customObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonType: rectangle
+      icon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      iconSizeMode: fixed
+      text: ""
+      iconAlignment: left
+      textAlignment: center
+      hideTextWhenTooSmall: false
+      buttonTheme: Inherited
+      buttonStyle: ""
+      buttonBehavior: voice
+      buttonIsOn: false
+      holdSeconds: !<float> 0.000000
+      drainSeconds: !<float> 0.000000
+      holdRepeatable: false
+      voiceFormat: default
+      color: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
+      placeholder: ""
+      textFieldTextAlignment: left
+      textFieldIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      min: !<float> 0.000000
+      max: !<float> 100.000000
+      value: !<float> 50.000000
+      step: !<float> 1.000000
+      segmented: false
+      numberOfSegments: !<float> 2.000000
+      isOn: false
+      buttonSizeMode: manual
+      buttonManualSize: !<Vec2> {x: 4.000000, y: 4.000000}
+      buttonCrossAxisSize: !<float> 3.000000
+      customSizeMode: fill
+      customManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      customCrossAxisSize: !<float> 3.000000
+      textFieldSizeMode: fill
+      textFieldManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      textFieldCrossAxisSize: !<float> 3.000000
+      sliderSizeMode: fill
+      sliderManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      sliderCrossAxisSize: !<float> 3.000000
+      toggleSizeMode: fill
+      toggleManualSize: !<Vec2> {x: 6.000000, y: 3.000000}
+      toggleCrossAxisSize: !<float> 3.000000
+      thickness: 0.100000
+      height: !<float> 3.000000
+      isAttachedComponent: false
+      attachTo: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      attachmentPosition: right
+      attachmentOffset: !<Vec2> {x: 0.000000, y: 0.000000}
+      inactive: false
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/b8130a6a-e79a-47c3-ad23-a4643d7fbd7f>
+  PrefabRemaps:
+    []
+  Name: Separator
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> cca21993-b4b9-488b-804e-18a29429212b
+- !<ScriptComponent/cb19c20c-3278-4508-a418-1ecd244793b8>
+  PrefabRemaps:
+    []
+  Name: Toolbar
+  Enabled: true
+  ScriptAsset: !<reference> e6a7cb81-020a-46f4-b123-009e1323837f
+  ScriptInputsDefault:
+    frame: true
+    autoHideWhenFrameNotTargeted: true
+    direction: true
+    framePosition: true
+    frameGap: true
+    isToolbarInsideFrame: true
+    fitToFrame: true
+    frameSizeScaleX: true
+    frameSizeScaleY: true
+    spacing: true
+    paddingLeft: true
+    paddingRight: true
+    paddingTop: true
+    paddingBottom: true
+    backgroundColor: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      frame: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      autoHideWhenFrameNotTargeted: false
+      direction: horizontal
+      size: !<Vec2> {x: 30.000000, y: 5.000000}
+      framePosition: bottom
+      frameGap: !<float> 1.000000
+      isToolbarInsideFrame: false
+      fitToFrame: false
+      frameSizeScaleX: !<float> 1.000000
+      frameSizeScaleY: !<float> 1.000000
+      spacing: 0.500000
+      paddingLeft: !<float> 1.000000
+      paddingRight: !<float> 1.000000
+      paddingTop: 0.500000
+      paddingBottom: 0.500000
+      backgroundColor: !<Vec4> {x: 0.173000, y: 0.173000, z: 0.173000, w: 1.000000}
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/cca21993-b4b9-488b-804e-18a29429212b>
+  PrefabRemaps:
+    []
+  Name: ToolbarItemInput
+  Enabled: true
+  ScriptAsset: !<reference> b4d1ee51-b391-42fc-997f-e9fd6ad96fb7
+  ScriptInputsDefault:
+    id: true
+    alignment: true
+    customObject: true
+    buttonType: true
+    icon: true
+    iconSizeMode: true
+    text: true
+    iconAlignment: true
+    textAlignment: true
+    hideTextWhenTooSmall: true
+    buttonTheme: true
+    buttonStyle: true
+    buttonBehavior: true
+    buttonIsOn: true
+    holdSeconds: true
+    drainSeconds: true
+    holdRepeatable: true
+    voiceFormat: true
+    color: true
+    placeholder: true
+    textFieldTextAlignment: true
+    textFieldIcon: true
+    min: true
+    max: true
+    value: true
+    step: true
+    segmented: true
+    numberOfSegments: true
+    isOn: true
+    buttonSizeMode: true
+    buttonManualSize: true
+    buttonCrossAxisSize: true
+    customSizeMode: true
+    customManualSize: true
+    customCrossAxisSize: true
+    textFieldSizeMode: true
+    textFieldManualSize: true
+    textFieldCrossAxisSize: true
+    sliderSizeMode: true
+    sliderManualSize: true
+    sliderCrossAxisSize: true
+    toggleSizeMode: true
+    toggleManualSize: true
+    toggleCrossAxisSize: true
+    thickness: true
+    height: true
+    isAttachedComponent: true
+    attachTo: true
+    attachmentPosition: true
+    attachmentOffset: true
+    inactive: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      itemType: separator
+      id: ""
+      alignment: left
+      customObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonType: rectangle
+      icon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      iconSizeMode: fixed
+      text: ""
+      iconAlignment: left
+      textAlignment: center
+      hideTextWhenTooSmall: false
+      buttonTheme: Inherited
+      buttonStyle: ""
+      buttonBehavior: tap
+      buttonIsOn: false
+      holdSeconds: !<float> 0.000000
+      drainSeconds: !<float> 0.000000
+      holdRepeatable: false
+      voiceFormat: default
+      color: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
+      placeholder: ""
+      textFieldTextAlignment: left
+      textFieldIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      min: !<float> 0.000000
+      max: !<float> 100.000000
+      value: !<float> 50.000000
+      step: !<float> 1.000000
+      segmented: false
+      numberOfSegments: !<float> 2.000000
+      isOn: false
+      buttonSizeMode: fill
+      buttonManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      buttonCrossAxisSize: !<float> 3.000000
+      customSizeMode: fill
+      customManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      customCrossAxisSize: !<float> 3.000000
+      textFieldSizeMode: fill
+      textFieldManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      textFieldCrossAxisSize: !<float> 3.000000
+      sliderSizeMode: fill
+      sliderManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      sliderCrossAxisSize: !<float> 3.000000
+      toggleSizeMode: fill
+      toggleManualSize: !<Vec2> {x: 6.000000, y: 3.000000}
+      toggleCrossAxisSize: !<float> 3.000000
+      thickness: 0.100000
+      height: !<float> 3.000000
+      isAttachedComponent: false
+      attachTo: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      attachmentPosition: right
+      attachmentOffset: !<Vec2> {x: 0.000000, y: 0.000000}
+      inactive: false
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/e57c29f9-0539-4d95-9a2d-6d3cfd51e894>
+  PrefabRemaps:
+    []
+  Name: ToolbarItemInput
+  Enabled: true
+  ScriptAsset: !<reference> b4d1ee51-b391-42fc-997f-e9fd6ad96fb7
+  ScriptInputsDefault:
+    id: true
+    alignment: true
+    customObject: true
+    buttonType: true
+    icon: true
+    iconSizeMode: true
+    text: true
+    iconAlignment: true
+    textAlignment: true
+    hideTextWhenTooSmall: true
+    buttonTheme: true
+    buttonStyle: true
+    buttonBehavior: true
+    buttonIsOn: true
+    holdSeconds: true
+    drainSeconds: true
+    holdRepeatable: true
+    voiceFormat: true
+    color: true
+    placeholder: true
+    textFieldTextAlignment: true
+    textFieldIcon: true
+    min: true
+    max: true
+    value: true
+    step: true
+    segmented: true
+    numberOfSegments: true
+    isOn: true
+    buttonSizeMode: true
+    buttonManualSize: true
+    buttonCrossAxisSize: true
+    customSizeMode: true
+    customManualSize: true
+    customCrossAxisSize: true
+    textFieldSizeMode: true
+    textFieldManualSize: true
+    textFieldCrossAxisSize: true
+    sliderSizeMode: true
+    sliderManualSize: true
+    sliderCrossAxisSize: true
+    toggleSizeMode: true
+    toggleManualSize: true
+    toggleCrossAxisSize: true
+    thickness: true
+    height: true
+    isAttachedComponent: true
+    attachTo: true
+    attachmentPosition: true
+    attachmentOffset: true
+    inactive: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      itemType: separator
+      id: ""
+      alignment: left
+      customObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonType: rectangle
+      icon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      iconSizeMode: fixed
+      text: ""
+      iconAlignment: left
+      textAlignment: center
+      hideTextWhenTooSmall: false
+      buttonTheme: Inherited
+      buttonStyle: ""
+      buttonBehavior: tap
+      buttonIsOn: false
+      holdSeconds: !<float> 0.000000
+      drainSeconds: !<float> 0.000000
+      holdRepeatable: false
+      voiceFormat: default
+      color: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
+      placeholder: ""
+      textFieldTextAlignment: left
+      textFieldIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      min: !<float> 0.000000
+      max: !<float> 100.000000
+      value: !<float> 50.000000
+      step: !<float> 1.000000
+      segmented: false
+      numberOfSegments: !<float> 2.000000
+      isOn: false
+      buttonSizeMode: fill
+      buttonManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      buttonCrossAxisSize: !<float> 3.000000
+      customSizeMode: fill
+      customManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      customCrossAxisSize: !<float> 3.000000
+      textFieldSizeMode: fill
+      textFieldManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      textFieldCrossAxisSize: !<float> 3.000000
+      sliderSizeMode: fill
+      sliderManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      sliderCrossAxisSize: !<float> 3.000000
+      toggleSizeMode: fill
+      toggleManualSize: !<Vec2> {x: 6.000000, y: 3.000000}
+      toggleCrossAxisSize: !<float> 3.000000
+      thickness: 0.100000
+      height: !<float> 3.000000
+      isAttachedComponent: false
+      attachTo: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      attachmentPosition: right
+      attachmentOffset: !<Vec2> {x: 0.000000, y: 0.000000}
+      inactive: false
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/e951026d-15b9-4681-aebe-8aa245799ba1>
+  PrefabRemaps:
+    []
+  Name: Hold Button
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8555ef30-4fbf-4d4f-bfd1-5c985d3efd33

@@ -1,0 +1,81 @@
+// Spinner arc fragment stage.
+//
+// Derives everything per pixel from the displaced surface position (in Lens
+// Studio custom-node graphs, ports wired from a vertex node into a fragment
+// node are re-evaluated at the fragment stage rather than interpolated as
+// varyings — so no vertex outputs are consumed here at all; see
+// SpinnerVertex.customCode).
+//
+// The analytic arc (radial band + rounded end caps) is cut with a single
+// signed-distance function evaluated in arc space (arc symmetric about +Y,
+// theta measured from +Y, clockwise positive): distance to the arc
+// centerline minus halfThickness. Points beyond the angular aperture
+// measure distance to the arc's endpoint instead, which produces exact
+// semicircular caps with no extra branch. At arcAperture == PI the
+// beyond-aperture test can never pass, so the full ring renders capless
+// automatically.
+//
+// Antialiasing: smoothstep over max(edgeSoftness, half a screen pixel via
+// fwidth) — screen-crisp at any distance, with edgeSoftness as a floor so
+// extreme close-ups don't turn razor-hard.
+//
+// arcFade fades each END of the arc to transparent over that fraction of
+// the arc's length (the System 3.0 reference is a symmetric bump: rise,
+// short plateau, fall — arcFade ≈ 0.45).
+
+input_vec2 arcRot;
+input_vec2 arcSc;
+input_float arcFade;
+input_float arcFadeLift;
+input_float arcGradInv;
+input_float ringRadius;
+input_float halfThickness;
+input_float edgeSoftness;
+input_vec4 colorTail;
+input_vec4 colorHead;
+
+output_vec4 FinalColor;
+
+void main()
+{
+    // Displaced surface position in object space, centimeters.
+    mediump vec2 pos = system.getSurfacePositionObjectSpace().xy;
+
+    // Un-rotate into arc space (inverse of the vertex-stage rotation).
+    // arcRot = (cos, sin) of (arcCenter - PI/2), precomputed on the CPU.
+    mediump vec2 pArc = vec2(arcRot.x * pos.x + arcRot.y * pos.y,
+                             -arcRot.y * pos.x + arcRot.x * pos.y);
+
+    // Normalized position along the arc, tail (0) to head (1), from the
+    // signed angle off +Y (clockwise positive — matches theta convention).
+    // Computed before folding; tiny bias avoids atan(0, 0). arcGradInv =
+    // 1 / (2 * arcAperture), precomputed on the CPU (divide ~5.3x a
+    // multiply-add on the Adreno 621).
+    mediump float theta = atan(pArc.x, pArc.y + 1.0e-6);
+    mediump float s = clamp(theta * arcGradInv + 0.5, 0.0, 1.0);
+
+    // Arc is symmetric about +Y, so fold to one side for the SDF.
+    mediump vec2 p = vec2(abs(pArc.x), pArc.y);
+
+    // arcSc = (sin(arcAperture), cos(arcAperture)), precomputed on the CPU.
+    // Inside the aperture: distance to the circle of radius ringRadius.
+    // Beyond it: distance to the arc endpoint (rounds the cap).
+    mediump float d = (arcSc.y * p.x > arcSc.x * p.y)
+        ? length(p - arcSc * ringRadius)
+        : abs(length(p) - ringRadius);
+    mediump float sdf = d - halfThickness;
+
+    mediump float soft = max(edgeSoftness, 0.5 * fwidth(sdf));
+    mediump float alpha = 1.0 - smoothstep(-soft, soft, sdf);
+
+    // Symmetric end fade along the arc (s: 0 tail .. 1 head). arcFadeLift
+    // floods the fade envelope toward solid WITHOUT changing its shape —
+    // the completion seal melts the seam soft-to-soft, never sharpening
+    // either end into a flat edge.
+    mediump float fade = max(arcFade, 1.0e-4);
+    mediump float env = smoothstep(0.0, fade, s) * (1.0 - smoothstep(1.0 - fade, 1.0, s));
+    alpha *= mix(env, 1.0, arcFadeLift);
+
+    lowp vec4 col = mix(colorTail, colorHead, s);
+    FinalColor = vec4(col.rgb, col.a * alpha);
+}

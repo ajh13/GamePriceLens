@@ -1,0 +1,52 @@
+- !<AssetImportMetadata/d1971a9a-6337-575a-137d-e98dffde18bf>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8427b496-1e60-4229-aa03-527cb796acdc
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8427b496-1e60-4229-aa03-527cb796acdc
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3878856a-7d9c-4968-aef1-6483021d9673
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3878856a-7d9c-4968-aef1-6483021d9673>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 1ab587dd-48b8-49ce-a04e-c82c3c80cd10
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _autoStart: false
+    _target: false
+    _themeOverride: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      _autoStart: false
+      _themeOverride: Inherited
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject _target {"hint":"Root of the content to skeletonize; defaults to this SceneObject"}'
+    - '// @input bool _autoStart {"hint":"Start pulsing automatically on start"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'

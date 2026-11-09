@@ -1,0 +1,343 @@
+//
+// CollapsedSquircle — Fragment Color (Optimized)
+//
+// Computes background color/texture, fill gradient, border color,
+// border gradient, and final blending with opacity.
+//
+// Optimizations vs non-opt version:
+//   - UV received as varying from vertex (eliminates per-fragment inverse matrix multiply)
+//   - safeRadius computed as uniform expression (corner selection is a no-op when all radii equal)
+//   - Border gradient skipped for interior fragments (coherent branch, ideal for TBDR)
+//   - mediump/lowp precision qualifiers for mobile ALU throughput
+//
+// Output: FinalColor → connect to Surface.FinalColor
+//
+
+// ─────────────────────────────────────────────
+// UV from vertex (varying — replaces per-fragment matrix inverse)
+// ─────────────────────────────────────────────
+input_vec2 uv;
+
+// ─────────────────────────────────────────────
+// Shape
+// ─────────────────────────────────────────────
+input_vec2 size;
+input_float cornerRadius;
+input_float borderSize;
+input_float border;
+
+// ─────────────────────────────────────────────
+// Background
+// ─────────────────────────────────────────────
+input_texture_2d backgroundTexture;
+input_float useTexture;
+input_vec2 textureMode;
+input_float textureWrap;
+input_vec4 backgroundColor;
+
+// ─────────────────────────────────────────────
+// Fill gradient (up to 7 stops)
+// ─────────────────────────────────────────────
+input_float_array colors;
+input_float_array percents;
+input_int stops;
+input_float linearGradientStart;
+input_float linearGradientLength;
+input_float sinLinearGradientAngle;
+input_float cosLinearGradientAngle;
+input_vec2 gradientStartPosition;
+input_float radialGradientLength;
+input_float gradientType;
+
+// ─────────────────────────────────────────────
+// Border
+// ─────────────────────────────────────────────
+input_vec4 borderColor;
+
+// Width (absolute, same units as borderSize) of the soft fade on the INNER
+// edge of the border band. 0 = hard edge (hairline AA). Drive per-instance.
+input_float borderSoftness;
+
+// ─────────────────────────────────────────────
+// Border gradient (up to 7 stops)
+// ─────────────────────────────────────────────
+input_float_array borderGradientColors;
+input_float_array borderGradientPercents;
+input_int borderGradientStops;
+input_float borderLinearGradientStart;
+input_float borderLinearGradientLength;
+input_float borderSinLinearGradientAngle;
+input_float borderCosLinearGradientAngle;
+input_vec2 borderGradientStartPosition;
+input_float borderRadialGradientLength;
+input_float borderGradientType;
+
+// ─────────────────────────────────────────────
+// Opacity
+// ─────────────────────────────────────────────
+input_float opacityFactor;
+input_float baseOnly;
+
+output_vec4 FinalColor;
+output_vec4 fillColor_out;
+output_vec4 borderResult_out;
+output_float distFromEdge_out;
+
+const float TEXTURE_EPSILON = 0.05;
+
+// AA fade width on the border's inner edge, in screen pixels. The border's
+// outer edge is the mesh silhouette (MSAA's job); the inner edge is
+// shader-generated, so a centimetre-authored softness goes sub-pixel with
+// viewing distance and stair-steps. fwidth reads the actual rasterization,
+// so 1.5px holds in the LS preview, on both eye buffers, and under dynamic
+// resolution scaling alike. Validated in PR #7688; certified at +3.5pp GPU
+// busy WORST-CASE (borders filling the view) — borderless shapes run the
+// border-free material variants and pay nothing (see BaseRoundedRectangle's
+// variant ladder).
+const float AA_WIDTH_PX = 1.5;
+
+
+// ═══════════════════════════════════════════════
+// Helper: Sample background (texture or solid)
+// ═══════════════════════════════════════════════
+
+lowp vec4 sampleBackground(mediump vec2 uv)
+{
+    if (useTexture < 1.0) {
+        return backgroundColor;
+    }
+
+    // Map squircle UV [-1,1] to texture UV [0,1] with mode scaling
+    mediump vec2 tUv = uv * 0.5;
+    tUv *= textureMode;
+    tUv += 0.5;
+
+    if (textureWrap < 0.5) {
+        // None (0): backgroundColor outside texture bounds
+        lowp float outside = max(step(1.0 + TEXTURE_EPSILON, tUv.x), step(1.0 + TEXTURE_EPSILON, tUv.y));
+        outside = max(outside, step(tUv.x, 0.0 - TEXTURE_EPSILON));
+        outside = max(outside, step(tUv.y, 0.0 - TEXTURE_EPSILON));
+        return mix(backgroundTexture.sample(tUv), backgroundColor, outside);
+    } else if (textureWrap > 1.5) {
+        // Clamp (2): clamp to edge
+        tUv.x = max(0.0, tUv.x);
+        tUv.x = min(1.0, tUv.x);
+        tUv.y = max(0.0, tUv.y);
+        tUv.y = min(1.0, tUv.y);
+        return backgroundTexture.sample(tUv);
+    } else {
+        // Repeat (1): default
+        return backgroundTexture.sample(tUv);
+    }
+}
+
+
+// ═══════════════════════════════════════════════
+// Helper: Apply fill gradient
+// ═══════════════════════════════════════════════
+// Supports linear (0), radial (1), and rectangle-distance (2) types.
+
+lowp vec4 applyFillGradient(mediump vec2 uv, lowp vec4 bgColor, mediump float rectDist)
+{
+    if (stops <= 0) {
+        return bgColor;
+    }
+
+    int type = int(gradientType);
+
+    // Compute gradient parameter based on type
+    mediump float t;
+    if (type == 0) {
+        t = uv.x * cosLinearGradientAngle - uv.y * sinLinearGradientAngle;
+    } else if (type == 1) {
+        t = distance(uv, gradientStartPosition) * radialGradientLength;
+    } else {
+        t = rectDist;
+    }
+
+    // Blend through gradient stops
+    lowp vec4 result = colors.sample(0);
+
+    if (type == 0) {
+        // Linear: stops mapped to [start, start + length] range
+        result = mix(result, colors.sample(1), smoothstep(
+            linearGradientStart + percents.sample(0) * linearGradientLength,
+            linearGradientStart + percents.sample(1) * linearGradientLength,
+            t));
+        if (stops > 2) {
+            for (int i = 1; i < stops - 1; i++) {
+                result = mix(result, colors.sample(i + 1), smoothstep(
+                    linearGradientStart + percents.sample(i) * linearGradientLength,
+                    linearGradientStart + percents.sample(i + 1) * linearGradientLength,
+                    t));
+            }
+        }
+    } else {
+        // Radial / Rectangle: raw percent positions
+        result = mix(result, colors.sample(1), smoothstep(
+            percents.sample(0), percents.sample(1), t));
+        if (stops > 2) {
+            for (int i = 1; i < stops - 1; i++) {
+                result = mix(result, colors.sample(i + 1), smoothstep(
+                    percents.sample(i), percents.sample(i + 1), t));
+            }
+        }
+    }
+
+    // When texture is active, blend transparent gradient areas with background
+    if (useTexture == 1.0) {
+        result = mix(result, bgColor, 1.0 - result.a);
+    }
+
+    return result;
+}
+
+
+// ═══════════════════════════════════════════════
+// Helper: Apply border gradient
+// ═══════════════════════════════════════════════
+// Same gradient types as fill, but samples borderGradientColors/Percents.
+
+lowp vec4 applyBorderGradient(mediump vec2 uv, lowp vec4 baseColor, mediump float rectDist)
+{
+    if (borderGradientStops <= 0) {
+        return baseColor;
+    }
+
+    int type = int(borderGradientType);
+
+    mediump float t;
+    if (type == 0) {
+        t = uv.x * borderCosLinearGradientAngle - uv.y * borderSinLinearGradientAngle;
+    } else if (type == 1) {
+        t = distance(uv, borderGradientStartPosition) * borderRadialGradientLength;
+    } else {
+        t = rectDist;
+    }
+
+    lowp vec4 result = borderGradientColors.sample(0);
+
+    if (type == 0) {
+        result = mix(result, borderGradientColors.sample(1), smoothstep(
+            borderLinearGradientStart + borderGradientPercents.sample(0) * borderLinearGradientLength,
+            borderLinearGradientStart + borderGradientPercents.sample(1) * borderLinearGradientLength,
+            t));
+        if (borderGradientStops > 2) {
+            for (int i = 1; i < borderGradientStops - 1; i++) {
+                result = mix(result, borderGradientColors.sample(i + 1), smoothstep(
+                    borderLinearGradientStart + borderGradientPercents.sample(i) * borderLinearGradientLength,
+                    borderLinearGradientStart + borderGradientPercents.sample(i + 1) * borderLinearGradientLength,
+                    t));
+            }
+        }
+    } else {
+        result = mix(result, borderGradientColors.sample(1), smoothstep(
+            borderGradientPercents.sample(0), borderGradientPercents.sample(1), t));
+        if (borderGradientStops > 2) {
+            for (int i = 1; i < borderGradientStops - 1; i++) {
+                result = mix(result, borderGradientColors.sample(i + 1), smoothstep(
+                    borderGradientPercents.sample(i), borderGradientPercents.sample(i + 1), t));
+            }
+        }
+    }
+
+    return result;
+}
+
+
+// ═══════════════════════════════════════════════
+// Main
+// ═══════════════════════════════════════════════
+
+void main()
+{
+    // 1. Border distance (only when border is active)
+    //    safeRadius is uniform — all corners share the same radius,
+    //    so dot(vec4(r), weights) = r regardless of corner weights.
+    mediump float dist = 0.0;
+    mediump float distFromEdge = 0.0;
+
+    if (border > 0.5) {
+        dist = system.getSurfaceColor().a;
+
+        // safeRadius > 0.001 guards the degenerate cornerRadius ~ 0 case:
+        // below it strokeThickness goes non-positive and the fade divide
+        // below would paint the whole shape as border. The legacy smoothstep
+        // failed safe there (border silently absent); keep that behaviour.
+        mediump float safeRadius = min(cornerRadius, min(size.x, size.y));
+        if (borderSize > 0.0 && safeRadius > 0.001) {
+            mediump float strokeThickness = min(borderSize, safeRadius - 0.001);
+            mediump float d = safeRadius - dist * safeRadius;
+
+            // Screen-space pixel size from the actual rasterization. Floored
+            // because fwidth is exactly 0 wherever the interpolant is
+            // constant, which would otherwise divide by zero.
+            mediump float aaWidth = max(fwidth(d), 0.0001) * AA_WIDTH_PX;
+
+            // Softness is a width; negative input would FATTEN the border
+            // through the compensation. Clamp once.
+            mediump float softness = max(borderSoftness, 0.0);
+
+            // Fade: at least one AA width so it cannot go sub-pixel and
+            // stair-step, at most the band itself so thin borders still
+            // reach full opacity.
+            mediump float fade = min(max(softness, aaWidth), strokeThickness);
+
+            // WIDTH COMPENSATION, anchors mix(0, 1, fadeRatio): when the fade
+            // is a small slice of the band (near/thick) the band is placed
+            // IDENTICALLY to the legacy border and the fade just eats the
+            // inner edge (measured on-screen: PR #7688's 0.5 anchor read
+            // visibly wider side-by-side); toward the thin/distant regime —
+            // where the legacy border aliases — the authored solid core is
+            // kept instead of washing out. Themes with authored softness >=
+            // the pixel floor get compensation 0 and render as authored.
+            mediump float fadeRatio = fade / strokeThickness;
+            mediump float widthComp = max(fade - softness, 0.0) * fadeRatio;
+
+            // The divide can saturate mediump (fade floors at 1.5e-4 while
+            // the numerator is centimetre-scale) — benign, the clamp
+            // resolves +/-inf in the right direction.
+            mediump float e = clamp((strokeThickness + widthComp - d) / fade, 0.0, 1.0);
+
+            // S-curve so perceived softness matches the legacy smoothstep;
+            // where authored softness dominates this is algebraically
+            // IDENTICAL to the expression it replaces.
+            distFromEdge = e * e * (3.0 - 2.0 * e);
+        }
+    }
+
+    // 2. Sample background (texture or solid color)
+    lowp vec4 bgColor = sampleBackground(uv);
+
+    // 3. Base-only early out: skip gradients, expose raw values for compose nodes
+    if (baseOnly > 0.5) {
+        fillColor_out = bgColor;
+        borderResult_out = borderColor;
+        distFromEdge_out = distFromEdge;
+        FinalColor = bgColor;
+        FinalColor.a *= opacityFactor;
+        return;
+    }
+
+    // 4. Apply fill gradient
+    lowp vec4 fillColor = applyFillGradient(uv, bgColor, dist);
+
+    // 5. Compute border gradient result
+    lowp vec4 borderResult = borderColor;
+    if (distFromEdge > 0.0) {
+        borderResult = applyBorderGradient(uv, borderResult, dist);
+    }
+
+    // 6. Expose intermediates for variant effect nodes
+    fillColor_out = fillColor;
+    borderResult_out = borderResult;
+    distFromEdge_out = distFromEdge;
+
+    // 7. Final blend + opacity → FinalColor (base case output)
+    if (distFromEdge > 0.0) {
+        fillColor = mix(fillColor, borderResult, distFromEdge);
+    }
+    fillColor.a *= opacityFactor;
+
+    FinalColor = fillColor;
+}

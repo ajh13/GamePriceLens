@@ -1,0 +1,151 @@
+// Skeleton block fragment stage — the "Group Pulses" loader (spec Skeleton
+// Loaders page: "fade in and out in grouped pulses, supported by a soft
+// shimmer that passes").
+//
+// ONE wave lives in GROUP space, not per block: every block of a skeleton
+// group shares the same looping `phase` (written by the group's single
+// Motion clock), and each block is parameterized by where it sits along the
+// wave direction (`blockProj`, `spanInv`, both precomputed on the CPU from
+// the group's measured bounds). A fragment's group-space band coordinate is
+//     c = (blockProj + dot(pos, bandDir)) * spanInv       // 0..1 group span
+// so blocks at different positions catch the band at different moments
+// purely from their position — add or remove a block mid-pulse and it just
+// picks the wave up in the right place.
+//
+// Two refinements on top of the shared clock:
+//  - `phaseDelay` (per block, set at spawn): the block's EFFECTIVE phase is
+//    fract(phase − phaseDelay), so each hierarchy level below the shallowest
+//    visual runs the same choreography a beat later — the flash ripples down
+//    the tree, parents first, their children after.
+//  - Wave reveal (`waveReveal`, per block): inner blocks are PRESENT only
+//    while the wave is on their background — alpha rides the band +
+//    afterglow envelope of the GROUP's undelayed clock, so at idle only the
+//    top-level chrome shows and the sweep carries the contents in and out
+//    with it, never out of a flat background.
+//  - Afterglow: after the band passes a fragment it stays lighter and decays
+//    quadratically over `emberFall` (a fraction of the period), rearmed by
+//    the next pass. `fract(ph − passPhase)` makes the pass time continuous
+//    across the loop seam, where passPhase is when the band's leading edge
+//    reaches this fragment.
+//
+// The loop is: band crossing during the first `duty` fraction of the phase
+// (duty = waveDuration / wavePeriod), then rest. The grouped alpha pulse
+// breathes on the same (delayed) clock. The body is a rounded-rect SDF; AA
+// policy matches Spinner (smoothstep over max(edgeSoftness, half a pixel)).
+// BlendMode is PremultipliedAlphaAuto: output straight color, the engine
+// premultiplies.
+
+input_vec2 blockSize;
+input_float cornerRadius;
+input_float edgeSoftness;
+input_float phase;
+input_float phaseDelay;
+input_vec2 bandDir;
+input_float blockProj;
+input_float spanInv;
+input_float duty;
+input_float bandWidth;
+input_float waveBoost;
+input_float emberBoost;
+input_float emberFall;
+input_float pulseMin;
+input_float pulseMax;
+input_float blockOpacity;
+input_float waveReveal;
+input_vec4 baseColor;
+
+output_vec4 FinalColor;
+
+void main()
+{
+    // Displaced surface position in object space, centimeters.
+    mediump vec2 pos = system.getSurfacePositionObjectSpace().xy;
+    mediump vec2 halfSize = blockSize * 0.5;
+
+    // Rounded-rect body SDF (radius clamped so it can never exceed the block).
+    mediump float r = min(cornerRadius, min(halfSize.x, halfSize.y));
+    mediump vec2 q = abs(pos) - (halfSize - vec2(r));
+    mediump float sdf = length(max(q, vec2(0.0))) + min(max(q.x, q.y), 0.0) - r;
+    mediump float soft = max(edgeSoftness, 0.5 * fwidth(sdf));
+    mediump float body = 1.0 - smoothstep(-soft, soft, sdf);
+
+    // Group-space band coordinate.
+    mediump float c = (blockProj + dot(pos, bandDir)) * spanInv;
+
+    // This block's clock, delayed by its hierarchy depth.
+    mediump float ph = fract(phase - phaseDelay);
+
+    // Sheen band: center travels -bw .. 1+bw during the duty window so the
+    // band fully clears the group at both ends of the crossing — no pop.
+    // The profile is a smoothstep bump: zero slope at the crest AND at both
+    // edges. (An earlier (1-d)^2 profile was smooth at the edges but creased
+    // at the centerline — a crisp bright ridge that read as a harsh sweep.)
+    mediump float bw = max(bandWidth, 1.0e-4);
+    mediump float wavePhase = ph / max(duty, 1.0e-4);
+    mediump float center = wavePhase * (1.0 + 2.0 * bw) - bw;
+    mediump float d = abs(c - center) / bw;
+    // Flat-top profile: full brightness HOLDS across the middle of the band
+    // (d < plateau) and falls on a smoothstep outside it — the sheen sits at
+    // its crest for a stretch instead of grazing it for a frame. Zero slope
+    // at the plateau edge and at the rim keeps the field crease-free.
+    const mediump float BAND_PLATEAU = 0.5;
+    mediump float band = (wavePhase <= 1.0) ? 1.0 - smoothstep(BAND_PLATEAU, 1.0, d) : 0.0;
+
+    // Afterglow: a wake behind the wave, decaying over its OWN window
+    // (emberFall, a fraction of the period). fract() keeps the pass time
+    // continuous across the loop seam.
+    //
+    // The onset RAMPS IN over the band's transit at this fragment instead of
+    // switching on at the pass line — an instant onset is a hard spatial
+    // step of +emberBoost sweeping the group (fragments just behind the line
+    // fully lit, just ahead not at all), which read as a crisp diagonal edge
+    // even with a soft band. Ramping over the transit hides the rise under
+    // the band's own glow, so the field is continuous everywhere.
+    // passPhase is when the band's LEADING edge reaches this fragment, so
+    // the onset ramp (over the full transit) completes exactly as the band
+    // leaves — anchored at the centre crossing it would finish half a
+    // transit after the band was gone, blooming in the open. transit gets
+    // the same tiny floor as wavePhase's duty: at duty 0 it would hand
+    // smoothstep equal edges, which is undefined in GLSL.
+    // The fall clock starts at the TRAILING edge (since − transit), not the
+    // leading one: the band sweeps INTO the ember — full glow is exposed
+    // exactly as the band leaves, then decays over emberFall. (With the fall
+    // anchored at the leading edge the ember had already burned to ~20% by
+    // the time it was uncovered, leaving a dip right behind the sweep.)
+    mediump float passPhase = duty * c / (1.0 + 2.0 * bw);
+    mediump float since = fract(ph - passPhase);
+    mediump float transit = max(duty * 2.0 * bw / (1.0 + 2.0 * bw), 1.0e-4);
+    mediump float sinceTail = max(since - transit, 0.0);
+    mediump float emberEnv = max(1.0 - sinceTail / max(emberFall, 1.0e-4), 0.0);
+    mediump float emberNorm = emberEnv * emberEnv * smoothstep(0.0, transit, since);
+    mediump float ember = emberBoost * emberNorm;
+
+    // Grouped alpha pulse — blocks breathe together on their (delayed) clock.
+    mediump float breathe = 0.5 - 0.5 * cos(ph * 6.28318530718);
+    mediump float pulse = mix(pulseMin, pulseMax, breathe);
+
+    // Inner blocks exist only while the wave is on their BACKGROUND: at idle
+    // just the top-level chrome shows, and an inner is never a different
+    // color than the chrome behind it except under the sweep or its ember.
+    // So presence rides the GROUP's undelayed clock — the same wave that is
+    // lighting the chrome at this spot — NOT this block's cascade clock;
+    // with the delayed clock an inner materialized ~a beat after the sweep
+    // had left, popping out of a flat background. (The brightness crest
+    // above still uses the delayed clock, so the cascade ripple survives
+    // inside the presence window.) band0 falls as emberNorm0 rises across
+    // the transit, so the summed envelope hands off without a dip.
+    mediump float ph0 = fract(phase);
+    mediump float wavePhase0 = ph0 / max(duty, 1.0e-4);
+    mediump float center0 = wavePhase0 * (1.0 + 2.0 * bw) - bw;
+    mediump float d0 = abs(c - center0) / bw;
+    mediump float band0 = (wavePhase0 <= 1.0) ? 1.0 - smoothstep(BAND_PLATEAU, 1.0, d0) : 0.0;
+    mediump float since0 = fract(ph0 - passPhase);
+    mediump float sinceTail0 = max(since0 - transit, 0.0);
+    mediump float emberEnv0 = max(1.0 - sinceTail0 / max(emberFall, 1.0e-4), 0.0);
+    mediump float emberNorm0 = emberEnv0 * emberEnv0 * smoothstep(0.0, transit, since0);
+    mediump float presence = mix(1.0, clamp(band0 + emberNorm0, 0.0, 1.0), waveReveal);
+
+    lowp vec3 rgb = baseColor.rgb + vec3(waveBoost * band + ember);
+    mediump float alpha = body * baseColor.a * pulse * blockOpacity * presence;
+    FinalColor = vec4(rgb, alpha);
+}

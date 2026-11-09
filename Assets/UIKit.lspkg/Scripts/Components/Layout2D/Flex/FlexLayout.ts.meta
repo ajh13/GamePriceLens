@@ -1,0 +1,121 @@
+- !<AssetImportMetadata/a1814161-5463-9ada-67a0-af440d24881a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6ff387b2-71aa-448b-aed9-a4bd46096768
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6ff387b2-71aa-448b-aed9-a4bd46096768
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e5e1b72e-8d41-464b-a966-d53555d7ca7e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e5e1b72e-8d41-464b-a966-d53555d7ca7e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 9dd841b8-662b-408e-8b31-630cf54fd4a9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _alignContent: false
+    _alignItems: false
+    _autoDiscoverItemsOnStart: false
+    _columnGap: false
+    _debug: false
+    _direction: false
+    _height: false
+    _horizontalAlignment: false
+    _items: false
+    _justifyContent: false
+    _paddingBottom: false
+    _paddingLeft: false
+    _paddingRight: false
+    _paddingTop: false
+    _rowGap: false
+    _verticalAlignment: false
+    _width: false
+    _wrap: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _width: !<float> 20.000000
+      _height: !<float> 20.000000
+      _direction: row
+      _wrap: nowrap
+      _justifyContent: start
+      _alignItems: start
+      _alignContent: start
+      _rowGap: !<float> 0.000000
+      _columnGap: !<float> 0.000000
+      _paddingTop: !<float> 0.000000
+      _paddingRight: !<float> 0.000000
+      _paddingBottom: !<float> 0.000000
+      _paddingLeft: !<float> 0.000000
+      _horizontalAlignment: center
+      _verticalAlignment: center
+      _autoDiscoverItemsOnStart: true
+      _items: !<MappingBased.AssignableType_1[]>
+        []
+      _debug: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Container Size</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Dimensions of the flex container in local space</span>"}'
+    - '// @input float _width = 20 {"label":"Width", "hint":"Container width in cm. -1 = auto (shrink-to-fit content)."}'
+    - '// @input float _height = 20 {"label":"Height", "hint":"Container height in cm. -1 = auto (shrink-to-fit content)."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Flex Properties</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Main axis direction, wrapping, and alignment behavior</span>"}'
+    - '// @input string _direction = "row" {"label":"Direction", "hint":"Main axis direction for laying out items.", "widget":"combobox", "values":[{"label":"Row", "value":"row"}, {"label":"Row Reverse", "value":"rowReverse"}, {"label":"Column", "value":"column"}, {"label":"Column Reverse", "value":"columnReverse"}]}'
+    - '// @input string _wrap = "nowrap" {"label":"Wrap", "hint":"Whether items wrap to new lines when they overflow.", "widget":"combobox", "values":[{"label":"No Wrap", "value":"nowrap"}, {"label":"Wrap", "value":"wrap"}, {"label":"Wrap Reverse", "value":"wrapReverse"}]}'
+    - '// @input string _justifyContent = "start" {"label":"Justify Content", "hint":"Distribution of items along the main axis.", "widget":"combobox", "values":[{"label":"Start", "value":"start"}, {"label":"Center", "value":"center"}, {"label":"End", "value":"end"}, {"label":"Space Between", "value":"spaceBetween"}, {"label":"Space Around", "value":"spaceAround"}, {"label":"Space Evenly", "value":"spaceEvenly"}]}'
+    - '// @input string _alignItems = "start" {"label":"Align Items", "hint":"Alignment of items along the cross axis.", "widget":"combobox", "values":[{"label":"Start", "value":"start"}, {"label":"Center", "value":"center"}, {"label":"End", "value":"end"}, {"label":"Stretch", "value":"stretch"}]}'
+    - '// @input string _alignContent = "start" {"label":"Align Content", "hint":"Distribution of wrapped lines along the cross axis (only applies when wrapping).", "widget":"combobox", "values":[{"label":"Start", "value":"start"}, {"label":"Center", "value":"center"}, {"label":"End", "value":"end"}, {"label":"Space Between", "value":"spaceBetween"}, {"label":"Space Around", "value":"spaceAround"}, {"label":"Space Evenly", "value":"spaceEvenly"}, {"label":"Stretch", "value":"stretch"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Gap</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Spacing between rows and columns</span>"}'
+    - '// @input float _rowGap {"label":"Row Gap", "hint":"Gap between rows in cm. Always separates horizontal rows of items — cross-axis gap when direction=Row, main-axis gap when direction=Column."}'
+    - '// @input float _columnGap {"label":"Column Gap", "hint":"Gap between columns in cm. Always separates vertical columns of items — main-axis gap when direction=Row, cross-axis gap when direction=Column."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Padding</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Inner spacing between container edges and content</span>"}'
+    - '// @input float _paddingTop {"label":"Top", "hint":"Top padding in cm."}'
+    - '// @input float _paddingRight {"label":"Right", "hint":"Right padding in cm."}'
+    - '// @input float _paddingBottom {"label":"Bottom", "hint":"Bottom padding in cm."}'
+    - '// @input float _paddingLeft {"label":"Left", "hint":"Left padding in cm."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Content Alignment</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Position of the layout content relative to the SceneObject center</span>"}'
+    - '// @input string _horizontalAlignment = "center" {"label":"Horizontal", "hint":"Horizontal alignment of the layout content relative to the SceneObject center.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Center", "value":"center"}, {"label":"Right", "value":"right"}]}'
+    - '// @input string _verticalAlignment = "center" {"label":"Vertical", "hint":"Vertical alignment of the layout content relative to the SceneObject center.", "widget":"combobox", "values":[{"label":"Top", "value":"top"}, {"label":"Center", "value":"center"}, {"label":"Bottom", "value":"bottom"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Item Source</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Choose whether this layout manages direct children automatically or uses an explicit manual item list</span>"}'
+    - '// @input bool _autoDiscoverItemsOnStart = true {"label":"Auto Discover Items On Start", "hint":"Discovers direct-child FlexItems once during OnStartEvent. Disable to manage items manually"}'
+    - '// @ui {"widget":"group_start", "label":"Flex Items Selection", "showIf":"_autoDiscoverItemsOnStart", "showIfValue":false}'
+    - '// @input AssignableType_1[] _items = {} {"label":"Items", "hint":"Choose initial flex item children for the layout"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Debug</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Visual debugging tools for layout inspection</span>"}'
+    - '// @input bool _debug {"label":"Debug Visualization", "hint":"Enable debug visualization (container and item bounds)."}'

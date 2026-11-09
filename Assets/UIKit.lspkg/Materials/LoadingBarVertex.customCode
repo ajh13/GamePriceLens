@@ -1,0 +1,26 @@
+// Loading Bar quad vertex stage.
+//
+// Scales the unit quad (position.x/y in [-0.5, 0.5], built by
+// LoadingBarVisual's MeshBuilder) to the bar rect in local-space
+// centimeters, padded by aaPad on every side so the fragment SDF's
+// antialiasing fringe is never clipped by the geometry edge.
+//
+// IMPORTANT (Lens Studio custom-node semantics): outputs wired from a
+// vertex-stage node into a fragment-stage node are NOT varyings — LS
+// re-evaluates the expression at the fragment stage, where
+// system.getSurfacePositionObjectSpace() is the *displaced* surface
+// position. So this node outputs ONLY newPos; the fragment stage derives
+// everything per pixel from the rendered position instead (same contract
+// as SpinnerVertex.customCode).
+
+input_vec2 barSize;
+input_float aaPad;
+
+output_vec3 newPos;
+
+void main()
+{
+    // At the vertex stage this is the raw position attribute (the unit quad).
+    mediump vec3 basePos = system.getSurfacePositionObjectSpace();
+    newPos = vec3(basePos.x * (barSize.x + 2.0 * aaPad), basePos.y * (barSize.y + 2.0 * aaPad), 0.0);
+}

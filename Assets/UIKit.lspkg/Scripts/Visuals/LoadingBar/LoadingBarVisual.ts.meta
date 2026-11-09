@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/62448731-d717-5695-55f2-577e7d8cc59c>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f4cbcee5-8ae4-44f0-aaab-bad9a89b5b81
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f4cbcee5-8ae4-44f0-aaab-bad9a89b5b81
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 618ed31b-a3c2-4aa8-a941-43ed52007c65
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/618ed31b-a3c2-4aa8-a941-43ed52007c65>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 09214910-f3e7-4372-b12d-078d443981ed
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _colorHead: false
+    _colorTail: false
+    _depth: false
+    _renderOrder: false
+    _size: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: !<float> 0.000000
+      _size: !<Vec2> {x: 1.000000, y: 1.000000}
+      _depth: !<float> 1.000000
+      _colorTail: !<Vec4> {x: 0.250000, y: 0.950000, z: 0.850000, w: 0.000000}
+      _colorHead: !<Vec4> {x: 0.250000, y: 0.950000, z: 0.850000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input number _renderOrder = "0"'
+    - '// @input vec2 _size = "{1,1}" {"hint":"Size of Shape In Local Space Centimeters"}'
+    - // @input float _depth = 1
+    - '// @input vec4 _colorTail = "{0.25,0.95,0.85,0}" {"hint":"Sweep color at the trailing end.", "widget":"color"}'
+    - '// @input vec4 _colorHead = "{0.25,0.95,0.85,1}" {"hint":"Sweep color at the head (leading) end.", "widget":"color"}'

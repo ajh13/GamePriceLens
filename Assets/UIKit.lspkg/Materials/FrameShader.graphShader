@@ -1,0 +1,2697 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 2
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: size
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: size
+        Tooltip:
+          String: ""
+      PositionX: -1143
+      PositionY: -1270
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: size
+    Node1:
+      DependencyIndex: 1
+      LevelID: 3
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: cornerRadius
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: cornerRadius
+        Tooltip:
+          String: ""
+      PositionX: -1145
+      PositionY: -1191
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: cornerRadius
+    Node10:
+      DependencyIndex: 10
+      LevelID: 14
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: backgroundColor
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: backgroundColor
+        Tooltip:
+          String: ""
+      PositionX: -1130
+      PositionY: -479
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: backgroundColor
+    Node11:
+      DependencyIndex: 11
+      LevelID: 57
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Array:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          IOType: 1
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : xyz : xy : x"
+        Group:
+          String: ""
+        ScriptName:
+          String: colors
+        Size:
+          Variable: 6
+        SizeOut:
+          IOType: 1
+          Variable: 0.0
+        SortIndex:
+          Variable: 0
+        Title:
+          String: colors
+        Tooltip:
+          String: ""
+      PositionX: -1194
+      PositionY: -392
+      TemplateID: nodes_inputs_parameters_array_object
+      Title1: Float Array Object Parameter
+      Title2: colors
+    Node12:
+      DependencyIndex: 12
+      LevelID: 15
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Array:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          IOType: 1
+        Channels:
+          ItemIndex: 3
+          ItemList: "xyzw : xyz : xy : x"
+        Group:
+          String: ""
+        ScriptName:
+          String: percents
+        Size:
+          Variable: 6
+        SizeOut:
+          IOType: 1
+          Variable: 0.0
+        SortIndex:
+          Variable: 0
+        Title:
+          String: percents
+        Tooltip:
+          String: ""
+      PositionX: -1192
+      PositionY: -295
+      TemplateID: nodes_inputs_parameters_array_object
+      Title1: Float Array Object Parameter
+      Title2: percents
+    Node13:
+      DependencyIndex: 13
+      LevelID: 16
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: stops
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: stops
+        Tooltip:
+          String: ""
+      PositionX: -1120
+      PositionY: -202
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: stops
+    Node14:
+      DependencyIndex: 14
+      LevelID: 17
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: linearGradientStart
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: linearGradientStart
+        Tooltip:
+          String: ""
+      PositionX: -1136
+      PositionY: -119
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: linearGradientStart
+    Node15:
+      DependencyIndex: 15
+      LevelID: 18
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: linearGradientLength
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: linearGradientLength
+        Tooltip:
+          String: ""
+      PositionX: -1140
+      PositionY: -36
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: linearGradientLength
+    Node16:
+      DependencyIndex: 16
+      LevelID: 19
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: sinLinearGradientAngle
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: sinLinearGradientAngle
+        Tooltip:
+          String: ""
+      PositionX: -1139
+      PositionY: 49
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: sinLinearGradientAngle
+    Node17:
+      DependencyIndex: 17
+      LevelID: 20
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: cosLinearGradientAngle
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: cosLinearGradientAngle
+        Tooltip:
+          String: ""
+      PositionX: -1130
+      PositionY: 132
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: cosLinearGradientAngle
+    Node18:
+      DependencyIndex: 18
+      LevelID: 21
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: gradientStartPosition
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: gradientStartPosition
+        Tooltip:
+          String: ""
+      PositionX: -1108
+      PositionY: 219
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: gradientStartPosition
+    Node19:
+      DependencyIndex: 19
+      LevelID: 22
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: radialGradientLength
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: radialGradientLength
+        Tooltip:
+          String: ""
+      PositionX: -1114
+      PositionY: 302
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: radialGradientLength
+    Node2:
+      DependencyIndex: 2
+      LevelID: 5
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderSize
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderSize
+        Tooltip:
+          String: ""
+      PositionX: -1148
+      PositionY: -1104
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderSize
+    Node20:
+      DependencyIndex: 20
+      LevelID: 23
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: gradientType
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: gradientType
+        Tooltip:
+          String: ""
+      PositionX: -1071
+      PositionY: 385
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: gradientType
+    Node21:
+      DependencyIndex: 21
+      LevelID: 24
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderColor
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderColor
+        Tooltip:
+          String: ""
+      PositionX: -1065
+      PositionY: 467
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderColor
+    Node22:
+      DependencyIndex: 22
+      LevelID: 25
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Array:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          IOType: 1
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : xyz : xy : x"
+        Group:
+          String: ""
+        ScriptName:
+          String: borderGradientColors
+        Size:
+          Variable: 6
+        SizeOut:
+          IOType: 1
+          Variable: 0.0
+        SortIndex:
+          Variable: 0
+        Title:
+          String: borderGradientColors
+        Tooltip:
+          String: ""
+      PositionX: -1127
+      PositionY: 560
+      TemplateID: nodes_inputs_parameters_array_object
+      Title1: Float Array Object Parameter
+      Title2: borderGradientColors
+    Node23:
+      DependencyIndex: 23
+      LevelID: 26
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Array:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          IOType: 1
+        Channels:
+          ItemIndex: 3
+          ItemList: "xyzw : xyz : xy : x"
+        Group:
+          String: ""
+        ScriptName:
+          String: borderGradientPercents
+        Size:
+          Variable: 6
+        SizeOut:
+          IOType: 1
+          Variable: 0.0
+        SortIndex:
+          Variable: 0
+        Title:
+          String: borderGradientPercents
+        Tooltip:
+          String: ""
+      PositionX: -1098
+      PositionY: 659
+      TemplateID: nodes_inputs_parameters_array_object
+      Title1: Float Array Object Parameter
+      Title2: borderGradientPercents
+    Node24:
+      DependencyIndex: 24
+      LevelID: 27
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderGradientStops
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderGradientStops
+        Tooltip:
+          String: ""
+      PositionX: -1005
+      PositionY: 765
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderGradientStops
+    Node25:
+      DependencyIndex: 25
+      LevelID: 28
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderLinearGradientStart
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderLinearGradientStart
+        Tooltip:
+          String: ""
+      PositionX: -984
+      PositionY: 851
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderLinearGradientStart
+    Node26:
+      DependencyIndex: 26
+      LevelID: 29
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderLinearGradientLength
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderLinearGradientLength
+        Tooltip:
+          String: ""
+      PositionX: -958
+      PositionY: 939
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderLinearGradientLength
+    Node27:
+      DependencyIndex: 27
+      LevelID: 30
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderSinLinearGradientAngle
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderSinLinearGradientAngle
+        Tooltip:
+          String: ""
+      PositionX: -910
+      PositionY: 1024
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderSinLinearGradientAngle
+    Node28:
+      DependencyIndex: 28
+      LevelID: 31
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderCosLinearGradientAngle
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderCosLinearGradientAngle
+        Tooltip:
+          String: ""
+      PositionX: -891
+      PositionY: 1107
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderCosLinearGradientAngle
+    Node29:
+      DependencyIndex: 29
+      LevelID: 32
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderGradientStartPosition
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderGradientStartPosition
+        Tooltip:
+          String: ""
+      PositionX: -816
+      PositionY: 1193
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderGradientStartPosition
+    Node3:
+      DependencyIndex: 3
+      LevelID: 7
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: border
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: border
+        Tooltip:
+          String: ""
+      PositionX: -1145
+      PositionY: -1012
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: border
+    Node30:
+      DependencyIndex: 30
+      LevelID: 33
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderRadialGradientLength
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderRadialGradientLength
+        Tooltip:
+          String: ""
+      PositionX: -736
+      PositionY: 1275
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderRadialGradientLength
+    Node31:
+      DependencyIndex: 31
+      LevelID: 34
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: borderGradientType
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: borderGradientType
+        Tooltip:
+          String: ""
+      PositionX: -668
+      PositionY: 1367
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: borderGradientType
+    Node32:
+      DependencyIndex: 32
+      LevelID: 74
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: true
+        EnableMin:
+          Variable: true
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: opacityFactor
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Opacity Factor
+        Tooltip:
+          String: Multiplier On Outgoing Opacity (Make Sure To Enable Blending and Alpha on Color Mask)
+      PositionX: -626
+      PositionY: 1460
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Opacity Factor
+    Node33:
+      DependencyIndex: 33
+      LevelID: 1
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4  Value1;
+            input_vec4  Value2;
+            output_vec4 Result; 
+            
+            void main()
+            {
+            	Result = Value1 * Value2;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: "7062163365558962942:12743203639008043213"
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Errors:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        FinalColor:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ID:
+          Variable: 1
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Fragment
+        UseExternalFile:
+          Variable: true
+        backgroundColor:
+          Connection0:
+            NodeLevelID: 14
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        backgroundTexture:
+          ClassType2: TEXTURE_OBJECT_2D
+          Connection0:
+            NodeLevelID: 10
+            PortID: Texture
+        baseOnly:
+          Variable: 1.0
+        border:
+          Connection0:
+            NodeLevelID: 7
+            PortID: Output
+          Variable: 0.0
+        borderColor:
+          Connection0:
+            NodeLevelID: 24
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        borderCosLinearGradientAngle:
+          Connection0:
+            NodeLevelID: 31
+            PortID: Output
+          Variable: 0.0
+        borderGradientColors:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          Connection0:
+            NodeLevelID: 25
+            PortID: Array
+        borderGradientPercents:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          Connection0:
+            NodeLevelID: 26
+            PortID: Array
+        borderGradientStartPosition:
+          Connection0:
+            NodeLevelID: 32
+            PortID: Output
+          Variable: [0.0, 0.0]
+        borderGradientStops:
+          Connection0:
+            NodeLevelID: 27
+            PortID: Output
+          Variable: 0.0
+        borderGradientType:
+          Connection0:
+            NodeLevelID: 34
+            PortID: Output
+          Variable: 0.0
+        borderLinearGradientLength:
+          Connection0:
+            NodeLevelID: 29
+            PortID: Output
+          Variable: 0.0
+        borderLinearGradientStart:
+          Connection0:
+            NodeLevelID: 28
+            PortID: Output
+          Variable: 0.0
+        borderRadialGradientLength:
+          Connection0:
+            NodeLevelID: 33
+            PortID: Output
+          Variable: 0.0
+        borderResult_out:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        borderSinLinearGradientAngle:
+          Connection0:
+            NodeLevelID: 30
+            PortID: Output
+          Variable: 0.0
+        borderSize:
+          Connection0:
+            NodeLevelID: 5
+            PortID: Output
+          Variable: 0.0
+        colors:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          Connection0:
+            NodeLevelID: 57
+            PortID: Array
+        cornerRadius:
+          Connection0:
+            NodeLevelID: 3
+            PortID: Output
+          Variable: 0.0
+        cosLinearGradientAngle:
+          Connection0:
+            NodeLevelID: 20
+            PortID: Output
+          Variable: 0.0
+        distFromEdge_out:
+          IOType: 1
+          Variable: 0.0
+        fillColor_out:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        gradientStartPosition:
+          Connection0:
+            NodeLevelID: 21
+            PortID: Output
+          Variable: [0.0, 0.0]
+        gradientType:
+          Connection0:
+            NodeLevelID: 23
+            PortID: Output
+          Variable: 0.0
+        linearGradientLength:
+          Connection0:
+            NodeLevelID: 18
+            PortID: Output
+          Variable: 0.0
+        linearGradientStart:
+          Connection0:
+            NodeLevelID: 17
+            PortID: Output
+          Variable: 0.0
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        opacityFactor:
+          Connection0:
+            NodeLevelID: 74
+            PortID: Output
+          Variable: 0.0
+        percents:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          Connection0:
+            NodeLevelID: 15
+            PortID: Array
+        radialGradientLength:
+          Connection0:
+            NodeLevelID: 22
+            PortID: Output
+          Variable: 0.0
+        sinLinearGradientAngle:
+          Connection0:
+            NodeLevelID: 19
+            PortID: Output
+          Variable: 0.0
+        size:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [0.0, 0.0]
+        stops:
+          Connection0:
+            NodeLevelID: 16
+            PortID: Output
+          Variable: 0.0
+        textureMode:
+          Connection0:
+            NodeLevelID: 12
+            PortID: Output
+          Variable: [0.0, 0.0]
+        textureWrap:
+          Connection0:
+            NodeLevelID: 13
+            PortID: Output
+          Variable: 0.0
+        useTexture:
+          Connection0:
+            NodeLevelID: 11
+            PortID: Output
+          Variable: 0.0
+        uv:
+          Connection0:
+            NodeLevelID: 0
+            PortID: uv
+          Variable: [0.0, 0.0]
+      PositionX: -83
+      PositionY: -270
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Fragment
+    Node34:
+      DependencyIndex: 34
+      LevelID: 40
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        DepthMap:
+          Variable: false
+        ExtraOutputs:
+          Variable: false
+        Group:
+          String: ""
+        PixelSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        ScriptName:
+          String: background
+        SortIndex:
+          Variable: 0
+        Texture:
+          ClassType2: TEXTURE_OBJECT_2D
+          IOType: 1
+        TextureSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        Title:
+          String: background
+        Tooltip:
+          String: ""
+      PositionX: 2157
+      PositionY: 598
+      TemplateID: nodes_inputs_parameters_texture2d_object
+      TemplateVersionMinor: 1
+      Title1: Texture 2D Object Parameter
+      Title2: background
+    Node35:
+      DependencyIndex: 35
+      LevelID: 115
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: frameBorder
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: margin
+        Tooltip:
+          String: ""
+      PositionX: 1533
+      PositionY: 592
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: margin
+    Node36:
+      DependencyIndex: 36
+      LevelID: 113
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: false
+        Group:
+          String: ""
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: borderOnly
+        SortIndex:
+          Variable: 0
+        SpecifySpecConst:
+          Variable: false
+        Static:
+          Variable: false
+        Tooltip:
+          String: ""
+        UniqueID:
+          String: borderOnly
+      PositionX: 1536
+      PositionY: 670
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: borderOnly
+    Node37:
+      DependencyIndex: 37
+      LevelID: 116
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        CreateGroup:
+          Variable: false
+        Group:
+          String: ""
+        OptimizeOnExport:
+          Variable: true
+        Output:
+          IOType: 1
+          Variable: 0.0
+        ScriptName:
+          String: cutOutCenter
+        SortIndex:
+          Variable: 0
+        SpecifySpecConst:
+          Variable: false
+        Static:
+          Variable: false
+        Tooltip:
+          String: ""
+        UniqueID:
+          String: cutOutCenter
+      PositionX: 1539
+      PositionY: 751
+      TemplateID: nodes_inputs_parameters_bool
+      Title1: Bool Parameter
+      Title2: cutOutCenter
+    Node38:
+      DependencyIndex: 38
+      LevelID: 82
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        DepthMap:
+          Variable: false
+        ExtraOutputs:
+          Variable: false
+        Group:
+          String: ""
+        PixelSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        ScriptName:
+          String: circleTexture
+        SortIndex:
+          Variable: 0
+        Texture:
+          ClassType2: TEXTURE_OBJECT_2D
+          IOType: 1
+        TextureSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        Title:
+          String: circleTexture
+        Tooltip:
+          String: ""
+      PositionX: 1460
+      PositionY: 828
+      TemplateID: nodes_inputs_parameters_texture2d_object
+      Title1: Texture 2D Object Parameter
+      Title2: circleTexture
+    Node39:
+      DependencyIndex: 39
+      LevelID: 85
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: cursorPosition
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: cursorPostion
+        Tooltip:
+          String: ""
+      PositionX: 1536
+      PositionY: 908
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: cursorPostion
+    Node4:
+      DependencyIndex: 4
+      LevelID: 8
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: uvSize
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: uvSize
+        Tooltip:
+          String: ""
+      PositionX: -1143
+      PositionY: -925
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: uvSize
+    Node40:
+      DependencyIndex: 40
+      LevelID: 35
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: cursorRadiusFactor
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Cursor Radius Factor
+        Tooltip:
+          String: ""
+      PositionX: 1507
+      PositionY: 986
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Cursor Radius Factor
+    Node41:
+      DependencyIndex: 41
+      LevelID: 37
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: glowOpacityFactor
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: glowOpacityFactor
+        Tooltip:
+          String: ""
+      PositionX: 1520
+      PositionY: 1069
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: glowOpacityFactor
+    Node42:
+      DependencyIndex: 42
+      LevelID: 98
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: isHovered
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Is Hovered
+        Tooltip:
+          String: ""
+      PositionX: 1537
+      PositionY: 1149
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Is Hovered
+    Node43:
+      DependencyIndex: 43
+      LevelID: 103
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: isActive
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: isActive
+        Tooltip:
+          String: ""
+      PositionX: 1536
+      PositionY: 1230
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: isActive
+    Node44:
+      DependencyIndex: 44
+      LevelID: 124
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: highlightColorStop1
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Highlight Color Stop 1
+        Tooltip:
+          String: ""
+      PositionX: 1502
+      PositionY: 1308
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Highlight Color Stop 1
+    Node45:
+      DependencyIndex: 45
+      LevelID: 123
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: highlightColorStop2
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Highlight Color Stop 2
+        Tooltip:
+          String: ""
+      PositionX: 1506
+      PositionY: 1387
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Highlight Color Stop 2
+    Node46:
+      DependencyIndex: 46
+      LevelID: 96
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: highlightActiveColorStop1
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Highlight Active Color Stop 1
+        Tooltip:
+          String: ""
+      PositionX: 1468
+      PositionY: 1478
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Highlight Active Color Stop 1
+    Node47:
+      DependencyIndex: 47
+      LevelID: 121
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 1
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: highlightActiveColorStop2
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Highlight Active Color Stop 2
+        Tooltip:
+          String: ""
+      PositionX: 1470
+      PositionY: 1561
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Highlight Active Color Stop 2
+    Node48:
+      DependencyIndex: 48
+      LevelID: 107
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: highlightStop1
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: highlightStop1
+        Tooltip:
+          String: ""
+      PositionX: 1461
+      PositionY: 1640
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: highlightStop1
+    Node49:
+      DependencyIndex: 49
+      LevelID: 108
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: highlightStop2
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: highlightStop2
+        Tooltip:
+          String: ""
+      PositionX: 1458
+      PositionY: 1719
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: highlightStop2
+    Node5:
+      DependencyIndex: 5
+      LevelID: 0
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4  Value1;
+            input_vec4  Value2;
+            output_vec4 Result; 
+            
+            void main()
+            {
+            	Result = Value1 * Value2;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: "11057117676718738393:10540014829682391960"
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Errors:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        ID:
+          Variable: 0
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: Vertex
+        UseExternalFile:
+          Variable: true
+        border:
+          Connection0:
+            NodeLevelID: 7
+            PortID: Output
+          Variable: 0.0
+        borderSize:
+          Connection0:
+            NodeLevelID: 5
+            PortID: Output
+          Variable: 0.0
+        cornerRadius:
+          Connection0:
+            NodeLevelID: 3
+            PortID: Output
+          Variable: 0.0
+        newPos:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        size:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [0.0, 0.0]
+        uv:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        uvSize:
+          Connection0:
+            NodeLevelID: 8
+            PortID: Output
+          Variable: [0.0, 0.0]
+      PositionX: -430
+      PositionY: -695
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: Vertex
+    Node50:
+      DependencyIndex: 50
+      LevelID: 109
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: edgeHighlightStop1
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: edgeHighlightStop1
+        Tooltip:
+          String: ""
+      PositionX: 1479
+      PositionY: 1803
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: edgeHighlightStop1
+    Node51:
+      DependencyIndex: 51
+      LevelID: 110
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: edgeHighlightStop2
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: edgeHighlightStop2
+        Tooltip:
+          String: ""
+      PositionX: 1469
+      PositionY: 1867
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: edgeHighlightStop2
+    Node52:
+      DependencyIndex: 52
+      LevelID: 101
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Array:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          IOType: 1
+        Channels:
+          ItemIndex: 0
+          ItemList: "xyzw : xyz : xy : x"
+        Group:
+          String: ""
+        ScriptName:
+          String: grabZones
+        Size:
+          Variable: 8
+        SizeOut:
+          IOType: 1
+          Variable: 0.0
+        SortIndex:
+          Variable: 0
+        Title:
+          String: Grab Zones
+        Tooltip:
+          String: ""
+      PositionX: 1463
+      PositionY: 1937
+      TemplateID: nodes_inputs_parameters_array_object
+      Title1: Float Array Object Parameter
+      Title2: Grab Zones
+    Node53:
+      DependencyIndex: 53
+      LevelID: 104
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: grabZonesCount
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: Grab Zones Count
+        Tooltip:
+          String: ""
+      PositionX: 1470
+      PositionY: 2042
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: Grab Zones Count
+    Node54:
+      DependencyIndex: 54
+      LevelID: 36
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: dotsHighlightStop1
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: dotsHighlightStop1
+        Tooltip:
+          String: ""
+      PositionX: 1500
+      PositionY: 2133
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: dotsHighlightStop1
+    Node55:
+      DependencyIndex: 55
+      LevelID: 38
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: dotsHighlightStop2
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: dotsHighlightStop2
+        Tooltip:
+          String: ""
+      PositionX: 1510
+      PositionY: 2250
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: dotsHighlightStop2
+    Node56:
+      DependencyIndex: 56
+      LevelID: 39
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: dotsScalar
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: dotsScalar
+        Tooltip:
+          String: ""
+      PositionX: 1542
+      PositionY: 2370
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: dotsScalar
+    Node57:
+      DependencyIndex: 57
+      LevelID: 6
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Code:
+          ClassType1: TEXT
+          String: |-
+            input_vec4  Value1;
+            input_vec4  Value2;
+            output_vec4 Result; 
+            
+            void main()
+            {
+            	Result = Value1 * Value2;
+            }
+        CustomCodeNodeAsset:
+          ClassType1: REFUID
+          String: "13447043180129894772:13741783386849001369"
+        Description:
+          ClassType1: TEXT
+          String: ""
+        Errors:
+          ClassType1: TEXT
+          String: ""
+        Examples:
+          ItemIndex: 0
+          ItemList: "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions"
+        FinalColor:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ID:
+          Variable: 6
+        Locked:
+          Variable: false
+        Stage:
+          ItemIndex: 1
+          ItemList: "Vertex : Pixel"
+        Title:
+          String: FrameCompose
+        UseExternalFile:
+          Variable: true
+        background:
+          ClassType2: TEXTURE_OBJECT_2D
+          Connection0:
+            NodeLevelID: 40
+            PortID: Texture
+        borderOnly:
+          Connection0:
+            NodeLevelID: 113
+            PortID: Output
+          Variable: 0.0
+        borderResult:
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        circleTexture:
+          ClassType2: TEXTURE_OBJECT_2D
+          Connection0:
+            NodeLevelID: 82
+            PortID: Texture
+        cursorPosition:
+          Connection0:
+            NodeLevelID: 85
+            PortID: Output
+          Variable: [0.0, 0.0]
+        cursorRadiusFactor:
+          Connection0:
+            NodeLevelID: 35
+            PortID: Output
+          Variable: 0.0
+        cutOutCenter:
+          Connection0:
+            NodeLevelID: 116
+            PortID: Output
+          Variable: 0.0
+        distFromEdge:
+          Connection0:
+            NodeLevelID: 1
+            PortID: distFromEdge_out
+          Variable: 0.0
+        dotsHighlightStop1:
+          Connection0:
+            NodeLevelID: 36
+            PortID: Output
+          Variable: 0.0
+        dotsHighlightStop2:
+          Connection0:
+            NodeLevelID: 38
+            PortID: Output
+          Variable: 0.0
+        dotsScalar:
+          Connection0:
+            NodeLevelID: 39
+            PortID: Output
+          Variable: 0.0
+        edgeHighlightStop1:
+          Connection0:
+            NodeLevelID: 109
+            PortID: Output
+          Variable: 0.0
+        edgeHighlightStop2:
+          Connection0:
+            NodeLevelID: 110
+            PortID: Output
+          Variable: 0.0
+        frameBorder:
+          Connection0:
+            NodeLevelID: 115
+            PortID: Output
+          Variable: 0.0
+        glowOpacityFactor:
+          Connection0:
+            NodeLevelID: 37
+            PortID: Output
+          Variable: 0.0
+        grabZones:
+          ClassType2: FLOAT_ARRAY_OBJECT
+          Connection0:
+            NodeLevelID: 101
+            PortID: Array
+        grabZonesCount:
+          Connection0:
+            NodeLevelID: 104
+            PortID: Output
+          Variable: 0.0
+        highlightActiveColorStop1:
+          Connection0:
+            NodeLevelID: 96
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        highlightActiveColorStop2:
+          Connection0:
+            NodeLevelID: 121
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        highlightColorStop1:
+          Connection0:
+            NodeLevelID: 124
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        highlightColorStop2:
+          Connection0:
+            NodeLevelID: 123
+            PortID: Output
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        highlightStop1:
+          Connection0:
+            NodeLevelID: 107
+            PortID: Output
+          Variable: 0.0
+        highlightStop2:
+          Connection0:
+            NodeLevelID: 108
+            PortID: Output
+          Variable: 0.0
+        isActive:
+          Connection0:
+            NodeLevelID: 103
+            PortID: Output
+          Variable: 0.0
+        isHovered:
+          Connection0:
+            NodeLevelID: 98
+            PortID: Output
+          Variable: 0.0
+        ngs_Height:
+          Variable: 400
+        ngs_Version:
+          String: 0.1.0
+        opacityFactor:
+          Connection0:
+            NodeLevelID: 74
+            PortID: Output
+          Variable: 0.0
+        size:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Output
+          Variable: [0.0, 0.0]
+        uv:
+          Connection0:
+            NodeLevelID: 0
+            PortID: uv
+          Variable: [0.0, 0.0]
+      PositionX: 2650
+      PositionY: 885
+      TemplateID: node_util_custom
+      TemplateVersionMinor: 2
+      Title1: FrameCompose
+    Node58:
+      DependencyIndex: 58
+      LevelID: 9
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ApplyBlending:
+          Variable: false
+        ApplyRotation:
+          Variable: true
+        ApplySkinning:
+          Variable: false
+        ApplyTranslation:
+          Variable: true
+        From:
+          ItemIndex: 1
+          ItemList: "Tangent Space : Object Space : World Space : View Space : Screen Space ( NDC )"
+        To:
+          ItemIndex: 1
+          ItemList: "Object Space : World Space : View Space : Screen Space ( NDC )"
+        TransformNormal:
+          Variable: false
+        VectorIn:
+          Connection0:
+            NodeLevelID: 0
+            PortID: newPos
+          Variable: [0.0, 0.0, 0.0]
+        VectorOut:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: 350
+      PositionY: -597
+      TemplateID: node_math_transform
+      TemplateVersionMinor: 2
+      Title1: Transform Vector
+      Title2: Object to World
+    Node59:
+      CommentSizeX: 0
+      CommentSizeY: 0
+      DependencyIndex: 59
+      LevelID: 4
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Depth:
+          Variable: 1.0
+        DepthMode:
+          ItemIndex: 0
+          ItemList: |2-
+            		Non-Linear - Normalized [0 to 1] ) :		Linear - Normalized [-1 to 1] :		View Space - Non-Normalized [-near to -far]	
+        DontFreezeSpec:
+          Variable: false
+        FinalColor:
+          ClassType1: COLOR
+          Connection0:
+            NodeLevelID: 6
+            PortID: FinalColor
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor1:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor2:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        FinalColor3:
+          ClassType1: COLOR
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        GSplatPointSize:
+          Variable: 0.0
+        GSplatRotation:
+          Variable: [0.0, 0.0, 0.0, 1.0]
+        GSplatScale:
+          Variable: [0.0, 0.0, 0.0]
+        Motion Vector Pass:
+          ItemIndex: 0
+          ItemList: "Write Velocity and Depth : Discard Velocity but Write Depth : Discard Velocity and Depth"
+        Negative:
+          Variable: false
+        PrevWorldPosition:
+          Variable: [0.0, 0.0, 0.0]
+        RayDirection:
+          Variable: [0.0, 1.0, 0.0]
+        RayOrigin:
+          Variable: [0.0, 0.0, 0.0]
+        ShowPrevPos:
+          Variable: false
+        Targets:
+          ItemIndex: 0
+          ItemList: "1 : 2 : 3 : 4"
+        Type:
+          ItemIndex: 0
+          ItemList: "3D : Post Effect : Hair : Gaussian Splatting"
+        WorldNormal:
+          Variable: [0.0, 1.0, 0.0]
+        WorldPosition:
+          Connection0:
+            NodeLevelID: 9
+            PortID: VectorOut
+          Variable: [0.0, 0.0, 0.0]
+        WorldTangent:
+          Variable: [0.0, 0.0, 1.0]
+        WriteDepth:
+          Variable: false
+      PositionX: 2909
+      PositionY: -495
+      TemplateID: nodes_main_graph
+      Title1: Shader
+      Title2: 3D
+    Node6:
+      DependencyIndex: 6
+      LevelID: 10
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        DepthMap:
+          Variable: false
+        ExtraOutputs:
+          Variable: false
+        Group:
+          String: ""
+        PixelSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        ScriptName:
+          String: backgroundTexture
+        SortIndex:
+          Variable: 0
+        Texture:
+          ClassType2: TEXTURE_OBJECT_2D
+          IOType: 1
+        TextureSize:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        Title:
+          String: backgroundTexture
+        Tooltip:
+          String: ""
+      PositionX: -1209
+      PositionY: -818
+      TemplateID: nodes_inputs_parameters_texture2d_object
+      TemplateVersionMinor: 1
+      Title1: Texture 2D Object Parameter
+      Title2: backgroundTexture
+    Node7:
+      DependencyIndex: 7
+      LevelID: 11
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: useTexture
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: useTexture
+        Tooltip:
+          String: ""
+      PositionX: -1133
+      PositionY: -727
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: useTexture
+    Node8:
+      DependencyIndex: 8
+      LevelID: 12
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 4
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: textureMode
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: textureMode
+        Tooltip:
+          String: ""
+      PositionX: -1132
+      PositionY: -642
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: textureMode
+    Node9:
+      DependencyIndex: 9
+      LevelID: 13
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Channels:
+          ItemIndex: 5
+          ItemList: "xyzw : rgba : xyz : rgb : xy : x"
+        Default:
+          Variable: [1.0, 1.0, 1.0, 1.0]
+        EnableMax:
+          Variable: false
+        EnableMin:
+          Variable: false
+        Group:
+          String: ""
+        Max:
+          Variable: 1.0
+        Min:
+          Variable: 0.0
+        Output:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0, 0.0]
+        ScriptName:
+          String: textureWrap
+        SortIndex:
+          Variable: 0
+        Step:
+          Variable: 0.009999999776482582
+        Title:
+          String: textureWrap
+        Tooltip:
+          String: ""
+      PositionX: -1131
+      PositionY: -562
+      TemplateID: nodes_inputs_parameters_float
+      Title1: Float Parameter
+      Title2: textureWrap
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+SystemID: dev.snap.shaders

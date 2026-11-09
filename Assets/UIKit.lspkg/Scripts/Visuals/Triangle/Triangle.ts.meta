@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/7afb2750-43b4-be2e-229d-cedcbd1fdf00>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2a4f813b-6277-4b7c-a250-23ca2b104d4f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2a4f813b-6277-4b7c-a250-23ca2b104d4f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 04339d03-0aa5-48dc-9493-ca02ff65ca01
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/04339d03-0aa5-48dc-9493-ca02ff65ca01>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: cf857574-1acd-49a9-84c1-428a968ff78e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _baseColor: false
+    _depth: false
+    _opacity: false
+    _renderOrder: false
+    _size: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: !<float> 0.000000
+      _size: !<Vec2> {x: 1.000000, y: 1.000000}
+      _depth: !<float> 1.000000
+      _baseColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      _opacity: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input number _renderOrder = "0"'
+    - '// @input vec2 _size = "{1,1}" {"hint":"Size of Shape In Local Space Centimeters"}'
+    - // @input float _depth = 1
+    - '// @input vec4 _baseColor = "{1,1,1,1}" {"hint":"Solid fill color of the triangle.", "widget":"color"}'
+    - '// @input float _opacity = "1" {"hint":"Opacity multiplier applied to the material.", "widget":"slider", "min":0, "max":1, "step":0.01}'

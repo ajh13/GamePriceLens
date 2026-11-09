@@ -1,0 +1,205 @@
+- !<AssetImportMetadata/7e8dbc92-dc59-3f23-c5c3-644d30a0871b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b4d1ee51-b391-42fc-997f-e9fd6ad96fb7
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b4d1ee51-b391-42fc-997f-e9fd6ad96fb7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> fa425565-40c0-412b-9a54-7ebc1d5fcee5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/fa425565-40c0-412b-9a54-7ebc1d5fcee5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 692c0331-2406-4fdb-b953-bd73557b2fb0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    alignment: false
+    attachTo: false
+    attachmentOffset: false
+    attachmentPosition: false
+    buttonBehavior: false
+    buttonCrossAxisSize: false
+    buttonIsOn: false
+    buttonManualSize: false
+    buttonSizeMode: false
+    buttonStyle: false
+    buttonTheme: false
+    buttonType: false
+    color: false
+    customCrossAxisSize: false
+    customManualSize: false
+    customObject: false
+    customSizeMode: false
+    drainSeconds: false
+    height: false
+    hideTextWhenTooSmall: false
+    holdRepeatable: false
+    holdSeconds: false
+    icon: false
+    iconAlignment: false
+    iconSizeMode: false
+    id: false
+    inactive: false
+    isAttachedComponent: false
+    isOn: false
+    itemType: false
+    max: false
+    min: false
+    numberOfSegments: false
+    placeholder: false
+    segmented: false
+    sliderCrossAxisSize: false
+    sliderManualSize: false
+    sliderSizeMode: false
+    step: false
+    text: false
+    textAlignment: false
+    textFieldCrossAxisSize: false
+    textFieldIcon: false
+    textFieldManualSize: false
+    textFieldSizeMode: false
+    textFieldTextAlignment: false
+    thickness: false
+    toggleCrossAxisSize: false
+    toggleManualSize: false
+    toggleSizeMode: false
+    value: false
+    voiceFormat: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - itemType: button
+      id: ""
+      alignment: left
+      customObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonType: rectangle
+      icon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      iconSizeMode: fixed
+      text: ""
+      iconAlignment: left
+      textAlignment: center
+      hideTextWhenTooSmall: false
+      buttonTheme: Inherited
+      buttonStyle: ""
+      buttonBehavior: tap
+      buttonIsOn: false
+      holdSeconds: !<float> 0.000000
+      drainSeconds: !<float> 0.000000
+      holdRepeatable: false
+      voiceFormat: default
+      color: !<Vec4> {x: 0.500000, y: 0.500000, z: 0.500000, w: 0.500000}
+      placeholder: ""
+      textFieldTextAlignment: left
+      textFieldIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      min: !<float> 0.000000
+      max: !<float> 100.000000
+      value: !<float> 50.000000
+      step: !<float> 1.000000
+      segmented: false
+      numberOfSegments: !<float> 2.000000
+      isOn: false
+      buttonSizeMode: fill
+      buttonManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      buttonCrossAxisSize: !<float> 3.000000
+      customSizeMode: fill
+      customManualSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      customCrossAxisSize: !<float> 3.000000
+      textFieldSizeMode: fill
+      textFieldManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      textFieldCrossAxisSize: !<float> 3.000000
+      sliderSizeMode: fill
+      sliderManualSize: !<Vec2> {x: 12.000000, y: 3.000000}
+      sliderCrossAxisSize: !<float> 3.000000
+      toggleSizeMode: fill
+      toggleManualSize: !<Vec2> {x: 6.000000, y: 3.000000}
+      toggleCrossAxisSize: !<float> 3.000000
+      thickness: 0.100000
+      height: !<float> 3.000000
+      isAttachedComponent: false
+      attachTo: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      attachmentPosition: right
+      attachmentOffset: !<Vec2> {x: 0.000000, y: 0.000000}
+      inactive: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string itemType = "button" {"hint":"Type of toolbar item.", "widget":"combobox", "values":[{"label":"Button", "value":"button"}, {"label":"Separator", "value":"separator"}, {"label":"Text Field", "value":"textfield"}, {"label":"Slider", "value":"slider"}, {"label":"Toggle", "value":"toggle"}, {"label":"Custom", "value":"custom"}]}'
+    - '// @input string id {"hint":"Unique identifier for this item. Auto-generated if empty."}'
+    - "// @input string alignment {\"hint\":\"Alignment along the toolbar's main axis. For horizontal toolbars: Left/Right. For vertical toolbars: Left = Bottom, Right = Top.\", \"widget\":\"combobox\", \"values\":[{\"label\":\"Left\", \"value\":\"left\"}, {\"label\":\"Center\", \"value\":\"center\"}, {\"label\":\"Right\", \"value\":\"right\"}]}"
+    - '// @ui {"widget":"group_start", "label":"Toolbar Item Settings"}'
+    - '// @input SceneObject customObject {"hint":"SceneObject to attach as a custom toolbar item. The toolbar reserves its cell but does not scale the object; use ToolbarCustomItemConfig.onResize when programmatic content must fit the computed size.", "showIf":"itemType", "showIfValue":"custom"}'
+    - '// @input string buttonType = "rectangle" {"hint":"Shape/style of the button.", "widget":"combobox", "values":[{"label":"Rectangle", "value":"rectangle"}, {"label":"Capsule", "value":"capsule"}], "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input Asset.Texture icon {"hint":"Icon texture for the button. Optional.", "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input string iconSizeMode {"hint":"Icon size mode: Fixed uses standard icon size, Fill makes icon fill the entire button.", "widget":"combobox", "values":[{"label":"Fixed", "value":"fixed"}, {"label":"Fill", "value":"fill"}], "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input string text {"hint":"Text label for the button. Optional.", "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input string iconAlignment {"hint":"Alignment of the icon relative to the text. Icon is centered when there is no text.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Center", "value":"center"}, {"label":"Right", "value":"right"}], "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input string textAlignment {"hint":"Alignment of the text within the button.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Center", "value":"center"}, {"label":"Right", "value":"right"}], "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input bool hideTextWhenTooSmall {"hint":"Hide text when button is too small to fit both icon and text. Only applies when an icon is set.", "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input string buttonTheme = "Inherited" {"hint":"Theme override for the button visual. Inherited uses the global ThemeService theme.", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}], "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input string buttonStyle {"hint":"Style name for the chosen theme (e.g. \"Primary\", \"Secondary\", \"Ghost\"). Leave empty for the theme default.", "showIf":"itemType", "showIfValue":"button"}'
+    - "// @input string buttonBehavior = \"tap\" {\"hint\":\"What a press does. Toggle latches on and off. Hold to confirm completes after a continuous hold. Voice input listens while on, in VoiceInputButton's own look (icon and text are ignored).\", \"widget\":\"combobox\", \"values\":[{\"label\":\"Tap\", \"value\":\"tap\"}, {\"label\":\"Toggle\", \"value\":\"toggle\"}, {\"label\":\"Hold to confirm\", \"value\":\"hold\"}, {\"label\":\"Voice input\", \"value\":\"voice\"}], \"showIf\":\"itemType\", \"showIfValue\":\"button\"}"
+    - '// @input bool buttonIsOn {"hint":"Toggle: start in the on state.", "showIf":"buttonBehavior", "showIfValue":"toggle"}'
+    - '// @input float holdSeconds {"label":"Hold Duration (s)", "hint":"Hold to confirm: seconds of continuous hold to complete. 0 uses the theme value (1 s).", "showIf":"buttonBehavior", "showIfValue":"hold"}'
+    - '// @input float drainSeconds {"label":"Drain Duration (s)", "hint":"Hold to confirm: seconds for the fill to drain after an early release. 0 uses the theme value (0.25 s).", "showIf":"buttonBehavior", "showIfValue":"hold"}'
+    - '// @input bool holdRepeatable {"hint":"Hold to confirm: re-arm when the trigger ends. Off, the button stays complete until reset() is called on it.", "showIf":"buttonBehavior", "showIfValue":"hold"}'
+    - '// @input string voiceFormat = "default" {"hint":"Voice input: the transcription format.", "widget":"combobox", "values":[{"label":"Default", "value":"default"}, {"label":"Search", "value":"search"}, {"label":"URL", "value":"url"}], "showIf":"buttonBehavior", "showIfValue":"voice"}'
+    - '// @input vec4 color = "{0.5,0.5,0.5,0.5}" {"hint":"Color of the separator (RGBA, 0-1 range).", "showIf":"itemType", "showIfValue":"separator"}'
+    - '// @input string placeholder {"hint":"Text that is displayed before any text is entered", "showIf":"itemType", "showIfValue":"textfield"}'
+    - '// @input string textFieldTextAlignment {"hint":"Alignment of the text within the text field.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Center", "value":"center"}, {"label":"Right", "value":"right"}], "showIf":"itemType", "showIfValue":"textfield"}'
+    - '// @input Asset.Texture textFieldIcon {"hint":"Icon texture for the text field. Optional.", "showIf":"itemType", "showIfValue":"textfield"}'
+    - '// @input number min = "0" {"hint":"Minimum slider value.", "showIf":"itemType", "showIfValue":"slider"}'
+    - '// @input number max = "100" {"hint":"Maximum slider value.", "showIf":"itemType", "showIfValue":"slider"}'
+    - '// @input number value = "50" {"hint":"Initial slider value.", "showIf":"itemType", "showIfValue":"slider"}'
+    - '// @input number step = "1" {"hint":"Step size for slider increments.", "showIf":"itemType", "showIfValue":"slider"}'
+    - '// @input bool segmented {"hint":"Make the slider segmented with discrete steps (like SegmentedSliderTest).", "showIf":"itemType", "showIfValue":"slider"}'
+    - '// @input number numberOfSegments = "2" {"hint":"Number of segments when Segmented is enabled (at least 2).", "showIf":"itemType", "showIfValue":"slider"}'
+    - '// @input bool isOn {"hint":"Initial toggle state (on/off).", "showIf":"itemType", "showIfValue":"toggle"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Item Size"}'
+    - '// @input string buttonSizeMode {"hint":"How the button sizes itself.", "widget":"combobox", "values":[{"label":"Fill Available Space", "value":"fill"}, {"label":"Manual", "value":"manual"}], "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input vec2 buttonManualSize = "{3,3}" {"hint":"Manual size in centimeters. Only used when Size Mode is set to Manual.", "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input number buttonCrossAxisSize = "3" {"hint":"Fixed size for the cross-axis in centimeters when Size Mode is Fill (height for horizontal toolbar, width for vertical toolbar).", "showIf":"itemType", "showIfValue":"button"}'
+    - '// @input string customSizeMode {"hint":"How the custom item sizes itself.", "widget":"combobox", "values":[{"label":"Fill Available Space", "value":"fill"}, {"label":"Manual", "value":"manual"}], "showIf":"itemType", "showIfValue":"custom"}'
+    - '// @input vec2 customManualSize = "{3,3}" {"hint":"Manual size in centimeters. Only used when Size Mode is set to Manual.", "showIf":"itemType", "showIfValue":"custom"}'
+    - '// @input number customCrossAxisSize = "3" {"hint":"Fixed size for the cross-axis in centimeters when Size Mode is Fill (height for horizontal toolbar, width for vertical toolbar).", "showIf":"itemType", "showIfValue":"custom"}'
+    - '// @input string textFieldSizeMode {"hint":"How the item sizes itself.", "widget":"combobox", "values":[{"label":"Fill Available Space", "value":"fill"}, {"label":"Manual", "value":"manual"}], "showIf":"itemType", "showIfValue":"textfield"}'
+    - '// @input vec2 textFieldManualSize = "{12,3}" {"hint":"Manual size in centimeters. Only used when Size Mode is set to Manual.", "showIf":"itemType", "showIfValue":"textfield"}'
+    - '// @input number textFieldCrossAxisSize = "3" {"hint":"Fixed height in centimeters when Size Mode is Fill.", "showIf":"itemType", "showIfValue":"textfield"}'
+    - '// @input string sliderSizeMode {"hint":"How the item sizes itself.", "widget":"combobox", "values":[{"label":"Fill Available Space", "value":"fill"}, {"label":"Manual", "value":"manual"}], "showIf":"itemType", "showIfValue":"slider"}'
+    - '// @input vec2 sliderManualSize = "{12,3}" {"hint":"Manual size in centimeters. Only used when Size Mode is set to Manual.", "showIf":"itemType", "showIfValue":"slider"}'
+    - '// @input number sliderCrossAxisSize = "3" {"hint":"Fixed height in centimeters when Size Mode is Fill.", "showIf":"itemType", "showIfValue":"slider"}'
+    - '// @input string toggleSizeMode {"hint":"How the item sizes itself.", "widget":"combobox", "values":[{"label":"Fill Available Space", "value":"fill"}, {"label":"Manual", "value":"manual"}], "showIf":"itemType", "showIfValue":"toggle"}'
+    - '// @input vec2 toggleManualSize = "{6,3}" {"hint":"Manual size in centimeters. Only used when Size Mode is set to Manual.", "showIf":"itemType", "showIfValue":"toggle"}'
+    - '// @input number toggleCrossAxisSize = "3" {"hint":"Fixed height in centimeters when Size Mode is Fill.", "showIf":"itemType", "showIfValue":"toggle"}'
+    - '// @input number thickness = "0.1" {"hint":"Thickness of the separator in centimeters.", "showIf":"itemType", "showIfValue":"separator"}'
+    - '// @input number height = "3.0" {"hint":"Height of the separator in centimeters.", "showIf":"itemType", "showIfValue":"separator"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Attachment Settings"}'
+    - '// @input bool isAttachedComponent {"hint":"Enable this to attach this item to another toolbar item."}'
+    - '// @input AssignableType_1 attachTo {"hint":"Reference to another ToolbarItemInput component to attach this item to.", "showIf":"isAttachedComponent"}'
+    - '// @input string attachmentPosition {"hint":"Position of this item relative to the attached item.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Right", "value":"right"}, {"label":"Top", "value":"top"}, {"label":"Bottom", "value":"bottom"}, {"label":"Center", "value":"center"}], "showIf":"isAttachedComponent"}'
+    - '// @input vec2 attachmentOffset = "{0,0}" {"hint":"Fine-tuning offset from attachment position (x, y in centimeters).", "showIf":"isAttachedComponent"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input bool inactive {"hint":"Initial disabled state. When disabled, item is visible but not interactive."}'

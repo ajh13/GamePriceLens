@@ -1,0 +1,97 @@
+// Loading Bar fragment stage.
+//
+// The sweep is a FIELD, not a shape. It is given a head position and a LAG:
+// `headPos` is 0..1 along the bar and `lagSpan` is how far the trail hangs
+// back behind it, both animated by their own tweens (see the loader.sweep
+// intent). The tail is derived, `headPos - lagSpan`, clamped at the bar's
+// start so a trail longer than the head's progress simply anchors there.
+//
+// Lag is animated rather than emergent because two independent 0..1 positions
+// cannot express the intended motion: a tail that fully caught the head
+// before the head landed would have to overtake it. As its own quantity the
+// lag can open immediately, hold, and close again while the head is still
+// travelling — the streak stretches out of the start, reforms mid-flight, and
+// arrives compact.
+//
+// Nothing here draws an outline. The bar's extents are only a bounding clip,
+// deliberately square: an earlier rounded-rect body carved visible arcs out
+// of the moving band, and because its auto radius was half the bar height,
+// raising the height turned the whole bar into a stadium. A sweep has no
+// silhouette to round.
+//
+// Two modes, one path:
+//  - Indeterminate: tail behind head, brightness ramping from tail to head,
+//    so the leading end reads hottest and the trail falls away behind it.
+//  - Determinate (`solid` = 1): the same span with the tail pinned at 0 and
+//    the gradient replaced by a flat fill, i.e. a progress bar whose leading
+//    edge is `headPos`.
+//
+// `headSoftness` is the leading bloom as a fraction of the CURRENT span, so a
+// squashed streak keeps proportional softness instead of turning hard-edged.
+//
+// glowShape selects the variant: 0 lights the quad uniformly (the thin
+// list-row streak — the quad IS the line); > 0 concentrates light at the
+// bottom edge, fading upward with pow(1-v, glowShape), so extra height buys
+// the pill comet more room to bleed rather than a taller rectangle.
+//
+// Antialiasing: smoothstep over max(edgeSoftness, half a screen pixel via
+// fwidth) — screen-crisp at any distance (same policy as Spinner).
+// BlendMode is PremultipliedAlphaAuto: the engine premultiplies — output
+// straight (non-premultiplied) color here.
+
+input_vec2 barSize;
+input_float edgeSoftness;
+input_float headPos;
+input_float lagSpan;
+input_float headSoftness;
+input_float solid;
+input_float glowShape;
+input_float barOpacity;
+input_vec4 colorTail;
+input_vec4 colorHead;
+
+output_vec4 FinalColor;
+
+void main()
+{
+    // Displaced surface position in object space, centimeters.
+    mediump vec2 pos = system.getSurfacePositionObjectSpace().xy;
+    mediump vec2 halfSize = barSize * 0.5;
+
+    // Bounding clip: an axis-aligned antialiased cut at the bar's extents,
+    // so the field can't spill into the mesh's AA padding. No corners.
+    mediump vec2 inside = halfSize - abs(pos);
+    mediump float softX = max(edgeSoftness, 0.5 * fwidth(pos.x));
+    mediump float softY = max(edgeSoftness, 0.5 * fwidth(pos.y));
+    mediump float clip = smoothstep(-softX, softX, inside.x) * smoothstep(-softY, softY, inside.y);
+
+    // Normalized bar coordinates (u along the sweep, v up the height).
+    mediump float u = pos.x / max(barSize.x, 1.0e-4) + 0.5;
+    mediump float v = clamp(pos.y / max(barSize.y, 1.0e-4) + 0.5, 0.0, 1.0);
+
+    // The trail's start: the head minus its lag, anchored at the bar's start
+    // edge. Determinate mode pins it there outright and fills from 0 to head.
+    mediump float tailPos = mix(max(headPos - lagSpan, 0.0), 0.0, solid);
+
+    // Position within the lit span: 0 at the tail, 1 at the head, outside
+    // that range beyond either end.
+    mediump float span = max(headPos - tailPos, 1.0e-4);
+    mediump float s = (u - tailPos) / span;
+    mediump float hs = max(headSoftness, 1.0e-4);
+
+    // Brightness across the span: quadratic ramp toward the head, or flat
+    // when filling. Both ends get a soft cut — ahead of the head the light
+    // blooms out over hs, and just behind the tail it eases in.
+    mediump float sClamped = clamp(s, 0.0, 1.0);
+    mediump float ramp = mix(sClamped * sClamped, 1.0, solid);
+    mediump float lead = 1.0 - smoothstep(1.0, 1.0 + hs, s);
+    mediump float tailCut = smoothstep(-hs, 0.0, s);
+    mediump float intensity = ramp * lead * tailCut;
+
+    // Vertical envelope: uniform line, or bottom-hugging glow.
+    mediump float envY = (glowShape > 0.0) ? pow(1.0 - v, glowShape) : 1.0;
+
+    lowp vec4 col = mix(colorTail, colorHead, sClamped);
+    mediump float alpha = clip * intensity * envY * barOpacity;
+    FinalColor = vec4(col.rgb, col.a * alpha);
+}

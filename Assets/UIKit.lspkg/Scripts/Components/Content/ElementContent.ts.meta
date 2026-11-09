@@ -1,0 +1,176 @@
+- !<AssetImportMetadata/b85949d0-8cfc-49c8-9670-e31698679c9e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0f90e97f-4aae-4c73-9b1a-3aae60be117b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0f90e97f-4aae-4c73-9b1a-3aae60be117b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6c841fb8-0c56-4871-a10a-57d0aebac059
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6c841fb8-0c56-4871-a10a-57d0aebac059>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: f07e8262-8900-450a-8697-83905682e345
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _autoResizeParent: false
+    _customSpacing: false
+    _debug: false
+    _defaultIconTint: false
+    _defaultTextColor: false
+    _font: false
+    _hoveredIconTint: false
+    _hoveredTextColor: false
+    _iconLayout: false
+    _inactiveIconTint: false
+    _inactiveTextColor: false
+    _leadingIcon: false
+    _leadingIconSize: false
+    _minHeight: false
+    _minWidth: false
+    _paddingBottom: false
+    _paddingLeft: false
+    _paddingRight: false
+    _paddingTop: false
+    _sizeOverride: false
+    _spacing: false
+    _text: false
+    _textAlignment: false
+    _textColorOverride: false
+    _textSize: false
+    _textSizing: false
+    _trailingIcon: false
+    _trailingIconSize: false
+    _triggeredIconTint: false
+    _triggeredTextColor: false
+    _underline: false
+    _underlineOffset: false
+    _underlineThickness: false
+    _useLeadingIcon: false
+    _useTextColorOverride: false
+    _useThemeColors: false
+    _useTrailingIcon: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _text: ""
+      _useLeadingIcon: false
+      _leadingIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      _useTrailingIcon: false
+      _trailingIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      _iconLayout: left
+      _textAlignment: center
+      _textSizing: hug
+      _font: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      _textSize: !<float> 60.000000
+      _leadingIconSize: 1.250000
+      _trailingIconSize: 1.250000
+      _underline: false
+      _underlineThickness: 0.120000
+      _underlineOffset: 0.040000
+      _customSpacing: false
+      _spacing: 0.500000
+      _paddingTop: 0.500000
+      _paddingRight: 0.800000
+      _paddingBottom: 0.500000
+      _paddingLeft: 0.800000
+      _autoResizeParent: false
+      _minWidth: !<float> 0.000000
+      _minHeight: !<float> 0.000000
+      _sizeOverride: !<Vec2> {x: 0.000000, y: 0.000000}
+      _useThemeColors: true
+      _defaultTextColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      _hoveredTextColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      _triggeredTextColor: !<Vec4> {x: 0.080000, y: 0.080000, z: 0.080000, w: 1.000000}
+      _inactiveTextColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.400000}
+      _defaultIconTint: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      _hoveredIconTint: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      _triggeredIconTint: !<Vec4> {x: 0.080000, y: 0.080000, z: 0.080000, w: 1.000000}
+      _inactiveIconTint: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.400000}
+      _useTextColorOverride: false
+      _textColorOverride: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      _debug: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Content</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Primary text, icons, and layout direction</span>"}'
+    - '// @input string _text {"label":"Text", "hint":"Text label to display."}'
+    - '// @input bool _useLeadingIcon {"label":"Use Leading Icon", "hint":"Enable to attach an icon before the text."}'
+    - '// @input Asset.Texture _leadingIcon {"label":"Leading Icon", "hint":"Icon displayed before the text.", "showIf":"_useLeadingIcon", "showIfValue":true}'
+    - '// @input bool _useTrailingIcon {"label":"Use Trailing Icon", "hint":"Enable to attach an icon after the text."}'
+    - '// @input Asset.Texture _trailingIcon {"label":"Trailing Icon", "hint":"Icon displayed after the text.", "showIf":"_useTrailingIcon", "showIfValue":true}'
+    - '// @input string _iconLayout {"label":"Icon Layout", "hint":"Controls layout direction relative to text.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Right", "value":"right"}, {"label":"Top", "value":"top"}, {"label":"Bottom", "value":"bottom"}], "showIf":"_useLeadingIcon", "showIfValue":true}'
+    - '// @input string _textAlignment {"label":"Text Alignment", "hint":"Horizontal alignment of text within the container.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Center", "value":"center"}, {"label":"Right", "value":"right"}]}'
+    - '// @input string _textSizing = "hug" {"label":"Text Sizing", "hint":"Hug: text expands to fill remaining space. Fit: text uses its natural width.", "widget":"combobox", "values":[{"label":"Hug", "value":"hug"}, {"label":"Fit", "value":"fit"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Styling"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Font, text size, and icon dimensions</span>"}'
+    - '// @input Asset.Font _font {"label":"Font", "hint":"Custom font. Leave empty for system default."}'
+    - '// @input float _textSize = 48 {"label":"Text Size", "hint":"Font size in Lens Studio units."}'
+    - '// @input float _leadingIconSize = 1.25 {"label":"Leading Icon Size", "hint":"Leading icon width and height in cm.", "showIf":"_useLeadingIcon", "showIfValue":true}'
+    - '// @input float _trailingIconSize = 1.25 {"label":"Trailing Icon Size", "hint":"Trailing icon width and height in cm.", "showIf":"_useTrailingIcon", "showIfValue":true}'
+    - '// @input bool _underline {"label":"Underline", "hint":"Draw a bar under the text that tracks the text width and recolors with the text per state (e.g. Link)."}'
+    - '// @input float _underlineThickness = 0.12 {"label":"Underline Thickness", "hint":"Underline bar thickness in cm.", "showIf":"_underline", "showIfValue":true}'
+    - '// @input float _underlineOffset = 0.04 {"label":"Underline Offset", "hint":"Gap in cm between the bottom of the glyphs and the underline bar.", "showIf":"_underline", "showIfValue":true}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Spacing"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Gaps between items and padding within the container</span>"}'
+    - '// @input bool _customSpacing {"label":"Custom Spacing", "hint":"Enable to override default spacing and padding values."}'
+    - '// @input float _spacing = 0.5 {"label":"Item Spacing", "hint":"Gap between items in cm.", "showIf":"_customSpacing", "showIfValue":true}'
+    - '// @input float _paddingTop = 0.5 {"label":"Padding Top", "showIf":"_customSpacing", "showIfValue":true}'
+    - '// @input float _paddingRight = 0.8 {"label":"Padding Right", "showIf":"_customSpacing", "showIfValue":true}'
+    - '// @input float _paddingBottom = 0.5 {"label":"Padding Bottom", "showIf":"_customSpacing", "showIfValue":true}'
+    - '// @input float _paddingLeft = 0.8 {"label":"Padding Left", "showIf":"_customSpacing", "showIfValue":true}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Sizing"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Standalone mode, auto-resize, and size constraints</span>"}'
+    - '// @input bool _autoResizeParent {"label":"Auto-Resize Parent", "hint":"When true, the parent element auto-sizes to fit content."}'
+    - '// @input float _minWidth {"label":"Min Width", "hint":"Minimum content width in cm (0 = no minimum).", "showIf":"_autoResizeParent", "showIfValue":true}'
+    - '// @input float _minHeight {"label":"Min Height", "hint":"Minimum content height in cm (0 = no minimum).", "showIf":"_autoResizeParent", "showIfValue":true}'
+    - '// @input vec2 _sizeOverride = {10,3} {"label":"Size Override", "hint":"Width and height in cm. Used when no sibling VisualElement provides a size."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Colors"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Theme integration, manual per-state colors, and per-instance overrides</span>"}'
+    - '// @input bool _useThemeColors = true {"label":"Use Theme Colors", "hint":"When true, content colors are resolved from the active theme."}'
+    - '// @input vec4 _defaultTextColor = {1,1,1,1} {"label":"Default Text Color", "showIf":"_useThemeColors", "showIfValue":false}'
+    - '// @input vec4 _hoveredTextColor = {1,1,1,1} {"label":"Hovered Text Color", "showIf":"_useThemeColors", "showIfValue":false}'
+    - '// @input vec4 _triggeredTextColor = {0.08,0.08,0.08,1} {"label":"Triggered Text Color", "showIf":"_useThemeColors", "showIfValue":false}'
+    - '// @input vec4 _inactiveTextColor = {1,1,1,0.4} {"label":"Inactive Text Color", "showIf":"_useThemeColors", "showIfValue":false}'
+    - '// @input vec4 _defaultIconTint = {1,1,1,1} {"label":"Default Icon Tint", "showIf":"_useThemeColors", "showIfValue":false}'
+    - '// @input vec4 _hoveredIconTint = {1,1,1,1} {"label":"Hovered Icon Tint", "showIf":"_useThemeColors", "showIfValue":false}'
+    - '// @input vec4 _triggeredIconTint = {0.08,0.08,0.08,1} {"label":"Triggered Icon Tint", "showIf":"_useThemeColors", "showIfValue":false}'
+    - '// @input vec4 _inactiveIconTint = {1,1,1,0.4} {"label":"Inactive Icon Tint", "showIf":"_useThemeColors", "showIfValue":false}'
+    - '// @input bool _useTextColorOverride {"label":"Use Text Color Override", "hint":"When enabled, uses the color below instead of theme-resolved text color."}'
+    - '// @input vec4 _textColorOverride = {1,1,1,1} {"label":"Text Color Override", "hint":"Per-instance text color. State opacity still applies.", "showIf":"_useTextColorOverride", "showIfValue":true}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Debug</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Visual debugging tools for content inspection</span>"}'
+    - '// @input bool _debug {"label":"Debug Visualization", "hint":"Enable debug visualization (container and item bounds)."}'

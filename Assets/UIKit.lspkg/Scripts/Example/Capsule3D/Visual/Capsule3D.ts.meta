@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/13a06461-1190-9fd4-d6c4-f5317d1ecfad>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9ed7f9a8-a2aa-4434-bf85-dd8fdaa17cea
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9ed7f9a8-a2aa-4434-bf85-dd8fdaa17cea
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d3331117-6910-459d-a5ac-0821605d3178
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d3331117-6910-459d-a5ac-0821605d3178>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 1cbc5e36-8394-4784-bc1d-541cee763048
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _backgroundColor: false
+    _depth: false
+    _renderOrder: false
+    _size: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: !<float> 0.000000
+      _size: !<Vec2> {x: 1.000000, y: 1.000000}
+      _depth: !<float> 1.000000
+      _backgroundColor: !<Vec4> {x: 0.800000, y: 0.800000, z: 0.800000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input number _renderOrder = "0"'
+    - '// @input vec2 _size = "{1,1}" {"hint":"Size of Shape In Local Space Centimeters"}'
+    - // @input float _depth = 1
+    - '// @input vec4 _backgroundColor = "{.8,.8,.8,1.}" {"widget":"color"}'

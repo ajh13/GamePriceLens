@@ -1,0 +1,69 @@
+- !<NativePackageDescriptor/3710b351-23cc-42fd-863a-416d66505957>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 25
+    patch: 0
+    build: 26100705
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "LEAF is an automated testing framework for AR developers that helps validate Lens behavior. It enables developers to define repeatable test scenarios, simulate interactions, and catch regressions caused by Lens changes, UI updates, or platform evolution. The result is faster debugging, less manual device testing, and more reliable releases."
+  SvgIcon: |
+    <svg width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Group">
+    <path id="Vector" d="M130.525 256.75C116.075 174.867 147.383 121.883 224.45 97.8C287.067 78.5333 318.375 100.208 318.375 162.825C318.375 220.625 284.658 256.75 217.225 271.2C178.692 278.425 149.792 273.608 130.525 256.75Z" fill="url(#paint1_linear_4828_768)" stroke="#5C2DA4" stroke-width="7.225" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_2" d="M131.688 260.322C115.11 276.504 104.033 295.283 94.4 314.55" stroke="url(#paint2_linear_4828_768)" stroke-width="14.45" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_3" d="M168.211 218.258C183.386 195.63 201.598 176.896 212.163 167.303C222.729 157.71 242.289 143.921 262.642 136.528" stroke="url(#paint3_linear_4828_768)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_4" d="M267.8 227.85L311.15 249.525L267.8 271.2L224.45 249.525L267.8 227.85Z" fill="#CAA9F2"/>
+    <path id="Vector_5" d="M265.994 272.316V311.627L226.257 291.758V252.447L265.994 272.316Z" fill="#4F2DA4" stroke="#5C2DA4" stroke-width="3.6125" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_6" d="M309.344 291.758L269.607 311.627V272.316L309.344 252.447V291.758Z" fill="#5C2DA4" stroke="#CAA9F2" stroke-width="3.6125" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_7" opacity="0.7" d="M210 300.1L267.8 329L325.6 300.1" stroke="#5C2DA4" stroke-width="9.03125" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <defs>
+    <linearGradient id="paint0_linear_4828_768" x1="-9.50742" y1="-2.16091e-06" x2="210" y2="420" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#3A2261"/>
+    <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_4828_768" x1="127.103" y1="91" x2="127.103" y2="274.451" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#BFBEC2"/>
+    <stop offset="0.5" stop-color="#AA88DE"/>
+    <stop offset="1" stop-color="#674A95"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear_4828_768" x1="129.235" y1="265.128" x2="73.7231" y2="293.205" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#4E2DA4"/>
+    <stop offset="1" stop-color="#DBBAFD"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear_4828_768" x1="259.271" y1="148.375" x2="162.041" y2="239.285" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#4E2DA4"/>
+    <stop offset="1" stop-color="#DBBAFD"/>
+    </linearGradient>
+    </defs>
+    </svg>
+
+  SetupScript:
+    code: ""
+  VersionMajor: 4
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 109
+  ExportUid: d6adee1c-e4b5-4764-8663-236419e6d343
+  ComponentUid: b5c0453c-8076-44a8-aea3-4b878299e9f9
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> a9a4dec6-f61b-4b52-8abd-6cc438fb91a7
+  Tags:
+    []
+  Attachments:
+    []
+  VersionPrerelease: ""
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

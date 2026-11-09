@@ -1,0 +1,5 @@
+{
+  "@uikit:text-input-field:clear": "Effacer",
+  "@uikit:text-input-field:voice-error": "Erreur",
+  "@uikit:text-input-field:voice-listening": "Écoute en cours"
+}

@@ -1,0 +1,123 @@
+- !<Material/f0676d7f-d6a2-49d1-9271-75656e3b5496>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> c810757f-c150-4590-8c89-7047a4333624
+- !<PassInfo/c810757f-c150-4590-8c89-7047a4333624>
+  CachedProperties:
+    - Port_Depth_N022:
+        typeIdx: 1
+        value: 1.000000
+    - Port_FinalColor1_N022:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N022:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N022:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N022:
+        typeIdx: 1
+        value: 0.000000
+    - Port_GSplatRotation_N022:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_GSplatScale_N022:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_PrevWorldPosition_N022:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RayDirection_N022:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N022:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldNormal_N022:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldTangent_N022:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - aaPad:
+        typeIdx: 1
+        value: 0.050000
+    - bandDir:
+        typeIdx: 3
+        value: {x: 0.866025, y: -0.500000}
+    - bandWidth:
+        typeIdx: 1
+        value: 0.350000
+    - baseColor:
+        typeIdx: 5
+        value: {x: 0.160000, y: 0.180000, z: 0.180000, w: 1.000000}
+    - blockOpacity:
+        typeIdx: 1
+        value: 1.000000
+    - blockProj:
+        typeIdx: 1
+        value: 0.000000
+    - blockSize:
+        typeIdx: 3
+        value: {x: 4.000000, y: 3.000000}
+    - cornerRadius:
+        typeIdx: 1
+        value: 0.600000
+    - duty:
+        typeIdx: 1
+        value: 0.450000
+    - edgeSoftness:
+        typeIdx: 1
+        value: 0.010000
+    - emberBoost:
+        typeIdx: 1
+        value: 0.160000
+    - emberFall:
+        typeIdx: 1
+        value: 0.260000
+    - phase:
+        typeIdx: 1
+        value: 0.000000
+    - phaseDelay:
+        typeIdx: 1
+        value: 0.000000
+    - pulseMax:
+        typeIdx: 1
+        value: 1.000000
+    - pulseMin:
+        typeIdx: 1
+        value: 0.750000
+    - spanInv:
+        typeIdx: 1
+        value: 0.200000
+    - waveBoost:
+        typeIdx: 1
+        value: 0.350000
+    - waveReveal:
+        typeIdx: 1
+        value: 0.000000
+  DepthWrite: false
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Extend
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: PremultipliedAlphaAuto
+  Properties:
+    Port_FinalColor_N020:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_VectorIn_N022:
+      typeIdx: 4
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+  Pass: !<reference> 7f7b3657-f538-4ebd-ab57-0a3a0c7e1a10

@@ -1,0 +1,73 @@
+- !<AssetImportMetadata/bae1434a-9e46-49a6-8dbc-235513db5ca5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> db8bda08-1b67-48ed-914f-8728d1aee1fd
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> db8bda08-1b67-48ed-914f-8728d1aee1fd
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3c0929ad-c0f4-4c02-b5e6-f0e4a12b7002
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3c0929ad-c0f4-4c02-b5e6-f0e4a12b7002>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 102c3e3c-97b7-417c-a4bf-12ece1f7a026
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    completePriceText: false
+    loosePriceText: false
+    newPriceText: false
+    platformText: false
+    proxyBaseUrl: false
+    runMockAtStart: false
+    statusText: false
+    titleText: false
+    useDirectPriceCharting: false
+    useMockData: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - proxyBaseUrl: "https://example.invalid"
+      useDirectPriceCharting: true
+      useMockData: true
+      runMockAtStart: true
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      titleText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      platformText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      loosePriceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      completePriceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      newPriceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string proxyBaseUrl = "https://example.invalid" {"hint":"HTTPS origin of the GamePriceLens proxy. Never put a PriceCharting token here."}'
+    - '// @input bool useDirectPriceCharting = true {"hint":"Private prototype mode: use a token entered by the wearer instead of the proxy."}'
+    - '// @input bool useMockData = true {"hint":"Use deterministic recognition and price data while building the scene."}'
+    - '// @input bool runMockAtStart = true {"hint":"Run the mock scan automatically when the Lens starts."}'
+    - // @input Component.Text statusText
+    - // @input Component.Text titleText
+    - // @input Component.Text platformText
+    - // @input Component.Text loosePriceText
+    - // @input Component.Text completePriceText
+    - // @input Component.Text newPriceText

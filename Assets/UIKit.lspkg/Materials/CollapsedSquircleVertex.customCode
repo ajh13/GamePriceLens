@@ -1,0 +1,58 @@
+//
+// CollapsedSquircle — Vertex Position (Optimized)
+//
+// Stretches a unit-circle mesh into a rounded rectangle (squircle).
+// Vertex colors encode corner identity (R=right/left, G=top/bottom)
+// and border distance (A=inner-to-outer).
+//
+// Outputs:
+//   newPos → connect to Transform Vector → Surface.WorldPosition
+//   uv    → connect to Fragment node's uv input (varying)
+//
+
+input_vec2 size;
+input_float cornerRadius;
+input_float borderSize;
+input_float border;
+input_vec2 uvSize;
+
+output_vec3 newPos;
+output_vec2 uv;
+
+void main()
+{
+    vec3 localPos = system.getSurfacePositionObjectSpace();
+    lowp vec4 vertColor = system.getSurfaceColor();
+
+    // Decode corner direction: R,G are 0 or 1, map to -1 or +1
+    lowp float dirX = (step(0.5, vertColor.r) - 0.5) * 2.0;
+    lowp float dirY = (step(0.5, vertColor.g) - 0.5) * 2.0;
+    lowp vec2 direction = vec2(dirX, dirY);
+
+    // Select corner radius via vertex color mask
+    // R=1 Right, R=0 Left, G=1 Top, G=0 Bottom
+    lowp float R = vertColor.r;
+    lowp float L = 1.0 - R;
+    lowp float T = vertColor.g;
+    lowp float B = 1.0 - T;
+
+    // Weights: x=TopRight, y=BottomRight, z=TopLeft, w=BottomLeft
+    lowp vec4 cornerWeights = vec4(R * T, R * B, L * T, L * B);
+    vec4 cornerRadii = vec4(cornerRadius);
+    float activeRadius = dot(cornerRadii, cornerWeights);
+
+    // Clamp radius to half the smallest dimension
+    float safeRadius = min(activeRadius, min(size.x, size.y));
+
+    // Hub = center of corner arc, offset from shape center
+    vec2 halfSize = size * 0.5;
+    vec2 hubOffset = (halfSize - vec2(safeRadius)) * direction;
+
+    // Scale unit mesh by radius to form the corner arc
+    vec3 cornerArc = localPos * safeRadius;
+
+    newPos = vec3(hubOffset + cornerArc.xy, 0.0);
+
+    // Pass UV to fragment as varying (avoids inverse matrix multiply per-fragment)
+    uv = localPos.xy * uvSize;
+}

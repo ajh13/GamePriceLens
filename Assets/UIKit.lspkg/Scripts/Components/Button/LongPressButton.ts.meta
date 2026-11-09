@@ -1,0 +1,139 @@
+- !<AssetImportMetadata/dc644de6-ae62-363e-b5b9-2f8df46b5ef8>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 83c187e2-e99f-49a4-89bc-35e14347108d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 83c187e2-e99f-49a4-89bc-35e14347108d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a253b32e-397d-484c-b6e4-36125d421c99
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a253b32e-397d-484c-b6e4-36125d421c99>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 05faa42d-4dc6-48a9-bba4-58fb20bf79e3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _cancelOnPointerLeave: false
+    _defaultToOn: true
+    _drainSecondsOverride: false
+    _emitProgressEvents: false
+    _hasShadow: false
+    _holdSecondsOverride: false
+    _inactive: false
+    _opacity: false
+    _playAudio: false
+    _renderOrder: false
+    _repeatable: false
+    _shadowPositionOffset: false
+    _shapeSystem2: false
+    _shapeSystem3: false
+    _size: false
+    _styleSystem2: false
+    _styleSystem3: false
+    _themeOverride: false
+    _toggleable: true
+    addCallbacks: false
+    addLongPressCallbacks: false
+    holdCanceledCallbacks: false
+    holdCompleteCallbacks: false
+    onFinishedCallbacks: false
+    onValueChangeCallbacks: false
+    triggerDownCallbacks: false
+    triggerUpCallbacks: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _inactive: false
+      _playAudio: false
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
+      _themeOverride: Inherited
+      _toggleable: false
+      _defaultToOn: false
+      addCallbacks: false
+      triggerUpCallbacks:
+        []
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
+      _size: !<Vec3> {x: 9.000000, y: 3.750000, z: 1.000000}
+      _shapeSystem2: Rectangle
+      _shapeSystem3: Rectangle
+      _styleSystem2: PrimaryNeutral
+      _styleSystem3: Primary
+      _opacity: !<float> 1.000000
+      _holdSecondsOverride: !<float> 0.000000
+      _drainSecondsOverride: !<float> 0.000000
+      _repeatable: false
+      _cancelOnPointerLeave: false
+      _emitProgressEvents: false
+      addLongPressCallbacks: false
+      holdCompleteCallbacks:
+        []
+      holdCanceledCallbacks:
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Enable interaction audio feedback"}'
+    - // @input bool _hasShadow
+    - '// @input vec3 _shadowPositionOffset = "{0.05,-0.05,-0.01}" {"showIf":"_hasShadow"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - // @input bool _toggleable
+    - '// @input bool _defaultToOn {"hint":"The default state of the Toggle", "showIf":"_toggleable"}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - '// @ui {"widget":"group_start", "label":"Callbacks", "showIf":"addCallbacks"}'
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] triggerUpCallbacks = {} {"label":"On Trigger Up Callbacks"}'
+    - '// @input Callback[] triggerDownCallbacks = {} {"label":"On Trigger Down Callbacks"}'
+    - '// @input Callback[] onValueChangeCallbacks = {} {"label":"On Value Changed Callbacks", "showIf":"_toggleable"}'
+    - '// @input Callback[] onFinishedCallbacks = {} {"label":"On Finished Callbacks", "showIf":"_toggleable"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input vec3 _size = {9,3.75,1} {"hint":"Size of the element in centimeters"}'
+    - '// @input string _shapeSystem2 = "Rectangle" {"label":"Shape", "widget":"combobox", "values":[{"label":"Rectangle", "value":"Rectangle"}, {"label":"Capsule", "value":"Capsule"}, {"label":"Round", "value":"Round"}], "showIf":"_themeOverride", "showIfValue":"System2"}'
+    - '// @input string _shapeSystem3 = "Rectangle" {"label":"Shape", "widget":"combobox", "values":[{"label":"Rectangle", "value":"Rectangle"}, {"label":"Capsule", "value":"Capsule"}, {"label":"Round", "value":"Round"}], "showIf":"_themeOverride", "showIfValue":"System3"}'
+    - '// @input string _styleSystem2 = "PrimaryNeutral" {"label":"Style", "widget":"combobox", "values":[{"label":"PrimaryNeutral", "value":"PrimaryNeutral"}, {"label":"Primary", "value":"Primary"}, {"label":"Secondary", "value":"Secondary"}, {"label":"Special", "value":"Special"}, {"label":"Ghost", "value":"Ghost"}], "showIf":"_themeOverride", "showIfValue":"System2"}'
+    - '// @input string _styleSystem3 = "Primary" {"label":"Style", "widget":"combobox", "values":[{"label":"Prism", "value":"Prism"}, {"label":"PrismGhost", "value":"PrismGhost"}, {"label":"Primary", "value":"Primary"}, {"label":"Secondary", "value":"Secondary"}, {"label":"Ghost", "value":"Ghost"}, {"label":"Tag", "value":"Tag"}, {"label":"Chip", "value":"Chip"}], "showIf":"_themeOverride", "showIfValue":"System3"}'
+    - '// @input float _opacity = 1 {"widget":"slider", "min":0, "max":1}'
+    - '// @input float _holdSecondsOverride {"label":"Hold Duration (s)", "hint":"Seconds of continuous hold to fill and complete. 0 uses the theme value (1.0s in both themes)."}'
+    - '// @input float _drainSecondsOverride {"label":"Drain Duration (s)", "hint":"Seconds for the fill to empty after an early release. 0 uses the theme value (0.25s in both themes)."}'
+    - '// @input bool _repeatable {"label":"Repeatable", "hint":"Off (default): stays filled once completed until reset() is called. On: re-arms when the trigger ends."}'
+    - '// @input bool _cancelOnPointerLeave {"label":"Cancel When Pointer Leaves", "hint":"Off (default): the hold survives the hand drifting off, as long as the pinch holds. On: moving off aborts."}'
+    - '// @input bool _emitProgressEvents {"label":"Emit Progress Events", "hint":"Fire onHoldProgress every frame while filling. Off by default — it is a per-frame event."}'
+    - "// @input bool addLongPressCallbacks {\"hint\":\"Enable this to add functions from another script to this component's long-press callbacks\"}"
+    - '// @ui {"widget":"group_start", "label":"Long Press Callbacks", "showIf":"addLongPressCallbacks"}'
+    - '// @input Callback[] holdCompleteCallbacks = {} {"label":"On Hold Complete Callbacks"}'
+    - '// @input Callback[] holdCanceledCallbacks = {} {"label":"On Hold Canceled Callbacks"}'
+    - '// @ui {"widget":"group_end"}'

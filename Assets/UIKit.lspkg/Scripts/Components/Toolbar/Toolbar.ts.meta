@@ -1,0 +1,99 @@
+- !<AssetImportMetadata/4b7af798-2acc-bdcb-59ae-1bcf209a47d7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e6a7cb81-020a-46f4-b123-009e1323837f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e6a7cb81-020a-46f4-b123-009e1323837f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 602a2522-a1ec-4ff2-98df-ab096343ee5a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/602a2522-a1ec-4ff2-98df-ab096343ee5a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: cc9a2e40-879f-41ba-b98f-c58d70d75ebe
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoHideWhenFrameNotTargeted: false
+    backgroundColor: false
+    direction: false
+    fitToFrame: false
+    frame: false
+    frameGap: false
+    framePosition: false
+    frameSizeScaleX: false
+    frameSizeScaleY: false
+    isToolbarInsideFrame: false
+    paddingBottom: false
+    paddingLeft: false
+    paddingRight: false
+    paddingTop: false
+    size: false
+    spacing: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - frame: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      autoHideWhenFrameNotTargeted: false
+      direction: horizontal
+      size: !<Vec2> {x: 25.000000, y: 5.000000}
+      framePosition: bottom
+      frameGap: !<float> 1.000000
+      isToolbarInsideFrame: false
+      fitToFrame: false
+      frameSizeScaleX: !<float> 1.000000
+      frameSizeScaleY: !<float> 1.000000
+      spacing: 0.500000
+      paddingLeft: !<float> 1.000000
+      paddingRight: !<float> 1.000000
+      paddingTop: 0.500000
+      paddingBottom: 0.500000
+      backgroundColor: !<Vec4> {x: 0.173000, y: 0.173000, z: 0.173000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Toolbar Settings"}'
+    - '// @input AssignableType_1 frame {"hint":"Optional: Frame component to attach the toolbar to. Leave empty for standalone toolbar."}'
+    - '// @input bool autoHideWhenFrameNotTargeted {"hint":"When enabled, toolbar fades when not targeted. With a Frame attached, targeting the Frame shows it; otherwise targeting the toolbar shows it."}'
+    - '// @input string direction {"hint":"Direction items are laid out in the toolbar.", "widget":"combobox", "values":[{"label":"Horizontal", "value":"horizontal"}, {"label":"Vertical", "value":"vertical"}]}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Size Settings"}'
+    - '// @input vec2 size = "{25,5}" {"hint":"Size of the toolbar in centimeters (width, height)."}'
+    - '// @input string framePosition {"hint":"Position of the toolbar relative to the Frame.", "widget":"combobox", "values":[{"label":"Bottom", "value":"bottom"}, {"label":"Top", "value":"top"}, {"label":"Left", "value":"left"}, {"label":"Right", "value":"right"}]}'
+    - '// @input number frameGap = "1" {"hint":"Gap between the toolbar and the Frame in centimeters."}'
+    - '// @input bool isToolbarInsideFrame {"hint":"Place toolbar inside frame (inner area) or outside. Gap applies in both cases."}'
+    - '// @input bool fitToFrame {"hint":"Match toolbar size to Frame (scale factors below). Uses inner size when inside frame."}'
+    - '// @input number frameSizeScaleX = "1" {"hint":"Width scale relative to Frame (1.0 = same width, 0.5 = half width). Only for horizontal fit-to-frame mode.", "showIf":"fitToFrame"}'
+    - '// @input number frameSizeScaleY = "1" {"hint":"Height scale relative to Frame (1.0 = same height, 0.5 = half height). Only for vertical fit-to-frame mode.", "showIf":"fitToFrame"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Layout Settings"}'
+    - '// @input number spacing = "0.5" {"hint":"Spacing between items in centimeters."}'
+    - '// @input number paddingLeft = "1" {"hint":"Left padding in centimeters."}'
+    - '// @input number paddingRight = "1" {"hint":"Right padding in centimeters."}'
+    - '// @input number paddingTop = "0.5" {"hint":"Top padding in centimeters."}'
+    - '// @input number paddingBottom = "0.5" {"hint":"Bottom padding in centimeters."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Background"}'
+    - '// @input vec4 backgroundColor = "{0.173,0.173,0.173,1}" {"hint":"Toolbar background color (RGBA, 0-1).", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

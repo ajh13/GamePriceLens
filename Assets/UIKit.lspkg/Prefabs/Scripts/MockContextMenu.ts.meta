@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/04954177-3435-ded9-739a-8779f5f3f87b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> ac4efe8d-9ceb-4285-921a-6cbf365dd847
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> ac4efe8d-9ceb-4285-921a-6cbf365dd847
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d3f6402c-5a16-4e96-ab3c-321f7444484a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d3f6402c-5a16-4e96-ab3c-321f7444484a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 13d58252-e959-44b6-aa74-3b9243b6dc3c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    copyTextButton: false
+    cutTextButton: false
+    pasteLabel: false
+    replaceTextButton: false
+    selectAllButton: false
+    textInputComponents: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - selectAllButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      copyTextButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      replaceTextButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      cutTextButton: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      pasteLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      textInputComponents: !<MappingBased.AssignableType_5[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType_1 selectAllButton
+    - // @input AssignableType_2 copyTextButton
+    - // @input AssignableType_3 replaceTextButton
+    - // @input AssignableType_4 cutTextButton
+    - // @input Component.Text pasteLabel
+    - "// @input AssignableType_5[] textInputComponents"

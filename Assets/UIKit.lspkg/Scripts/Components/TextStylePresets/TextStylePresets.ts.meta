@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/cf11d190-b46a-7348-5f97-cc1bba6631df>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 96266eb6-d655-4806-8581-86c3c510a18f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 96266eb6-d655-4806-8581-86c3c510a18f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8d37fae1-7458-4499-8416-3be9b2a710c4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8d37fae1-7458-4499-8416-3be9b2a710c4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 97e84470-cff1-4546-aad7-0d381e2db718
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _ranking: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _ranking: Title1
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string _ranking = "Title1" {"hint":"Preset text style ranking (e.g. Title, Headline, Caption). Applies a consistent font size and weight by design.", "widget":"combobox", "values":[{"label":"Title 1", "value":"Title1"}, {"label":"Title 2", "value":"Title2"}, {"label":"Headline XL", "value":"HeadlineXL"}, {"label":"Headline 1", "value":"Headline1"}, {"label":"Headline 2", "value":"Headline2"}, {"label":"Subheadline", "value":"Subheadline"}, {"label":"Button", "value":"Button"}, {"label":"Callout", "value":"Callout"}, {"label":"Body", "value":"Body"}, {"label":"Caption", "value":"Caption"}]}'

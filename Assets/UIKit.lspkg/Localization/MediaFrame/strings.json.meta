@@ -1,0 +1,16 @@
+- !<AssetImportMetadata/3a9d5a91-cd2e-1c12-d633-4fa0a74e10a3>
+  ImportedAssetIds:
+    LocalizationsAsset: !<reference> a4824ed8-086e-418e-8144-2292c2becac5
+  ImporterName: LocalizationsAssetImporter
+  PrimaryAsset: !<reference> a4824ed8-086e-418e-8144-2292c2becac5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    - strings_fr_FR.json
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

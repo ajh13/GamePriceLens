@@ -1,0 +1,222 @@
+- !<AssetImportMetadata/8d583994-e1e0-dc53-cdd4-a08560a79148>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 60e86491-b8b7-49c3-90ab-351536b3311f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 60e86491-b8b7-49c3-90ab-351536b3311f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 62268ffe-0056-469f-8c91-d113c0ca1974
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/62268ffe-0056-469f-8c91-d113c0ca1974>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 0b16c156-e110-4918-9240-5a3392c11e0a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _allowScaling: false
+    _appearance: false
+    _cutOutCenter: false
+    _cutOutFeather: false
+    _depthScalingMaximumDepth: false
+    _depthScalingMaximumScale: false
+    _depthScalingMinimumDepth: false
+    _depthScalingMinimumScale: false
+    _enableInteractionPlane: false
+    _following: false
+    _hasShadow: false
+    _innerSize: false
+    _interactablePadding: false
+    _interactionPlaneOffset: false
+    _interactionPlanePadding: false
+    _maximumDepth: false
+    _maximumSize: false
+    _minimumDepth: false
+    _minimumSize: false
+    _onlyInteractOnMargin: false
+    _padding: false
+    _showCloseButton: false
+    _showFollowButton: false
+    _spawnOnStart: false
+    _tagAlongDistance: false
+    _targetingVisual: false
+    _themeOverride: false
+    _tiltDownThreshold: false
+    _tiltUpThreshold: false
+    _useDepthClamping: false
+    _useDepthScaling: false
+    _useFocusFrame: false
+    _useTagAlong: false
+    _useTiltMode: false
+    allowNonUniformScaling: false
+    allowTranslation: false
+    autoScaleContent: false
+    autoShowHide: false
+    itemSnapping: false
+    relativeZ: false
+    useBillboarding: false
+    useFollowBehavior: false
+    useSnapping: false
+    worldSnapping: false
+    xAlways: false
+    xBufferDegrees: false
+    xOnTranslate: false
+    yAlways: false
+    yBufferDegrees: false
+    yOnTranslate: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _themeOverride: Inherited
+      autoShowHide: true
+      _spawnOnStart: false
+      _appearance: Large
+      _innerSize: !<Vec2> {x: 32.000000, y: 32.000000}
+      _padding: !<Vec2> {x: 0.000000, y: 0.000000}
+      _allowScaling: true
+      allowNonUniformScaling: false
+      autoScaleContent: true
+      relativeZ: true
+      _onlyInteractOnMargin: false
+      allowTranslation: true
+      _cutOutCenter: false
+      _cutOutFeather: 0.100000
+      _hasShadow: false
+      _minimumSize: !<Vec2> {x: 10.000000, y: 10.000000}
+      _maximumSize: !<Vec2> {x: 150.000000, y: 150.000000}
+      useBillboarding: true
+      xOnTranslate: true
+      xAlways: false
+      xBufferDegrees: !<float> 0.000000
+      yOnTranslate: true
+      yAlways: false
+      yBufferDegrees: !<float> 0.000000
+      useSnapping: false
+      itemSnapping: false
+      worldSnapping: false
+      _useTagAlong: false
+      _tagAlongDistance: !<float> 110.000000
+      _showFollowButton: false
+      _useFocusFrame: true
+      useFollowBehavior: false
+      _useTiltMode: false
+      _tiltUpThreshold: !<float> 25.000000
+      _tiltDownThreshold: !<float> 35.000000
+      _following: false
+      _useDepthClamping: false
+      _minimumDepth: !<float> 35.000000
+      _maximumDepth: !<float> 110.000000
+      _useDepthScaling: false
+      _depthScalingMinimumDepth: !<float> 35.000000
+      _depthScalingMaximumDepth: !<float> 110.000000
+      _depthScalingMinimumScale: 0.500000
+      _depthScalingMaximumScale: !<float> 1.000000
+      _showCloseButton: false
+      _enableInteractionPlane: true
+      _interactionPlaneOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      _interactionPlanePadding: !<Vec2> {x: 0.000000, y: 0.000000}
+      _targetingVisual: !<float> 1.000000
+      _interactablePadding: !<Vec2> {x: 1.000000, y: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - '// @ui {"hint":"Controls the appearance, size, and interaction behavior of the frame.", "widget":"group_start", "label":"Frame Settings"}'
+    - '// @input bool autoShowHide = true {"hint":"When enabled, the frame automatically appears when hovered and hides when not being interacted with. Disable to manually control frame visibility.", "showIf":"_themeOverride", "showIfValue":"System2"}'
+    - '// @input bool _spawnOnStart {"hint":"Play the Horizon Reveal spawn animation when the frame starts."}'
+    - '// @input string _appearance = "Large" {"hint":"Preset appearance configurations for the frame. <br><br> <code>Large</code> is useful for <i>far-field</i> interactons. <br><br> While, <code>Small</code> is useful for <i>near-field</i> interactions", "widget":"combobox", "values":[{"label":"Large", "value":"Large"}, {"label":"Small", "value":"Small"}], "showIf":"_themeOverride", "showIfValue":"System2"}'
+    - "// @input vec2 _innerSize = \"{32,32}\" {\"hint\":\"Size of the frames's inner content area. In local space centimeters.\"}"
+    - '// @input vec2 _padding = "{0,0}" {"hint":"Extra padding that maintains a fixed size in centimeters regardless of frame scaling, useful for toolbars and fixed-size UI elements. In local space centimeters."}'
+    - '// @input bool _allowScaling = true {"hint":"Enables interactive scaling of the frame via corner handles."}'
+    - '// @input bool allowNonUniformScaling {"hint":"Allows independent width/height scaling, clamped to min/max sizes.", "showIf":"_allowScaling"}'
+    - '// @input bool autoScaleContent = true {"hint":"Automatically scales child content when the frame is resized to maintain proportions."}'
+    - '// @input bool relativeZ = true {"hint":"When enabled, Z-axis scaling of content will match X-axis scaling during frame resizing."}'
+    - '// @input bool _onlyInteractOnMargin {"hint":"When enabled, only the margin is interactive for controlling the frame."}'
+    - '// @input bool allowTranslation = true {"hint":"Enables moving the frame."}'
+    - '// @input bool _cutOutCenter {"hint":"When enabled, creates a transparent center in the frame, allowing content behind the frame to be visible."}'
+    - '// @input float _cutOutFeather = 0.1 {"hint":"Softness of the transparent-center cutout edge, in local centimeters. Higher is softer; the shader keeps a small minimum to avoid aliasing."}'
+    - '// @input bool _hasShadow {"hint":"When enabled, renders a soft drop shadow behind the frame body."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - '// @ui {"hint":"Sets the minimum and maximum dimensions that the frame can be resized to.", "widget":"group_start", "label":"Min/Max Size"}'
+    - '// @input vec2 _minimumSize = "{10,10}" {"hint":"Minimum dimensions that the frame can be resized to. In local space centimeters."}'
+    - '// @input vec2 _maximumSize = "{150,150}" {"hint":"Maximum dimensions that the frame can be resized to. In local space centimeters."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - '// @ui {"hint":"Controls how the frame automatically rotates to face the camera/user.", "widget":"group_start", "label":"Billboarding"}'
+    - '// @input bool useBillboarding = true {"hint":"Enables the frame to automatically rotate to face the camera/user."}'
+    - '// @input bool xOnTranslate = true {"hint":"When enabled, the frame rotates around the X-axis to face the user, but only during movement/translation unless xAlways is also enabled.", "showIf":"useBillboarding"}'
+    - '// @input bool xAlways {"hint":"When enabled, the frame continuously rotates around the X-axis to face the user, regardless of movement.", "showIf":"xOnTranslate"}'
+    - '// @input float xBufferDegrees {"hint":"A buffered degrees on the x-axis before the frame billboards to face the user.", "showIf":"xAlways"}'
+    - '// @input bool yOnTranslate = true {"hint":"When enabled, the frame rotates around the Y-axis to face the user, but only during movement/translation unless yAlways is also enabled.", "showIf":"useBillboarding"}'
+    - '// @input bool yAlways {"hint":"When enabled, the frame continuously rotates around the Y-axis to face the user, regardless of movement.", "showIf":"yOnTranslate"}'
+    - '// @input float yBufferDegrees {"hint":"A buffered degrees on the y-axis before the frame billboards to face the user.", "showIf":"yAlways"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - '// @ui {"hint":"Controls how the frame snaps to other frames or world features when moved.", "widget":"group_start", "label":"Snapping"}'
+    - '// @input bool useSnapping {"hint":"Enables frame snapping functionality for automatic alignment to other frames or world features when moved."}'
+    - '// @input bool itemSnapping {"hint":"Enables snapping to other frames when moving. Not supported together with Depth Clamping/Scaling, which are disabled while this is active.", "showIf":"useSnapping"}'
+    - '// @input bool worldSnapping {"hint":"Enables snapping to physical surfaces in the real-world environment when moving.", "showIf":"useSnapping"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - '// @ui {"hint":"Controls the tag-along behavior of the frame.", "widget":"group_start", "label":"Tag-Along", "showIf":"_showFollowButton", "showIfValue":false}'
+    - '// @input bool _useTagAlong {"label":"Use Tag-Along Mode", "hint":"Replaces smooth follow with tag-along: the frame stays still during small head movements and recenters after larger turns."}'
+    - '// @input float _tagAlongDistance = 110 {"label":"Follow Distance", "hint":"Distance (cm) at which the frame repositions in front of the user.", "widget":"slider", "min":20, "max":200, "step":1, "showIf":"_useTagAlong"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - "// @ui {\"hint\":\"Controls whether the frame automatically follows the user's view when moving around.\", \"widget\":\"group_start\", \"label\":\"Follow Behavior\", \"showIf\":\"_useTagAlong\", \"showIfValue\":false}"
+    - '// @input bool _showFollowButton {"hint":"Shows a button that allows users to toggle whether the frame follows their view as they move."}'
+    - "// @input bool _useFocusFrame = true {\"label\":\"Use Focus Frame\", \"hint\":\"When enabled, a text field inside this frame moves the whole frame toward the system keyboard while editing, pausing the frame's follow behavior until editing ends.\"}"
+    - "// @input bool useFollowBehavior {\"label\":\"Use Built-In Follow Behavior\", \"hint\":\"When enabled, creates a follow behavior that keeps the frame in front of the user's view.\", \"showIf\":\"_showFollowButton\"}"
+    - '// @input bool _useTiltMode {"label":"Use Tilt Mode", "hint":"Enables tilt mode, which switches the follow behavior to gaze-tracking when the user looks up or down beyond the configured thresholds.", "showIf":"useFollowBehavior"}'
+    - '// @input float _tiltUpThreshold = 25 {"label":"Tilt Up Threshold (degrees)", "hint":"Camera pitch angle looking up at which gaze-tracking activates.", "widget":"slider", "min":0, "max":90, "step":1, "showIf":"_useTiltMode"}'
+    - '// @input float _tiltDownThreshold = 35 {"label":"Tilt Down Threshold (degrees)", "hint":"Camera pitch angle looking down at which gaze-tracking activates.", "widget":"slider", "min":0, "max":90, "step":1, "showIf":"_useTiltMode"}'
+    - '// @input bool _following {"hint":"Turns on the following. If this is set to true, it will begin following the user immediately.", "showIf":"useFollowBehavior"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - "// @ui {\"hint\":\"Constrains the grabbed point's camera-forward depth while the frame is translated.\", \"widget\":\"group_start\", \"label\":\"Depth Clamping\"}"
+    - '// @input bool _useDepthClamping {"label":"Enable Depth Clamping", "hint":"Keeps the grabbed point between the configured near and far depths during user translation. Has no effect while Allow Translation is off (unless Force Translate is on). Not supported together with Item Snapping."}'
+    - '// @input float _minimumDepth = 35 {"label":"Minimum Depth (cm)", "hint":"Closest camera-forward depth allowed for the grabbed point, in centimeters.", "showIf":"_useDepthClamping"}'
+    - '// @input float _maximumDepth = 110 {"label":"Maximum Depth (cm)", "hint":"Farthest camera-forward depth allowed for the grabbed point, in centimeters.", "showIf":"_useDepthClamping"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - '// @ui {"hint":"Uniformly scales the Frame from its authored local scale as its camera-forward depth changes. Independent of Allow Scaling (the corner-resize gesture).", "widget":"group_start", "label":"Depth Scaling"}'
+    - '// @input bool _useDepthScaling {"label":"Enable Depth Scaling", "hint":"Updates scale when the Frame moves; camera-only movement does not resize a stationary Frame. Not supported together with Item Snapping."}'
+    - '// @input float _depthScalingMinimumDepth = 35 {"label":"Minimum Depth (cm)", "hint":"Near endpoint of the depth scaling curve, in centimeters.", "showIf":"_useDepthScaling"}'
+    - '// @input float _depthScalingMaximumDepth = 110 {"label":"Maximum Depth (cm)", "hint":"Far endpoint of the depth scaling curve, in centimeters.", "showIf":"_useDepthScaling"}'
+    - '// @input float _depthScalingMinimumScale = 0.5 {"label":"Minimum Scale", "hint":"Uniform scale factor at or nearer than the minimum depth.", "showIf":"_useDepthScaling"}'
+    - '// @input float _depthScalingMaximumScale = 1 {"label":"Maximum Scale", "hint":"Uniform scale factor at or farther than the maximum depth.", "showIf":"_useDepthScaling"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - '// @ui {"hint":"Controls whether a close button is displayed in the corner of the frame.", "widget":"group_start", "label":"Close Button"}'
+    - '// @input bool _showCloseButton {"hint":"Shows a button that allows users to close or dismiss the frame."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"hint":"Settings for an interaction plane that extends around the frame.", "widget":"group_start", "label":"Interaction Plane"}'
+    - '// @input bool _enableInteractionPlane = true {"hint":"Enables an Interaction Plane that creates a near-field targeting zone around the frame that improves precision when interacting with buttons and UI elements using hand tracking."}'
+    - '// @input vec3 _interactionPlaneOffset = {0,0,0} {"hint":"Offset position for the interaction plane relative to the frame center.", "showIf":"_enableInteractionPlane"}'
+    - '// @input vec2 _interactionPlanePadding = {0,0} {"hint":"Padding that extends the InteractionPlane size.", "showIf":"_enableInteractionPlane"}'
+    - '// @input float _targetingVisual {"hint":"Sets the preferred targeting visual. An enclosing InteractionPlane overrides this unless Ignore Interaction Plane is set.\n\n- 0: None\n- 1: Cursor (default)\n- 2: Ray", "widget":"combobox", "values":[{"label":"None", "value":0}, {"label":"Cursor", "value":1}, {"label":"Ray", "value":2}], "showIf":"_enableInteractionPlane"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input vec2 _interactablePadding = "{1,1}" {"hint":"Per-side padding (x = horizontal, y = vertical) added to the interaction collider only — widens the grab band around the frame without changing the visible frame size. In local space centimeters."}'

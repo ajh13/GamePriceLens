@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/4918f463-6061-ac34-3ee5-49c1ac3f100e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9010d290-d186-47a7-a8cd-fb933b6bb338
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9010d290-d186-47a7-a8cd-fb933b6bb338
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5bb7cab1-0c05-483c-a4b7-6806bc979cb9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5bb7cab1-0c05-483c-a4b7-6806bc979cb9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e1953934-5084-4e06-a02d-3d225d87bcaa
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _defaultColor: false
+    _defaultFormat: false
+    _fieldHeight: false
+    _panelHeight: false
+    _width: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _width: !<float> 28.000000
+      _fieldHeight: 3.500000
+      _panelHeight: 34.500000
+      _defaultColor: !<Vec4> {x: 1.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      _defaultFormat: Hex
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Size</span>"}'
+    - '// @input float _width = 28 {"label":"Width", "hint":"Width of the field row and the expanded popup panel, in centimeters."}'
+    - '// @input float _fieldHeight {"label":"Field Height", "hint":"Height of the field-row backplate; the controls sit inset within it."}'
+    - '// @input float _panelHeight = 36 {"label":"Panel Height", "hint":"Height of the expanded popup panel below the field row."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Color</span>"}'
+    - '// @input vec4 _defaultColor = {1,0,0,1} {"label":"Default Color", "widget":"color"}'
+    - '// @input string _defaultFormat = "Hex" {"label":"Default Format", "hint":"Value-field format the picker opens with; the format dropdown switches it at runtime.", "widget":"combobox", "values":[{"label":"Hex", "value":"Hex"}, {"label":"RGB", "value":"RGB"}, {"label":"HSB", "value":"HSB"}, {"label":"CMYK", "value":"CMYK"}]}'

@@ -1,0 +1,82 @@
+- !<AssetImportMetadata/115a3711-1e11-d4a5-3006-8aa81618fd23>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 931372df-23ca-4d9a-8cf7-fca9f51e25ed
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 931372df-23ca-4d9a-8cf7-fca9f51e25ed
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 47a8eef6-5508-4a52-9cbd-9296842960ce
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/47a8eef6-5508-4a52-9cbd-9296842960ce>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: ea36e865-121d-4d88-801f-811a68d8f48f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _fadeInDelayMs: false
+    _fadeOutDelayMs: false
+    _iconGap: false
+    _iconSize: false
+    _iconTexture: false
+    _renderOrder: false
+    _tailDirection: false
+    _tailEnabled: false
+    _tailOffsetAlongEdge: false
+    _tailSize: false
+    _themeOverride: false
+    _tip: false
+    _useIcon: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _themeOverride: Inherited
+      _renderOrder: 0
+      _tip: Helpful Hint
+      _fadeInDelayMs: !<float> 50.000000
+      _fadeOutDelayMs: !<float> 0.000000
+      _tailEnabled: false
+      _tailSize: !<Vec2> {x: 1.000000, y: 0.600000}
+      _tailDirection: Down
+      _tailOffsetAlongEdge: !<float> 0.000000
+      _useIcon: false
+      _iconTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      _iconSize: !<float> 1.000000
+      _iconGap: 0.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "hint":"The theme used to style this tooltip. <code>Inherited</code> defers to the active global theme configured on a <code>ThemeManager</code> in the scene.", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - // @input int _renderOrder = 1000
+    - '// @input string _tip = "Helpful Hint" {"hint":"Tooltip body.", "widget":"text_area"}'
+    - '// @input float _fadeInDelayMs = 50 {"label":"Fade-In Delay (ms)", "hint":"Milliseconds to wait before the fade-in animation starts."}'
+    - '// @input float _fadeOutDelayMs {"label":"Fade-Out Delay (ms)", "hint":"Milliseconds to wait before the fade-out animation starts."}'
+    - '// @input bool _tailEnabled {"label":"Tail", "hint":"Render a triangular connector hanging off one edge of the tooltip backing."}'
+    - '// @input vec2 _tailSize = "{1.0,0.6}" {"label":"Tail Size", "hint":"Base width and apex-depth of the tail, in local-space centimeters.", "showIf":"_tailEnabled", "showIfValue":true}'
+    - '// @input string _tailDirection {"label":"Tail Direction", "hint":"Which edge of the tooltip backing the tail hangs off.", "widget":"combobox", "values":[{"label":"Down", "value":"Down"}, {"label":"Up", "value":"Up"}, {"label":"Left", "value":"Left"}, {"label":"Right", "value":"Right"}], "showIf":"_tailEnabled", "showIfValue":true}'
+    - "// @input float _tailOffsetAlongEdge = \"0\" {\"label\":\"Tail Offset\", \"hint\":\"Shifts the tail along the edge it's anchored to (centimeters). Positive moves toward +X for top/bottom edges, +Y for left/right edges.\", \"showIf\":\"_tailEnabled\", \"showIfValue\":true}"
+    - '// @input bool _useIcon {"label":"Use Icon", "hint":"Display an icon alongside the tooltip text."}'
+    - '// @input Asset.Texture _iconTexture {"label":"Icon", "hint":"Texture to display as the tooltip icon.", "showIf":"_useIcon", "showIfValue":true}'
+    - '// @input float _iconSize = "1.0" {"label":"Icon Size", "hint":"Width and height of the icon in local-space centimeters.", "showIf":"_useIcon", "showIfValue":true}'
+    - '// @input float _iconGap = "0.5" {"label":"Icon Gap", "hint":"Gap between the icon and the text in local-space centimeters.", "showIf":"_useIcon", "showIfValue":true}'

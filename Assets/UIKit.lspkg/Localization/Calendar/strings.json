@@ -1,0 +1,13 @@
+{
+  "l10nsvc": "sourcefile",
+
+  "@uikit:calendar:weekday-sunday-short": "SUN",
+  "@uikit:calendar:weekday-monday-short": "MON",
+  "@uikit:calendar:weekday-tuesday-short": "TUE",
+  "@uikit:calendar:weekday-wednesday-short": "WED",
+  "@uikit:calendar:weekday-thursday-short": "THU",
+  "@uikit:calendar:weekday-friday-short": "FRI",
+  "@uikit:calendar:weekday-saturday-short": "SAT",
+
+  "@uikit:date-picker:select-date": "Select Date"
+}

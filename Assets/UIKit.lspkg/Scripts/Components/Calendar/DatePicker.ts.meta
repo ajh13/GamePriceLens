@@ -1,0 +1,74 @@
+- !<AssetImportMetadata/a8803e68-b74d-9d8c-dab6-35a783869f77>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7df0f09b-dc9e-424d-91c1-3dbe749c94fd
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7df0f09b-dc9e-424d-91c1-3dbe749c94fd
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d5cf02d7-57a4-432d-b060-387e01417ab5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d5cf02d7-57a4-432d-b060-387e01417ab5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 1190db52-5f42-4037-a4fa-34c5fb81c4cd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _calendarMaxHeight: false
+    _defaultDate: false
+    _defaultToCurrentDate: false
+    _fieldHeight: false
+    _mode: false
+    _width: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _width: !<float> 28.000000
+      _fieldHeight: !<float> 4.000000
+      _calendarMaxHeight: !<float> 30.000000
+      _mode: Single
+      _defaultToCurrentDate: true
+      _defaultDate:
+        year: 2026
+        month: !<float> 10.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Size</span>"}'
+    - '// @input float _width = 28 {"label":"Width", "hint":"Width of the field row and the calendar popup, in centimeters."}'
+    - '// @input float _fieldHeight = 4 {"label":"Field Height"}'
+    - '// @input float _calendarMaxHeight = 30 {"label":"Calendar Max Height", "hint":"Maximum popup height — the calendar shrinks to fit shorter months."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Selection</span>"}'
+    - '// @input string _mode {"label":"Selection Mode", "hint":"Single: one date field. Range: start and end date fields.", "widget":"combobox", "values":[{"label":"Single", "value":"Single"}, {"label":"Range", "value":"Range"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Default Date</span>"}'
+    - "// @input bool _defaultToCurrentDate = true {\"label\":\"Current Date\", \"hint\":\"Open the calendar on the device's current month and year.\"}"
+    - /*
+    - "@typedef DateInput"
+    - '@property {int} year = 2026 {"label":"Year"}'
+    - '@property {float} month = 10 {"label":"Month", "widget":"combobox", "values":[{"label":"January", "value":1}, {"label":"February", "value":2}, {"label":"March", "value":3}, {"label":"April", "value":4}, {"label":"May", "value":5}, {"label":"June", "value":6}, {"label":"July", "value":7}, {"label":"August", "value":8}, {"label":"September", "value":9}, {"label":"October", "value":10}, {"label":"November", "value":11}, {"label":"December", "value":12}]}'
+    - "*/"
+    - '// @input DateInput _defaultDate {"label":"Default Date", "showIf":"_defaultToCurrentDate", "showIfValue":false}'

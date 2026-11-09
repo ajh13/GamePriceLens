@@ -1,0 +1,106 @@
+- !<AssetImportMetadata/2f38fd4c-05ec-d965-9507-ddebb6aaa095>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 158f69e8-b7ef-4ccf-b867-b9c10c06f943
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 158f69e8-b7ef-4ccf-b867-b9c10c06f943
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f18b49ba-9063-49d2-ab03-c12b6fd40e77
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f18b49ba-9063-49d2-ab03-c12b6fd40e77>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 1d59ea98-70d2-4b0b-a6db-fb18f60cbf7a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _alignSelf: false
+    _aspectRatio: false
+    _flexBasis: false
+    _flexGrow: false
+    _flexShrink: false
+    _marginBottom: false
+    _marginLeft: false
+    _marginRight: false
+    _marginTop: false
+    _maxHeight: false
+    _maxWidth: false
+    _minHeight: false
+    _minWidth: false
+    _order: false
+    _overrideHeight: false
+    _overrideWidth: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _order: 0
+      _flexGrow: !<float> 0.000000
+      _flexShrink: !<float> 1.000000
+      _flexBasis: !<float> -1.000000
+      _alignSelf: auto
+      _marginTop: !<float> 0.000000
+      _marginRight: !<float> 0.000000
+      _marginBottom: !<float> 0.000000
+      _marginLeft: !<float> 0.000000
+      _overrideWidth: !<float> 0.000000
+      _overrideHeight: !<float> 0.000000
+      _minWidth: !<float> 0.000000
+      _maxWidth: !<float> 0.000000
+      _minHeight: !<float> 0.000000
+      _maxHeight: !<float> 0.000000
+      _aspectRatio: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Flex Properties</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Controls how this item grows, shrinks, and aligns within the flex container</span>"}'
+    - '// @input int _order {"label":"Order", "hint":"Visual reordering without changing hierarchy. Lower values appear first."}'
+    - "// @input float _flexGrow {\"label\":\"Flex Grow\", \"hint\":\"How much this item grows to fill available space (0 = don't grow).\"}"
+    - "// @input float _flexShrink = 1 {\"label\":\"Flex Shrink\", \"hint\":\"How much this item shrinks when space is insufficient (0 = don't shrink).\"}"
+    - '// @input float _flexBasis = -1 {"label":"Flex Basis", "hint":"Initial main-axis size before grow/shrink. -1 = use intrinsic size."}'
+    - "// @input string _alignSelf = \"auto\" {\"label\":\"Align Self\", \"hint\":\"Override the container's cross-axis alignment for this item.\", \"widget\":\"combobox\", \"values\":[{\"label\":\"Auto (inherit)\", \"value\":\"auto\"}, {\"label\":\"Start\", \"value\":\"start\"}, {\"label\":\"Center\", \"value\":\"center\"}, {\"label\":\"End\", \"value\":\"end\"}, {\"label\":\"Stretch\", \"value\":\"stretch\"}]}"
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Margin</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Outer spacing around this item</span>"}'
+    - '// @input float _marginTop {"label":"Top", "hint":"Top margin in cm (>= 0)."}'
+    - '// @input float _marginRight {"label":"Right", "hint":"Right margin in cm (>= 0)."}'
+    - '// @input float _marginBottom {"label":"Bottom", "hint":"Bottom margin in cm (>= 0)."}'
+    - '// @input float _marginLeft {"label":"Left", "hint":"Left margin in cm (>= 0)."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Size Override</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Explicit intrinsic size — use for items without a recognized content type (e.g. prefab roots with no renderer). 0 = auto-detect from content.</span>"}'
+    - '// @input float _overrideWidth {"label":"Override Width", "hint":"Explicit intrinsic width in cm. 0 = auto-detect from content handler."}'
+    - '// @input float _overrideHeight {"label":"Override Height", "hint":"Explicit intrinsic height in cm. 0 = auto-detect from content handler."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Size Constraints</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Minimum and maximum size limits for this item</span>"}'
+    - '// @input float _minWidth {"label":"Min Width", "hint":"Minimum width (0 = no minimum)."}'
+    - '// @input float _maxWidth {"label":"Max Width", "hint":"Maximum width (0 = no maximum)."}'
+    - '// @input float _minHeight {"label":"Min Height", "hint":"Minimum height (0 = no minimum)."}'
+    - '// @input float _maxHeight {"label":"Max Height", "hint":"Maximum height (0 = no maximum)."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Aspect Ratio</span>"}'
+    - "// @ui {\"widget\":\"label\", \"label\":\"<span style=\\\"color: #94A3B8; font-size: 11px;\\\">Width ÷ height. When active and the main axis is auto (flex-basis auto, no grow/shrink), the item derives its main size from its resolved cross size to hold this ratio. 0 = inherit content (e.g. an Image's texture aspect), -1 = disabled, &gt;0 = explicit.</span>\"}"
+    - '// @input float _aspectRatio {"label":"Aspect Ratio", "hint":"Width / height. 0 = inherit content (e.g. Image texture), -1 = disabled, >0 = explicit ratio."}'

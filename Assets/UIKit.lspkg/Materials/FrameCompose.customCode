@@ -1,0 +1,211 @@
+//
+// Frame — Compose Effect
+//
+// Adds cursor-responsive highlight, circle dot pattern, grab zone detection,
+// center cutout, and edge highlight to the base CollapsedSquircle output.
+//
+// Wire: Base Fragment fillColor_out/borderResult_out/distFromEdge_out → this node
+//       Vertex uv → this node
+//       This node FinalColor → Surface.FinalColor
+//
+
+// ─────────────────────────────────────────────
+// From base fragment
+// ─────────────────────────────────────────────
+input_vec4 borderResult;
+input_float distFromEdge;
+
+// ─────────────────────────────────────────────
+// From vertex
+// ─────────────────────────────────────────────
+input_vec2 uv;
+
+// ─────────────────────────────────────────────
+// Background texture (sampled directly in compose)
+// ─────────────────────────────────────────────
+input_texture_2d background;
+
+// ─────────────────────────────────────────────
+// Frame shape
+// ─────────────────────────────────────────────
+input_vec2 size;
+input_float frameBorder;
+input_bool borderOnly;
+input_bool cutOutCenter;
+
+// ─────────────────────────────────────────────
+// Cursor / highlight
+// ─────────────────────────────────────────────
+input_texture_2d circleTexture;
+input_vec2 cursorPosition;
+input_float cursorRadiusFactor;
+input_float glowOpacityFactor;
+input_float isHovered;
+input_float isActive;
+
+// ─────────────────────────────────────────────
+// Highlight colors
+// ─────────────────────────────────────────────
+input_vec4 highlightColorStop1;
+input_vec4 highlightColorStop2;
+input_vec4 highlightActiveColorStop1;
+input_vec4 highlightActiveColorStop2;
+input_float highlightStop1;
+input_float highlightStop2;
+
+// ─────────────────────────────────────────────
+// Edge highlight
+// ─────────────────────────────────────────────
+input_float edgeHighlightStop1;
+input_float edgeHighlightStop2;
+
+// ─────────────────────────────────────────────
+// Dots / grab zones
+// ─────────────────────────────────────────────
+input_float_array grabZones;
+input_float grabZonesCount;
+input_float dotsHighlightStop1;
+input_float dotsHighlightStop2;
+input_float dotsScalar;
+
+// ─────────────────────────────────────────────
+// Opacity
+// ─────────────────────────────────────────────
+input_float opacityFactor;
+
+output_vec4 FinalColor;
+
+const float CENTER_FEATHER = 1.0;
+const float ZONE_FEATHER = 3.0;
+
+
+// ═══════════════════════════════════════════════
+// Helper: Center cutout mask
+// ═══════════════════════════════════════════════
+// Returns 1.0 in the border ring, 0.0 in the center.
+
+float computeCenterMask(vec2 frameUv, vec2 centerSize)
+{
+    float mask = smoothstep(centerSize.x * -0.5 - CENTER_FEATHER, centerSize.x * -0.5 + CENTER_FEATHER, frameUv.x);
+    mask *= smoothstep(centerSize.x * 0.5 + CENTER_FEATHER, centerSize.x * 0.5 - CENTER_FEATHER, frameUv.x);
+    mask *= smoothstep(centerSize.y * -0.5 - CENTER_FEATHER, centerSize.y * -0.5 + CENTER_FEATHER, frameUv.y);
+    mask *= smoothstep(centerSize.y * 0.5 + CENTER_FEATHER, centerSize.y * 0.5 - CENTER_FEATHER, frameUv.y);
+    return smoothstep(0.0, 1.0, mask);
+}
+
+
+// ═══════════════════════════════════════════════
+// Helper: Grab zone detection
+// ═══════════════════════════════════════════════
+// Returns > 0 when the fragment is inside any grab zone.
+
+float computeGrabZones(vec2 frameUv)
+{
+    float isZone = 0.0;
+    if (grabZonesCount > 0.0) {
+        for (int i = 0; i < int(grabZonesCount); i++) {
+            vec4 zone = grabZones.sample(i);
+            float z = smoothstep(zone.x - ZONE_FEATHER, zone.x + ZONE_FEATHER, frameUv.x);
+            z *= smoothstep(zone.y - ZONE_FEATHER, zone.y + ZONE_FEATHER, frameUv.y);
+            z *= smoothstep(zone.z + ZONE_FEATHER, zone.z - ZONE_FEATHER, frameUv.x);
+            z *= smoothstep(zone.w + ZONE_FEATHER, zone.w - ZONE_FEATHER, frameUv.y);
+            isZone += smoothstep(0.0, 1.0, z);
+        }
+    }
+    return isZone;
+}
+
+
+// ═══════════════════════════════════════════════
+// Helper: Circle dot pattern
+// ═══════════════════════════════════════════════
+// Renders checkerboard circle dots that appear near the cursor.
+
+float computeCircleDots(vec2 uv, float cursorLength, float isHovered, float isCenter, float isZone)
+{
+    float circle = 0.0;
+    if (isHovered != 0.0 || isZone != 0.0) {
+        float drawCircle = 1.0;
+        if (borderOnly) {
+            drawCircle -= isCenter;
+        }
+
+        vec2 circleUv = uv * vec2(dotsScalar * size.x, dotsScalar * size.y);
+
+        float dotAlpha = 0.0;
+        // Checkerboard: only process even tiles
+        if (mod(circleUv.x, 2.0) < 1.0) {
+            if (mod(circleUv.y + 1.0, 2.0) < 1.0) {
+                float dotFadeIn = smoothstep(dotsHighlightStop1, dotsHighlightStop2, cursorLength);
+                dotFadeIn *= isHovered;
+                dotFadeIn += isZone;
+                dotAlpha = clamp(smoothstep(0.0, 0.4, circleTexture.sample(circleUv).a * dotFadeIn), 0.0, 1.0);
+            }
+        }
+
+        circle = dotAlpha * drawCircle;
+    }
+    return circle;
+}
+
+
+// ═══════════════════════════════════════════════
+// Main
+// ═══════════════════════════════════════════════
+
+void main()
+{
+    // ── Sample background texture directly ──
+    vec2 bgUv = uv * 0.5 + 0.5;
+    lowp vec4 bgColor = background.sample(bgUv);
+
+    // ── Frame UV (map squircle UV to world-space frame coords) ──
+    vec2 frameUv = uv * (size + 2.0) * 0.5;
+
+    // ── Cursor distance via circle texture lookup ──
+    vec2 cursorOffset = uv - cursorPosition;
+    float radius = 40.0 * cursorRadiusFactor;
+    vec2 normalizedOffset = cursorOffset / radius;
+    vec2 texUv = clamp(normalizedOffset * size + 0.5, vec2(0.0), vec2(1.0));
+    float cursorAlpha = circleTexture.sample(texUv).a * glowOpacityFactor;
+    float cursorLength = smoothstep(1.0, 0.0, cursorAlpha);
+
+    // ── Highlight color based on cursor proximity ──
+    float highlightFactor = pow(smoothstep(highlightStop1, highlightStop2, cursorLength), 1.5);
+    lowp vec4 idleHighlight = mix(highlightColorStop1, highlightColorStop2, highlightFactor);
+    lowp vec4 activeHighlight = mix(highlightActiveColorStop2, highlightActiveColorStop1, highlightFactor);
+    lowp vec4 highlightColor = mix(idleHighlight, activeHighlight, isActive);
+
+    // ── Apply highlight overlay on background ──
+    float highlightStrength = smoothstep(highlightStop1, highlightStop2, cursorLength) * isHovered;
+    lowp vec4 result = mix(bgColor, highlightColor, highlightStrength);
+
+    // ── Center cutout mask ──
+    float isCenter = 1.0;
+    if (cutOutCenter || borderOnly) {
+        vec2 centerSize = size + 2.0 - frameBorder * 2.0;
+        isCenter = computeCenterMask(frameUv, centerSize);
+    }
+
+    // ── Grab zones ──
+    float isZone = computeGrabZones(frameUv);
+
+    // ── Circle dot overlay ──
+    float circle = computeCircleDots(uv, cursorLength, isHovered, isCenter, isZone);
+    result = mix(result, highlightColor, circle);
+
+    // ── Border blend (cursor-responsive edge visibility) ──
+    float edgeHighlight = smoothstep(edgeHighlightStop1, edgeHighlightStop2, cursorLength);
+    float borderStrength = max(isHovered * edgeHighlight, 0.1);
+    float borderMask = distFromEdge * borderStrength;
+    result = mix(result, borderResult, borderMask);
+
+    if (cutOutCenter) {
+        result.a *= 1.0 - isCenter;
+    }
+
+    // ── Opacity ──
+    result.a *= opacityFactor;
+
+    FinalColor = result;
+}

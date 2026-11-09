@@ -1,0 +1,61 @@
+- !<AssetImportMetadata/ad2deb83-2e4a-02aa-206d-e456520473ba>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 529e2cde-8e09-47f0-b62a-0971b8f064c5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 529e2cde-8e09-47f0-b62a-0971b8f064c5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 05a09fad-cc08-4d6d-9f5c-f271831f82c1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/05a09fad-cc08-4d6d-9f5c-f271831f82c1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e80ef2d2-27fa-4272-b2c1-243ffc8c5b75
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _colorHead: false
+    _colorTail: false
+    _depth: false
+    _renderOrder: false
+    _size: false
+    _thickness: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: !<float> 0.000000
+      _size: !<Vec2> {x: 1.000000, y: 1.000000}
+      _depth: !<float> 1.000000
+      _thickness: 0.400000
+      _colorTail: !<Vec4> {x: 1.000000, y: 0.000000, z: 1.000000, w: 0.250000}
+      _colorHead: !<Vec4> {x: 0.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input number _renderOrder = "0"'
+    - '// @input vec2 _size = "{1,1}" {"hint":"Size of Shape In Local Space Centimeters"}'
+    - // @input float _depth = 1
+    - '// @input float _thickness = "0.4" {"hint":"Ring thickness in centimeters."}'
+    - '// @input vec4 _colorTail = "{1,0,1,0.25}" {"hint":"Arc color at the tail end (gradient runs tail to head).", "widget":"color"}'
+    - '// @input vec4 _colorHead = "{0,1,1,1}" {"hint":"Arc color at the head end (gradient runs tail to head).", "widget":"color"}'

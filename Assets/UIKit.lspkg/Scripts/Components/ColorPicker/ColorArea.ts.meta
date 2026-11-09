@@ -1,0 +1,79 @@
+- !<AssetImportMetadata/66edce90-591d-c549-a83c-d5cade7d85fb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7956d649-2c77-4f9f-8028-9a95bf8e9623
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7956d649-2c77-4f9f-8028-9a95bf8e9623
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 126bbdad-c160-483d-93dc-41240a8f775e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/126bbdad-c160-483d-93dc-41240a8f775e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 43e19c6c-4ac4-438f-a314-2efdd548cc68
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _defaultHue: false
+    _defaultSaturation: false
+    _defaultValue: false
+    _hasShadow: false
+    _inactive: false
+    _knobSize: false
+    _playAudio: false
+    _renderOrder: false
+    _shadowPositionOffset: false
+    _size: false
+    _themeOverride: false
+    snapToTriggerPosition: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _inactive: false
+      _playAudio: false
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
+      _themeOverride: Inherited
+      _size: !<Vec3> {x: 25.000000, y: 25.000000, z: 1.000000}
+      _defaultHue: !<float> 0.000000
+      _defaultSaturation: !<float> 1.000000
+      _defaultValue: !<float> 1.000000
+      snapToTriggerPosition: true
+      _knobSize: !<Vec2> {x: 1.500000, y: 1.500000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Enable interaction audio feedback"}'
+    - // @input bool _hasShadow
+    - '// @input vec3 _shadowPositionOffset = "{0.05,-0.05,-0.01}" {"showIf":"_hasShadow"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - '// @input vec3 _size = {25,25,1} {"hint":"Size of the element in centimeters"}'
+    - '// @input float _defaultHue {"hint":"The default hue in degrees (0-360) rendered by the saturation gradient", "widget":"slider", "min":0, "max":360, "step":1}'
+    - '// @input float _defaultSaturation = 1 {"hint":"The default saturation, should be between 0 and 1", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input float _defaultValue = 1 {"hint":"The default value (brightness), should be between 0 and 1", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input bool snapToTriggerPosition = true {"hint":"Enable triggering anywhere on the area to snap the knob to that position"}'
+    - '// @input vec2 _knobSize = {1.5,1.5} {"hint":"Size of the knob in centimeters"}'

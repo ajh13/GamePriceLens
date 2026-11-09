@@ -1,0 +1,103 @@
+- !<AssetImportMetadata/f0d77a32-99d0-d122-fc9c-d634e06a2aa0>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6bbed34b-912e-4045-b2e3-faed0a1c53e0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6bbed34b-912e-4045-b2e3-faed0a1c53e0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 30936744-f035-4846-8c4b-f4ab9208a1c0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/30936744-f035-4846-8c4b-f4ab9208a1c0>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: cdb65bc5-3be3-4c9f-9915-904da00fdaac
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _defaultValue: false
+    _hasShadow: false
+    _hueRangeDegrees: false
+    _inactive: false
+    _knobIcon: false
+    _knobSize: false
+    _mode: false
+    _numberOfSegments: false
+    _playAudio: false
+    _renderOrder: false
+    _segmented: false
+    _shadowPositionOffset: false
+    _size: false
+    _themeOverride: false
+    addCallbacks: false
+    customKnobSize: false
+    onValueChangeCallbacks: false
+    snapToTriggerPosition: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _inactive: false
+      _playAudio: false
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
+      _themeOverride: Inherited
+      _size: !<Vec3> {x: 6.000000, y: 3.000000, z: 3.000000}
+      _defaultValue: !<float> 0.000000
+      snapToTriggerPosition: false
+      _segmented: false
+      _numberOfSegments: !<float> 5.000000
+      customKnobSize: false
+      _knobSize: !<Vec2> {x: 3.000000, y: 3.000000}
+      _knobIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      addCallbacks: false
+      onValueChangeCallbacks:
+        []
+      _mode: Hue
+      _hueRangeDegrees: !<float> 360.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Enable interaction audio feedback"}'
+    - // @input bool _hasShadow
+    - '// @input vec3 _shadowPositionOffset = "{0.05,-0.05,-0.01}" {"showIf":"_hasShadow"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - '// @input vec3 _size = {6,3,1} {"hint":"Size of the element in centimeters"}'
+    - '// @input float _defaultValue {"hint":"The default value of the slider, should be between 0 and 1", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input bool snapToTriggerPosition {"hint":"Enable triggering anywhere on the slider track to snap the knob to that position"}'
+    - '// @input bool _segmented {"hint":"Enable this to make the slider segmented, with a fixed number of segments"}'
+    - '// @input float _numberOfSegments = 5 {"hint":"The number of segments for the segmented slider, must be at least 2", "showIf":"_segmented"}'
+    - '// @input bool customKnobSize {"hint":"Enable this to customize the knob size"}'
+    - '// @input vec2 _knobSize = {3,3} {"showIf":"customKnobSize"}'
+    - '// @input Asset.Texture _knobIcon {"hint":"Optional icon rendered on the knob (moves with it). Leave empty for no knob icon."}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] onValueChangeCallbacks = {} {"label":"On Value Changed Callbacks", "showIf":"addCallbacks"}'
+    - '// @input string _mode {"hint":"Slider mode: Hue for full rainbow, Value for a black-to-color gradient, Alpha for a transparent-to-color gradient", "widget":"combobox", "values":[{"label":"Hue", "value":"Hue"}, {"label":"Value", "value":"Value"}, {"label":"Alpha", "value":"Alpha"}]}'
+    - '// @input float _hueRangeDegrees = 360 {"hint":"Hue span in degrees mapped across the slider (Hue mode only). 360 completes the wrap back to red; lower values end the ramp early so the two ends select distinct hues.", "widget":"slider", "min":1, "max":360, "step":1, "showIf":"_mode", "showIfValue":"Hue"}'

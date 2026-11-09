@@ -1,0 +1,144 @@
+- !<AssetImportMetadata/6afee8a5-a6c8-a9fc-a38b-96168579f614>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2cef28bf-d4ac-4766-af6e-90f142b18278
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2cef28bf-d4ac-4766-af6e-90f142b18278
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4b815b94-ac82-4958-b1f9-464e2ee75665
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4b815b94-ac82-4958-b1f9-464e2ee75665>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 1a95c933-e20e-49d2-a0df-65dc16e82a03
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _autoSizeAnchor: false
+    _fontFamily: false
+    _fontSize: false
+    _hasShadow: false
+    _horizontalTextAlignment: false
+    _inactive: false
+    _maxHeight: false
+    _opacity: false
+    _overflowMode: false
+    _paddingBottom: false
+    _paddingLeft: false
+    _paddingRight: false
+    _paddingTop: false
+    _placeholderText: false
+    _playAudio: false
+    _renderOrder: false
+    _shadowPositionOffset: false
+    _size: false
+    _themeOverride: true
+    addCallbacks: false
+    enableFocusFrame: false
+    focusFrameTarget: false
+    onKeyboardStateChangedCallbacks: false
+    onTextChangedCallbacks: false
+    voiceInputButton: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _size: !<Vec3> {x: 16.000000, y: 13.000000, z: 3.000000}
+      _inactive: false
+      _playAudio: false
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
+      _themeOverride: Inherited
+      _opacity: !<float> 1.000000
+      _fontSize: 96
+      _fontFamily: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      _horizontalTextAlignment: left
+      addCallbacks: false
+      onTextChangedCallbacks:
+        []
+      onKeyboardStateChangedCallbacks:
+        []
+      enableFocusFrame: true
+      focusFrameTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      _placeholderText: ""
+      _overflowMode: scroll
+      _autoSizeAnchor: center
+      _maxHeight: !<float> 13.000000
+      _paddingLeft: !<float> 1.000000
+      _paddingRight: !<float> 1.000000
+      _paddingTop: !<float> 1.000000
+      _paddingBottom: !<float> 1.000000
+      voiceInputButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input vec3 _size = {6,3,3} {"hint":"Size of the element in centimeters"}'
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Enable interaction audio feedback"}'
+    - // @input bool _hasShadow
+    - '// @input vec3 _shadowPositionOffset = "{0.05,-0.05,-0.01}" {"showIf":"_hasShadow"}'
+    - '// @input string _themeOverride = "Inherited" {"label":"Theme", "widget":"combobox", "values":[{"label":"Inherited", "value":"Inherited"}, {"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'
+    - '// @input float _opacity = "1" {"hint":"Opacity multiplier applied to the background, text, and manipulation visuals.", "widget":"slider", "min":0, "max":1}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Text Properties</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Font and placeholder configuration</span>"}'
+    - '// @input int _fontSize {"hint":"Custom font size. If not set, it will automatically scale from size.y"}'
+    - '// @input Asset.Font _fontFamily {"hint":"Font Family"}'
+    - '// @input string _horizontalTextAlignment = "left" {"hint":"Horizontal text alignment", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Center", "value":"center"}, {"label":"Right", "value":"right"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Event Callbacks</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Optional script functions to trigger on component events</span>"}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] onTextChangedCallbacks = {} {"label":"On Text Changed Callbacks", "showIf":"addCallbacks"}'
+    - '// @input Callback[] onKeyboardStateChangedCallbacks = {} {"label":"On Keyboard State Changed Callbacks", "showIf":"addCallbacks"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Focus Frame</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Move this field (or its panel) next to the keyboard while editing</span>"}'
+    - "// @input bool enableFocusFrame = true {\"hint\":\"When enabled, this field docks to the system keyboard's focus-frame anchor while it is being edited, then returns to rest when editing ends. Requires the platform focus-frame source to be active; inert otherwise.\"}"
+    - '// @input SceneObject focusFrameTarget {"label":"Focus Frame Target", "hint":"Object that moves toward the keyboard. Leave empty to move the nearest ancestor Frame (the whole panel), or this field itself if it has no Frame ancestor.", "showIf":"enableFocusFrame"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Text Properties</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Multiline text configuration and alignment</span>"}'
+    - '// @input string _placeholderText {"hint":"Text that is displayed before any text is entered", "widget":"text_area"}'
+    - '// @input string _overflowMode = "scroll" {"hint":"How text overflow is handled: scroll vertically, truncate, or auto-expand height", "widget":"combobox", "values":[{"label":"Scroll", "value":"scroll"}, {"label":"Truncate", "value":"truncate"}, {"label":"Auto Size Height", "value":"autoSize"}]}'
+    - '// @input string _autoSizeAnchor = "center" {"label":"Auto Size Anchor", "hint":"Which edge stays fixed when Auto Size changes the field height", "widget":"combobox", "values":[{"label":"Top", "value":"top"}, {"label":"Center", "value":"center"}, {"label":"Bottom", "value":"bottom"}], "showIf":"_overflowMode", "showIfValue":"autoSize"}'
+    - '// @input float _maxHeight {"label":"Max Height", "showIf":"_overflowMode", "showIfValue":"autoSize"}'
+    - '// @ui {"hint":"Maximum height used before Auto Size switches to scrolling.", "widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Values at or below field height keep Auto Size uncapped.</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Padding</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Inner spacing between the field boundary and text</span>"}'
+    - // @input float _paddingLeft
+    - // @input float _paddingRight
+    - // @input float _paddingTop
+    - // @input float _paddingBottom
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Voice Input</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Optional external voice input button</span>"}'
+    - '// @input AssignableType_1 voiceInputButton {"hint":"External VoiceInputButton that drives listening animation and speech-to-text updates."}'

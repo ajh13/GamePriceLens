@@ -1,0 +1,97 @@
+- !<AssetImportMetadata/126e9a51-0ec6-5ccf-e136-cbfa5768f22d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a0a2099d-c50f-497e-bb91-0ab2a8922c97
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a0a2099d-c50f-497e-bb91-0ab2a8922c97
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 968e2d4f-e79a-40cc-b655-6a1abef0f9b4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/968e2d4f-e79a-40cc-b655-6a1abef0f9b4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: c72f0b8f-f300-41ff-9f4c-9836160c3742
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _alignSelf: false
+    _autoPlacement: false
+    _gridArea: false
+    _gridColumn: false
+    _gridColumnSpan: false
+    _gridRow: false
+    _gridRowSpan: false
+    _justifySelf: false
+    _maxHeight: false
+    _maxWidth: false
+    _minHeight: false
+    _minWidth: false
+    _overrideHeight: false
+    _overrideWidth: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _autoPlacement: true
+      _gridRow: 0
+      _gridColumn: 0
+      _gridRowSpan: 1
+      _gridColumnSpan: 1
+      _gridArea: ""
+      _justifySelf: auto
+      _alignSelf: auto
+      _overrideWidth: !<float> 0.000000
+      _overrideHeight: !<float> 0.000000
+      _minWidth: !<float> 0.000000
+      _maxWidth: !<float> 0.000000
+      _minHeight: !<float> 0.000000
+      _maxHeight: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Placement</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Grid cell position, spanning, and named area assignment</span>"}'
+    - '// @input bool _autoPlacement = true {"label":"Auto Placement", "hint":"If true, the grid auto-places this item. If false, use gridRow/gridColumn."}'
+    - '// @input int _gridRow {"label":"Row", "hint":"0-based row index for explicit placement.", "showIf":"_autoPlacement", "showIfValue":false}'
+    - '// @input int _gridColumn {"label":"Column", "hint":"0-based column index for explicit placement.", "showIf":"_autoPlacement", "showIfValue":false}'
+    - '// @input int _gridRowSpan = 1 {"label":"Row Span", "hint":"Number of rows this item spans (>= 1).", "showIf":"_autoPlacement", "showIfValue":false}'
+    - '// @input int _gridColumnSpan = 1 {"label":"Column Span", "hint":"Number of columns this item spans (>= 1).", "showIf":"_autoPlacement", "showIfValue":false}'
+    - '// @input string _gridArea {"label":"Grid Area", "hint":"Named grid area (from templateAreas). Empty = no area assignment."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Alignment</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Per-item alignment overrides within the grid cell</span>"}'
+    - '// @input string _justifySelf = "auto" {"label":"Justify Self", "hint":"Horizontal alignment of this item within its grid cell.", "widget":"combobox", "values":[{"label":"Auto (inherit)", "value":"auto"}, {"label":"Start", "value":"start"}, {"label":"Center", "value":"center"}, {"label":"End", "value":"end"}, {"label":"Stretch", "value":"stretch"}]}'
+    - '// @input string _alignSelf = "auto" {"label":"Align Self", "hint":"Vertical alignment of this item within its grid cell.", "widget":"combobox", "values":[{"label":"Auto (inherit)", "value":"auto"}, {"label":"Start", "value":"start"}, {"label":"Center", "value":"center"}, {"label":"End", "value":"end"}, {"label":"Stretch", "value":"stretch"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Size Override</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Explicit intrinsic size — use for items without a recognized content type (e.g. prefab roots with no renderer). 0 = auto-detect from content.</span>"}'
+    - '// @input float _overrideWidth {"label":"Override Width", "hint":"Explicit intrinsic width in cm. 0 = auto-detect from content handler."}'
+    - '// @input float _overrideHeight {"label":"Override Height", "hint":"Explicit intrinsic height in cm. 0 = auto-detect from content handler."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Size Constraints</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Minimum and maximum size limits for this item</span>"}'
+    - '// @input float _minWidth {"label":"Min Width", "hint":"Minimum width (0 = no minimum)."}'
+    - '// @input float _maxWidth {"label":"Max Width", "hint":"Maximum width (0 = no maximum)."}'
+    - '// @input float _minHeight {"label":"Min Height", "hint":"Minimum height (0 = no minimum)."}'
+    - '// @input float _maxHeight {"label":"Max Height", "hint":"Maximum height (0 = no maximum)."}'

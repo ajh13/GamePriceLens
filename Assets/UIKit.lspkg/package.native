@@ -1,0 +1,86 @@
+- !<NativePackageDescriptor/3bbd574d-65da-4504-b04e-0ba84463b645>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 25
+    patch: 0
+    build: 26100705
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "UI Kit (or, simply, UIKit) is a collection of components, prefabs, scripts and assets designed to facilitate the development of graphical user interfaces (GUI) in Lens Studio."
+  SvgIcon: |
+    <svg width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Group">
+    <path id="Vector" d="M314.476 136.34L210 188.578L105.523 136.34L210 84.1016L314.476 136.34Z" fill="url(#paint1_linear_4828_768)" stroke="url(#paint2_linear_4828_768)" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="UI" d="M210.132 130.425H216.583V150.239C216.583 152.463 216.051 154.41 214.989 156.079C213.936 157.747 212.461 159.048 210.564 159.982C208.667 160.906 206.457 161.367 203.935 161.367C201.402 161.367 199.187 160.906 197.29 159.982C195.393 159.048 193.918 157.747 192.865 156.079C191.813 154.41 191.286 152.463 191.286 150.239V130.425H197.737V149.687C197.737 150.85 197.99 151.882 198.497 152.786C199.013 153.69 199.738 154.4 200.672 154.917C201.606 155.433 202.693 155.691 203.935 155.691C205.186 155.691 206.273 155.433 207.197 154.917C208.131 154.4 208.851 153.69 209.357 152.786C209.874 151.882 210.132 150.85 210.132 149.687V130.425ZM228.341 130.425V160.935H221.89V130.425H228.341Z" fill="#5E379D"/>
+    <path id="Vector_2" d="M208.115 190.302V306.765L106.292 255.853V139.391L208.115 190.302Z" fill="url(#paint3_linear_4828_768)" stroke="url(#paint4_linear_4828_768)" stroke-width="3.77122" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_3" opacity="0.9" d="M123.262 174.052L176.059 200.451V219.307L123.262 192.908V174.052Z" fill="#C1C0C2"/>
+    <path id="Vector_4" opacity="0.55" d="M123.262 219.307L160.974 238.163V257.019L123.262 238.163V219.307Z" fill="#C1C0C2"/>
+    <path id="Vector_5" d="M313.709 255.853L211.886 306.765V190.302L313.709 139.391V255.853Z" fill="#9877CE" stroke="url(#paint5_linear_4828_768)" stroke-width="3.77122" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_6" d="M240.17 215.536L274.111 198.565V247.591L240.17 264.562V215.536Z" fill="#8F66D1" stroke="url(#paint6_linear_4828_768)" stroke-width="3.77122" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_7" d="M257.14 255.134C262.347 255.134 266.568 250.913 266.568 245.706C266.568 240.499 262.347 236.278 257.14 236.278C251.933 236.278 247.712 240.499 247.712 245.706C247.712 250.913 251.933 255.134 257.14 255.134Z" fill="url(#paint7_linear_4828_768)"/>
+    </g>
+    <defs>
+    <linearGradient id="paint0_linear_4828_768" x1="-9.50742" y1="-2.16091e-06" x2="210" y2="420" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#3A2261"/>
+    <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_4828_768" x1="210" y1="24.1695" x2="210" y2="189.137" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#783ADB"/>
+    <stop offset="1" stop-color="#C1C0C2"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear_4828_768" x1="210" y1="83.543" x2="215.211" y2="156.729" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#C1C0C2"/>
+    <stop offset="1" stop-color="#783ADB"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear_4828_768" x1="104.406" y1="136.34" x2="104.406" y2="309.816" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#BFBEC2"/>
+    <stop offset="0.5" stop-color="#AA88DE"/>
+    <stop offset="1" stop-color="#674A95"/>
+    </linearGradient>
+    <linearGradient id="paint4_linear_4828_768" x1="210" y1="239.68" x2="92.755" y2="263.077" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#5C2DA4"/>
+    <stop offset="1" stop-color="#C1C0C2"/>
+    </linearGradient>
+    <linearGradient id="paint5_linear_4828_768" x1="240.197" y1="207.536" x2="318.906" y2="268.046" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#5C2DA4"/>
+    <stop offset="1" stop-color="#B3ACBE"/>
+    </linearGradient>
+    <linearGradient id="paint6_linear_4828_768" x1="257.14" y1="198.565" x2="257.14" y2="264.562" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#C1C0C2"/>
+    <stop offset="1" stop-color="#783ADB"/>
+    </linearGradient>
+    <linearGradient id="paint7_linear_4828_768" x1="255.943" y1="232.378" x2="257.14" y2="255.134" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#C1C0C2"/>
+    <stop offset="1" stop-color="#783ADB"/>
+    </linearGradient>
+    </defs>
+    </svg>
+
+  SetupScript:
+    code: ""
+  VersionMajor: 4
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 109
+  ExportUid: 76a4fb65-f53b-49ca-a0a7-6b6bb4b16252
+  ComponentUid: 8c9a8f41-acd1-446a-b428-742bbc993c39
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> de27d89d-5a92-4421-b660-0131e082c315
+  Tags:
+    []
+  Attachments:
+    []
+  VersionPrerelease: ""
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: SpectaclesUIKit
+    AssetId: 7pJbKPpGSYDaQrYPtHhfiL
+    Hash: 17d1169004bb4671e0a7e256212e55ec
+    Version:
+      major: 0
+      minor: 0
+      patch: 7
+      build: 0

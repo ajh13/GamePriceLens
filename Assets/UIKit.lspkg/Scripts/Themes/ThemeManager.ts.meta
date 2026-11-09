@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/6f8ad3ed-8625-33d3-6e84-3e9b128057d0>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> bd3a749f-1c0e-417c-9508-504795c2553c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> bd3a749f-1c0e-417c-9508-504795c2553c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6f15c7e4-c131-4acc-8745-26071bb9baaa
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6f15c7e4-c131-4acc-8745-26071bb9baaa>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e39e1236-9f97-40e8-ac04-5e7aaa961c6a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _theme: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _theme: System3
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string _theme = "System3" {"widget":"combobox", "values":[{"label":"System 2.0", "value":"System2"}, {"label":"System 3.0", "value":"System3"}]}'

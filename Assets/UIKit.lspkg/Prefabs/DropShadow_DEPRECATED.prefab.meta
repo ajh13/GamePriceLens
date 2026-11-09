@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/16992173-9864-b786-de59-d3980d81f28f>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 0e696ae6-f9fd-47bb-8306-b1461b9bbe97
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 0e696ae6-f9fd-47bb-8306-b1461b9bbe97
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 8ff741f5-0081-4577-9c32-ccecd69d93bf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/4713a388-e64a-4279-b314-19d3cf641d2c>
+  PrefabRemaps:
+    []
+  Name: Shadow
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.500000, z: -0.010000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f83bd68d-ad7b-4c36-9b86-c0247948002c
+- !<ObjectPrefabAssetData/8ff741f5-0081-4577-9c32-ccecd69d93bf>
+  Prototype: !<ObjectOwner/66d52674-f349-4a2d-b227-7f3dadd31649>
+    PackagePath: ""
+    objects:
+      - !<own> 4713a388-e64a-4279-b314-19d3cf641d2c
+- !<ScriptComponent/f83bd68d-ad7b-4c36-9b86-c0247948002c>
+  PrefabRemaps:
+    []
+  Name: DropShadow
+  Enabled: true
+  ScriptAsset: !<reference> 0e0e9dc1-3b1b-4c9b-8d4d-05623cf5d866
+  ScriptInputsDefault:
+    _renderOrder: true
+    _size: true
+    _cornerRadius: true
+    _spread: true
+    _offset: true
+    _blur: true
+    _spreadRadius: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _renderOrder: 0
+      _size: !<Vec2> {x: 3.000000, y: 3.000000}
+      _cornerRadius: 1.500000
+      _color: !<Vec4> {x: 0.043000, y: 0.043000, z: 0.043000, w: 0.500008}
+      _spread: 0.500000
+      _offset: !<Vec2> {x: 0.000000, y: 0.000000}
+      _blur: !<float> 0.000000
+      _spreadRadius: !<float> 0.000000
+  ScriptTypes:
+    "":
+      {}

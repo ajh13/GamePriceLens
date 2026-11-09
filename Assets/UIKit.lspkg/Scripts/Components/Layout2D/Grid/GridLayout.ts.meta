@@ -1,0 +1,124 @@
+- !<AssetImportMetadata/eed24264-9fff-4da3-3d9e-6dcca3c2d29e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7e59ed05-7d8e-4616-b347-d273635b2aba
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7e59ed05-7d8e-4616-b347-d273635b2aba
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bb7149d9-b927-42d1-b803-5dac1562d705
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bb7149d9-b927-42d1-b803-5dac1562d705>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: f66e7076-d074-4e63-af4f-db17ab95e175
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _alignItems: false
+    _autoColumns: false
+    _autoFlow: false
+    _autoRows: false
+    _columnGap: false
+    _debug: false
+    _height: false
+    _horizontalAlignment: false
+    _justifyItems: false
+    _paddingBottom: false
+    _paddingLeft: false
+    _paddingRight: false
+    _paddingTop: false
+    _rowGap: false
+    _templateAreas: false
+    _templateColumns: false
+    _templateRows: false
+    _verticalAlignment: false
+    _width: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _width: !<float> 20.000000
+      _height: !<float> 20.000000
+      _templateColumns: 1fr 1fr
+      _templateRows: 1fr
+      _autoRows: 1fr
+      _autoColumns: 1fr
+      _templateAreas: ""
+      _autoFlow: row
+      _columnGap: !<float> 0.000000
+      _rowGap: !<float> 0.000000
+      _paddingTop: !<float> 0.000000
+      _paddingRight: !<float> 0.000000
+      _paddingBottom: !<float> 0.000000
+      _paddingLeft: !<float> 0.000000
+      _justifyItems: stretch
+      _alignItems: stretch
+      _horizontalAlignment: center
+      _verticalAlignment: center
+      _debug: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Container Size</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Dimensions of the grid container in local space</span>"}'
+    - '// @input float _width = 20 {"label":"Width", "hint":"Container width in cm. -1 = auto (shrink-to-fit content)."}'
+    - '// @input float _height = 20 {"label":"Height", "hint":"Container height in cm. -1 = auto (shrink-to-fit content)."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Template</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Track definitions, auto sizing, and named grid areas</span>"}'
+    - "// @input string _templateColumns = \"1fr 1fr\" {\"label\":\"Template Columns\", \"hint\":\"Column track definitions. E.g. '1fr 1fr', '3cm 1fr 2fr auto', 'repeat(3, 1fr)'\"}"
+    - "// @input string _templateRows = \"1fr\" {\"label\":\"Template Rows\", \"hint\":\"Row track definitions. E.g. '1fr', '2cm auto 1fr', 'repeat(2, 1fr)'\"}"
+    - "// @input string _autoRows = \"1fr\" {\"label\":\"Auto Rows\", \"hint\":\"Sizing for implicitly created row tracks. E.g. '1fr', 'auto', '2cm'\"}"
+    - "// @input string _autoColumns = \"1fr\" {\"label\":\"Auto Columns\", \"hint\":\"Sizing for implicitly created column tracks. E.g. '1fr', 'auto', '2cm'\"}"
+    - "// @input string _templateAreas {\"label\":\"Template Areas\", \"hint\":\"Named grid areas. Rows separated by '/'. E.g. 'header header / sidebar content / footer footer'\", \"widget\":\"text_area\"}"
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Auto Flow</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">How auto-placed items fill empty grid cells</span>"}'
+    - '// @input string _autoFlow = "row" {"label":"Auto Flow", "hint":"How auto-placed items fill the grid.", "widget":"combobox", "values":[{"label":"Row", "value":"row"}, {"label":"Column", "value":"column"}, {"label":"Row Dense", "value":"rowDense"}, {"label":"Column Dense", "value":"columnDense"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Gap</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Spacing between rows and columns</span>"}'
+    - '// @input float _columnGap {"label":"Column Gap", "hint":"Gap between columns in cm."}'
+    - '// @input float _rowGap {"label":"Row Gap", "hint":"Gap between rows in cm."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Padding</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Inner spacing between container edges and content</span>"}'
+    - '// @input float _paddingTop {"label":"Top", "hint":"Top padding in cm."}'
+    - '// @input float _paddingRight {"label":"Right", "hint":"Right padding in cm."}'
+    - '// @input float _paddingBottom {"label":"Bottom", "hint":"Bottom padding in cm."}'
+    - '// @input float _paddingLeft {"label":"Left", "hint":"Left padding in cm."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Alignment</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Default alignment for all items within their grid cells</span>"}'
+    - '// @input string _justifyItems = "stretch" {"label":"Justify Items", "hint":"Default horizontal alignment for all items in their cells.", "widget":"combobox", "values":[{"label":"Start", "value":"start"}, {"label":"Center", "value":"center"}, {"label":"End", "value":"end"}, {"label":"Stretch", "value":"stretch"}]}'
+    - '// @input string _alignItems = "stretch" {"label":"Align Items", "hint":"Default vertical alignment for all items in their cells.", "widget":"combobox", "values":[{"label":"Start", "value":"start"}, {"label":"Center", "value":"center"}, {"label":"End", "value":"end"}, {"label":"Stretch", "value":"stretch"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Content Alignment</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Position of the grid content relative to the SceneObject center</span>"}'
+    - '// @input string _horizontalAlignment = "center" {"label":"Horizontal", "hint":"Horizontal alignment of the grid content relative to the SceneObject center.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Center", "value":"center"}, {"label":"Right", "value":"right"}]}'
+    - '// @input string _verticalAlignment = "center" {"label":"Vertical", "hint":"Vertical alignment of the grid content relative to the SceneObject center.", "widget":"combobox", "values":[{"label":"Top", "value":"top"}, {"label":"Center", "value":"center"}, {"label":"Bottom", "value":"bottom"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Debug</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Visual debugging tools for layout inspection</span>"}'
+    - '// @input bool _debug {"label":"Debug Visualization", "hint":"Enable debug visualization (container and item bounds)."}'

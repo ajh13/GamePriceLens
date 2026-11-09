@@ -1,0 +1,7 @@
+{
+  "l10nsvc": "sourcefile",
+
+  "@uikit:text-input-field:clear": "Clear",
+  "@uikit:text-input-field:voice-listening": "Listening",
+  "@uikit:text-input-field:voice-error": "Error"
+}

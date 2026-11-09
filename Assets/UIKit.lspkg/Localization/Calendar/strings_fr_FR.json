@@ -1,0 +1,10 @@
+{
+  "@uikit:calendar:weekday-friday-short": "VEN",
+  "@uikit:calendar:weekday-monday-short": "LUN",
+  "@uikit:calendar:weekday-saturday-short": "SAM",
+  "@uikit:calendar:weekday-sunday-short": "DIM",
+  "@uikit:calendar:weekday-thursday-short": "JEU",
+  "@uikit:calendar:weekday-tuesday-short": "MAR",
+  "@uikit:calendar:weekday-wednesday-short": "MER",
+  "@uikit:date-picker:select-date": "Sélectionner une date"
+}

@@ -1,0 +1,52 @@
+- !<ObjectPrefab/0e696ae6-f9fd-47bb-8306-b1461b9bbe97>
+  PackagePath: ""
+  objects:
+    - !<own> bbd798a6-f415-4440-89fb-cb11762b6f17
+  LazyLoading: false
+  RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/533f7684-8ae9-49d1-85fc-c598c4ffc767>
+  PrefabRemaps:
+    []
+  Name: DropShadow
+  Enabled: true
+  ScriptAsset: !<reference> 0e0e9dc1-3b1b-4c9b-8d4d-05623cf5d866
+  ScriptInputsDefault:
+    _renderOrder: true
+    _size: true
+    _cornerRadius: true
+    _spread: true
+    _offset: true
+    _blur: true
+    _spreadRadius: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _renderOrder: 0
+      _size: !<Vec2> {x: 3.000000, y: 3.000000}
+      _cornerRadius: 1.500000
+      _color: !<Vec4> {x: 0.043000, y: 0.043000, z: 0.043000, w: 0.500008}
+      _spread: 0.500000
+      _offset: !<Vec2> {x: 0.000000, y: 0.000000}
+      _blur: !<float> 0.000000
+      _spreadRadius: !<float> 0.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/bbd798a6-f415-4440-89fb-cb11762b6f17>
+  PrefabRemaps:
+    - 533f7684-8ae9-49d1-85fc-c598c4ffc767: f83bd68d-ad7b-4c36-9b86-c0247948002c
+    - bbd798a6-f415-4440-89fb-cb11762b6f17: 4713a388-e64a-4279-b314-19d3cf641d2c
+  Name: DropShadow_DEPRECATED
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.500000, z: -0.010000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 533f7684-8ae9-49d1-85fc-c598c4ffc767

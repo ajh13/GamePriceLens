@@ -1,0 +1,354 @@
+- !<Material/d4d880f0-6697-489d-bc64-d848ffa2ec59>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> 13912084-d402-49d1-8c66-2dd933f838e9
+- !<PassInfo/13912084-d402-49d1-8c66-2dd933f838e9>
+  CachedProperties:
+    - Port_Depth_N004:
+        typeIdx: 1
+        value: 1.000000
+    - Port_FinalColor1_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N004:
+        typeIdx: 1
+        value: 0.000000
+    - Port_GSplatRotation_N004:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_GSplatScale_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_PrevWorldPosition_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RayDirection_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldNormal_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldTangent_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Port_accent0_N000:
+        typeIdx: 5
+        value: {x: 0.345000, y: 0.345000, z: 0.345000, w: 1.000000}
+    - Port_accent0_N009:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_accent1_N000:
+        typeIdx: 5
+        value: {x: 0.050000, y: 0.050000, z: 0.050000, w: 1.000000}
+    - Port_accent1_N009:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_accent2_N000:
+        typeIdx: 5
+        value: {x: 0.260000, y: 0.260000, z: 0.260000, w: 1.000000}
+    - Port_accent2_N009:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_accent3_N000:
+        typeIdx: 5
+        value: {x: 0.160000, y: 0.160000, z: 0.160000, w: 1.000000}
+    - Port_accent3_N009:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_baseCursorOffset_N000:
+        typeIdx: 3
+        value: {x: 0.500000, y: 0.000000}
+    - Port_bevelOpacity_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_bevelPeak_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_bodyOpacity_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_cursorOffset_N000:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_dirT_N009:
+        typeIdx: 1
+        value: 0.000000
+    - Port_edgeHighlightAngle_N000:
+        typeIdx: 1
+        value: 0.000000
+    - Port_edgeHighlightAngle_N009:
+        typeIdx: 1
+        value: 0.000000
+    - Port_edgeHighlightFacePos_N009:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_edgeHighlightStrength_N000:
+        typeIdx: 1
+        value: 0.000000
+    - Port_edgeHighlightStrength_N009:
+        typeIdx: 1
+        value: 0.000000
+    - Port_faceRimStart_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_fresnelMaskStrength_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_frontExtrusion_N000:
+        typeIdx: 1
+        value: 0.000000
+    - Port_hubOffsetScale_N000:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+    - Port_idleFaceMask_N009:
+        typeIdx: 1
+        value: 0.000000
+    - Port_maskStrength_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_master0_N000:
+        typeIdx: 5
+        value: {x: 0.200000, y: 0.200000, z: 0.200000, w: 1.000000}
+    - Port_master0_N009:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_master1_N000:
+        typeIdx: 5
+        value: {x: 0.200000, y: 0.200000, z: 0.200000, w: 1.000000}
+    - Port_master1_N009:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_master2_N000:
+        typeIdx: 5
+        value: {x: 0.100000, y: 0.100000, z: 0.100000, w: 1.000000}
+    - Port_master2_N009:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_radialT_N009:
+        typeIdx: 1
+        value: 0.000000
+    - Port_rayCoord_N009:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_rayStrength_N000:
+        typeIdx: 1
+        value: 0.000000
+    - Port_reflUV_N009:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_rotation_N000:
+        typeIdx: 1
+        value: 10.000000
+    - Port_rotation_N009:
+        typeIdx: 1
+        value: 10.000000
+    - Port_safeBevel_N000:
+        typeIdx: 1
+        value: 1.000000
+    - Port_safeRadius_N000:
+        typeIdx: 1
+        value: 1.000000
+    - Port_stripeBackPos_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_stripeFalloffExp_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_stripeFrontPos_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_stripeHalfWidth_N009:
+        typeIdx: 1
+        value: 1.000000
+    - Port_vertexAccentColor_N009:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_vertexBaseColor_N009:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_vertexEdgeMask_N009:
+        typeIdx: 1
+        value: 0.000000
+    - Port_zParam_N009:
+        typeIdx: 1
+        value: 0.000000
+    - Tweak_N12:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N13:
+        typeIdx: 1
+        value: 1.000000
+    - Tweak_N14:
+        typeIdx: 1
+        value: 1.000000
+    - Tweak_N17:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N18:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N19:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N20:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N20a:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N21:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - accent0:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - accent1:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - accent2:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - accent3:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - bevelOpacity:
+        typeIdx: 1
+        value: 1.000000
+    - bevelPeak:
+        typeIdx: 1
+        value: 1.000000
+    - bevelRadius:
+        typeIdx: 1
+        value: 1.000000
+    - bodyOpacity:
+        typeIdx: 1
+        value: 0.500000
+    - borderSize:
+        typeIdx: 1
+        value: 1.000000
+    - cornerRadius:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - cursorOffset:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - edgeHighlightAngle:
+        typeIdx: 1
+        value: 1.000000
+    - edgeHighlightStrength:
+        typeIdx: 1
+        value: 1.000000
+    - faceBreathRotation:
+        typeIdx: 1
+        value: 1.000000
+    - faceRimStart:
+        typeIdx: 1
+        value: 0.150000
+    - fresnelMaskStrength:
+        typeIdx: 1
+        value: 0.750000
+    - fresnelPower:
+        typeIdx: 1
+        value: 4.000000
+    - frontExtrusion:
+        typeIdx: 1
+        value: 1.000000
+    - maskStrength:
+        typeIdx: 1
+        value: 1.000000
+    - master0:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - master1:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - master2:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - opacity:
+        typeIdx: 1
+        value: 0.800000
+    - rayAxis:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+    - reflIntensity:
+        typeIdx: 1
+        value: 1.500000
+    - reflTex:
+        typeIdx: 9
+        value:
+          id: db6d982f-cc16-4809-9cab-87487e52f831
+          sampler:
+            filteringMode: Bilinear
+            wrapModeU: Repeat
+            wrapModeV: Repeat
+            wrapModeW: ClampToEdge
+            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+            mipmaps: false
+          type: Texture2D
+    - reflTexTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - rotation:
+        typeIdx: 1
+        value: 5.000000
+    - rotation2:
+        typeIdx: 1
+        value: 1.000000
+    - stripeBackPos:
+        typeIdx: 1
+        value: 1.000000
+    - stripeFalloffExp:
+        typeIdx: 1
+        value: 2.000000
+    - stripeFrontPos:
+        typeIdx: 1
+        value: 0.000000
+    - stripeHalfWidth:
+        typeIdx: 1
+        value: 0.500000
+    - targetSize:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    - useBorder:
+        typeIdx: 1
+        value: 1.000000
+    - uvSize:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: Glass
+  Properties:
+    Port_FinalColor_N004:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_VectorIn_N001:
+      typeIdx: 4
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+  Pass: !<reference> c2c91890-ec81-4b48-8cee-3aad335bc47a

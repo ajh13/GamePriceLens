@@ -1,0 +1,64 @@
+- !<AssetImportMetadata/9cff08f2-02d9-7e7b-0a90-c82c970f562f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3492e693-65be-4e73-9990-ff443ed81d86
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3492e693-65be-4e73-9990-ff443ed81d86
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c9779dd3-6412-4265-ac12-018053e98b87
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c9779dd3-6412-4265-ac12-018053e98b87>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: b2831019-42a3-4925-991e-48d512d3e7e5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _backgroundEnabled: false
+    _direction: false
+    _height: false
+    _padding: false
+    _scrollWindow: false
+    _spacing: false
+    _width: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _direction: Horizontal
+      _width: 9.500000
+      _height: !<float> 3.000000
+      _spacing: 0.500000
+      _padding: !<Vec2> {x: 0.500000, y: 0.500000}
+      _backgroundEnabled: true
+      _scrollWindow: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string _direction = "Horizontal" {"label":"Direction", "hint":"Init-only. Cannot be changed after start. In horizontal mode, child Dropdown drawers expand independently with their own drawer backgrounds (no background segmentation).", "widget":"combobox", "values":[{"label":"Horizontal", "value":"Horizontal"}, {"label":"Vertical", "value":"Vertical"}]}'
+    - '// @input float _width = 9.5 {"hint":"Init-only. Width applied to all items in vertical mode (centimeters)", "showIf":"_direction", "showIfValue":"Vertical"}'
+    - '// @input float _height = 3 {"hint":"Init-only. Height applied to all items in horizontal mode (centimeters)", "showIf":"_direction", "showIfValue":"Horizontal"}'
+    - '// @input float _spacing = 0.5 {"hint":"Init-only. Gap between items in centimeters"}'
+    - '// @input vec2 _padding = "{0.5, 0.5}" {"hint":"Per-side padding (horizontal, vertical) in centimeters"}'
+    - // @input bool _backgroundEnabled = true
+    - "// @input AssignableType_1 _scrollWindow {\"label\":\"Scroll Window\", \"hint\":\"Optional. When set, the group becomes the window's scrolling content: it fits its locked axis to the viewport (minus padding), pins its leading edge to the viewport's leading edge, and drives the window's scrollDimensions from its own content size. The group owns its SceneObject's local position in this mode.\"}"

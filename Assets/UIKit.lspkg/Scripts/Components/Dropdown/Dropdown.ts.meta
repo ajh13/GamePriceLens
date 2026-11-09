@@ -1,0 +1,142 @@
+- !<AssetImportMetadata/6aa5cb42-965f-9b16-6534-382164df33cc>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> adca9932-3689-43cc-83b5-7e41e90a75ad
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> adca9932-3689-43cc-83b5-7e41e90a75ad
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2aa7306f-1106-4b85-9f6c-d137840ffea5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2aa7306f-1106-4b85-9f6c-d137840ffea5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a17332ec-2a17-4578-8db6-44b37eec7724
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _allowEmptySelection: false
+    _collapseOnSelect: false
+    _customTrigger: false
+    _dropdownPadding: false
+    _expandAnchor: false
+    _expandUp: false
+    _hasTriggerBackground: false
+    _hideTrigger: false
+    _itemSpacing: false
+    _maxVisibleItems: false
+    _optionHeight: false
+    _optionStyle: false
+    _optionTextAlignment: false
+    _optionTextSize: false
+    _overrideWidth: false
+    _scrollFade: false
+    _selectionMode: false
+    _showTriggerBackground: false
+    _startExpanded: false
+    _topButton: false
+    _topButtonStyle: false
+    _triggerAutoResize: false
+    _triggerButtonSize: false
+    _triggerContentAlignment: false
+    _triggerContentPadding: false
+    _triggerLabel: false
+    _triggerPadding: false
+    _triggerTextSize: false
+    _width: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _customTrigger: false
+      _topButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      _triggerButtonSize: !<Vec2> {x: 10.250000, y: 3.750000}
+      _topButtonStyle: Primary
+      _triggerLabel: Button
+      _triggerTextSize: !<float> 56.000000
+      _triggerContentPadding: !<Vec2> {x: 1.000000, y: 0.500000}
+      _triggerContentAlignment: left
+      _triggerAutoResize: false
+      _hideTrigger: false
+      _hasTriggerBackground: true
+      _showTriggerBackground: true
+      _triggerPadding: !<Vec2> {x: 0.500000, y: 0.500000}
+      _selectionMode: single
+      _allowEmptySelection: true
+      _collapseOnSelect: false
+      _maxVisibleItems: !<float> 5.000000
+      _overrideWidth: false
+      _width: 9.500000
+      _expandUp: false
+      _expandAnchor: Top
+      _startExpanded: true
+      _itemSpacing: 0.500000
+      _dropdownPadding: !<Vec2> {x: 0.500000, y: 0.500000}
+      _scrollFade: true
+      _optionHeight: 2.600000
+      _optionStyle: Ghost
+      _optionTextAlignment: left
+      _optionTextSize: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Trigger Button"}'
+    - '// @input bool _customTrigger {"label":"Custom Trigger", "hint":"When true, provide your own trigger button. When false, a styled button is auto-generated."}'
+    - '// @input AssignableType_1 _topButton {"label":"Custom Button", "hint":"Reference to a custom Button to use as the trigger.", "showIf":"_customTrigger", "showIfValue":true}'
+    - '// @input vec2 _triggerButtonSize = "{10.25, 3.75}" {"label":"Button Size", "hint":"Width and height of the auto-generated trigger button in world units.", "showIf":"_customTrigger", "showIfValue":false}'
+    - '// @input string _topButtonStyle = "Primary" {"label":"Style", "hint":"Visual style of the auto-generated trigger button.", "widget":"combobox", "values":[{"label":"Prism", "value":"Prism"}, {"label":"Primary", "value":"Primary"}, {"label":"Secondary", "value":"Secondary"}, {"label":"Ghost", "value":"Ghost"}], "showIf":"_customTrigger", "showIfValue":false}'
+    - '// @input string _triggerLabel = "Button" {"label":"Label", "hint":"Text label displayed on the auto-generated trigger button.", "showIf":"_customTrigger", "showIfValue":false}'
+    - '// @input float _triggerTextSize = 56 {"label":"Text Size", "hint":"Text size for the auto-generated trigger button label.", "showIf":"_customTrigger", "showIfValue":false}'
+    - '// @input vec2 _triggerContentPadding = "{1, 0.5}" {"label":"Content Padding", "hint":"Inner padding of the trigger button content (x = left/right, y = top/bottom).", "showIf":"_customTrigger", "showIfValue":false}'
+    - '// @input string _triggerContentAlignment = "left" {"label":"Content Alignment", "hint":"Horizontal alignment of the trigger label: left, center, or right.", "showIf":"_customTrigger", "showIfValue":false}'
+    - '// @input bool _triggerAutoResize {"label":"Auto-Resize Trigger", "hint":"When true the trigger shrinks to fit its label; when false it keeps the Button Size width.", "showIf":"_customTrigger", "showIfValue":false}'
+    - '// @input bool _hideTrigger {"label":"Hide Trigger", "hint":"When true, no trigger button is shown. Use expand()/collapse()/toggle() from code to control the drawer."}'
+    - '// @input bool _hasTriggerBackground = true {"label":"Has Background", "hint":"When true, the layout will leave space for a rounded background behind the trigger button area."}'
+    - '// @input bool _showTriggerBackground = true {"label":"Show Background", "hint":"When true, shows a rounded background behind the trigger button area.", "showIf":"_hasTriggerBackground", "showIfValue":true}'
+    - '// @input vec2 _triggerPadding = "{0.5, 0.5}" {"label":"Trigger Padding", "hint":"Per-side padding around the trigger background in cm (x = horizontal, y = vertical).", "showIf":"_hasTriggerBackground", "showIfValue":true}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Selection"}'
+    - '// @input string _selectionMode = "single" {"label":"Mode", "hint":"None: no toggle management. Single: one item at a time. Multi: multiple items.", "widget":"combobox", "values":[{"label":"None", "value":"none"}, {"label":"Single", "value":"single"}, {"label":"Multi", "value":"multi"}]}'
+    - '// @input bool _allowEmptySelection = true {"label":"Allow Empty", "hint":"When false, at least one item must always be selected (only applies when selectionMode is not none)."}'
+    - '// @input bool _collapseOnSelect {"label":"Collapse On Select", "hint":"When true, the dropdown automatically collapses after an item is selected."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Drawer Layout"}'
+    - '// @input float _maxVisibleItems = 5 {"label":"Max Visible Items", "hint":"Maximum number of items visible before the drawer scrolls."}'
+    - '// @input bool _overrideWidth {"label":"Override Width", "hint":"When true, use a fixed width for the drawer instead of matching the trigger button width."}'
+    - '// @input float _width = 9.5 {"label":"Width", "hint":"Fixed drawer width in world units.", "showIf":"_overrideWidth", "showIfValue":true}'
+    - '// @input bool _expandUp {"label":"Expand Up", "hint":"When true, the drawer expands upward from the trigger instead of downward."}'
+    - '// @input string _expandAnchor = "Top" {"label":"Expand Anchor", "hint":"Anchor edge when inside an ElementGroup. Top: top stays fixed. Bottom: bottom stays fixed. Center: growth splits both directions.", "widget":"combobox", "values":[{"label":"Top", "value":"Top"}, {"label":"Center", "value":"Center"}, {"label":"Bottom", "value":"Bottom"}]}'
+    - '// @input bool _startExpanded = true {"label":"Start Expanded", "hint":"Initial expanded state of the dropdown when it first appears."}'
+    - '// @input float _itemSpacing = 0.5 {"label":"Item Spacing", "hint":"Vertical gap between dropdown items in cm."}'
+    - '// @input vec2 _dropdownPadding = "{0.5, 0.5}" {"label":"Dropdown Padding", "hint":"Per-side padding around dropdown items in cm (x = horizontal, y = vertical)."}'
+    - '// @input bool _scrollFade = true {"label":"Scroll Fade", "hint":"When true, items at the top and bottom edges of the scroll window fade out."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Pool Mode"}'
+    - '// @input float _optionHeight = 2.6 {"label":"Option Height", "hint":"Height of each item in cm (used in pool mode for padding-based virtual scrolling)."}'
+    - '// @input string _optionStyle = "Ghost" {"label":"Option Style", "hint":"Visual style for pool-mode buttons.", "widget":"combobox", "values":[{"label":"Prism", "value":"Prism"}, {"label":"Primary", "value":"Primary"}, {"label":"Secondary", "value":"Secondary"}, {"label":"Ghost", "value":"Ghost"}]}'
+    - '// @input string _optionTextAlignment = "left" {"label":"Option Text Alignment", "hint":"Horizontal alignment of pool-mode item labels.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Center", "value":"center"}, {"label":"Right", "value":"right"}]}'
+    - '// @input float _optionTextSize {"label":"Option Text Size", "hint":"Text size for pool-mode item labels. 0 = use trigger text size."}'
+    - '// @ui {"widget":"group_end"}'

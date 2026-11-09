@@ -1,0 +1,90 @@
+- !<AssetImportMetadata/a166c147-24e6-51cc-6420-62b541e0160d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7ce6c11b-3151-4963-b7b8-6f90f12132bc
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7ce6c11b-3151-4963-b7b8-6f90f12132bc
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 0826daec-befb-43a3-ae76-5d816c0cc7c0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/0826daec-befb-43a3-ae76-5d816c0cc7c0>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 869265b8-19cd-47b3-9d28-20338d3084a7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _bufferCount: false
+    _edgeReachedThreshold: false
+    _fadeDistance: false
+    _fadeEnabled: false
+    _gap: false
+    _initialIndex: false
+    _itemSize: false
+    _minSlotsPerType: false
+    _prewarmBudgetMs: false
+    _scrollDirection: false
+    _shrinkDelayMs: false
+    _viewportSize: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _viewportSize: !<Vec2> {x: 20.000000, y: 30.000000}
+      _itemSize: !<float> 3.000000
+      _bufferCount: !<float> 2.000000
+      _gap: !<float> 0.000000
+      _scrollDirection: vertical
+      _initialIndex: !<float> 0.000000
+      _minSlotsPerType: !<float> 1.000000
+      _shrinkDelayMs: !<float> 30000.000000
+      _prewarmBudgetMs: !<float> 10.000000
+      _fadeEnabled: false
+      _fadeDistance: !<float> 1.000000
+      _edgeReachedThreshold: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Layout"}'
+    - '// @input vec2 _viewportSize = "{20, 30}" {"label":"Viewport Size", "hint":"Visible viewport in cm. Items fill the cross-axis; main axis is the scroll direction."}'
+    - '// @input float _itemSize = 3 {"label":"Item Size", "hint":"Default item size in cm along the scroll axis (height for vertical, width for horizontal). `adapter.getItemSize` can override per item."}'
+    - '// @input float _bufferCount = 2 {"label":"Buffer Count", "hint":"Extra slots rendered above and below (or left and right of) the viewport."}'
+    - '// @input float _gap {"label":"Gap", "hint":"Spacing in cm between consecutive items along the scroll axis."}'
+    - '// @input string _scrollDirection {"label":"Scroll Direction", "hint":"Scroll axis. Vertical stacks items top-to-bottom; horizontal stacks left-to-right.", "widget":"combobox", "values":[{"label":"Vertical", "value":"vertical"}, {"label":"Horizontal", "value":"horizontal"}]}'
+    - '// @input float _initialIndex {"label":"Initial Index", "hint":"Data index the viewport opens at. Clamped to [0, totalItems-1]. Post-init writes scroll the viewport instantly."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - '// @ui {"widget":"group_start", "label":"Pool"}'
+    - "// @input float _minSlotsPerType = 1 {\"label\":\"Min Slots Per Type\", \"hint\":\"Lower bound on per-type pool size after shrink GC. Setting to 2+ keeps spare slots warm so a single off-screen-back-into-view recycle doesn't fire adapter.onCreateView on the scroll hot path.\"}"
+    - "// @input float _shrinkDelayMs = 30000 {\"label\":\"Shrink Delay (ms)\", \"hint\":\"Idle threshold before an unused pool slot is GC'd. 0 disables shrink entirely (pool only grows). Default 30000 = 30 seconds.\"}"
+    - '// @input float _prewarmBudgetMs = 10 {"label":"Prewarm Budget (ms)", "hint":"Per-frame budget for long-tail typed-pool prewarm — rare row types whose first occurrence is past the discovery limit. 0 = drain the long-tail synchronously instead of yielding. Visible and buffer types are always allocated synchronously at init regardless of this value."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - '// @ui {"widget":"group_start", "label":"Fade"}'
+    - "// @input bool _fadeEnabled {\"label\":\"Fade Enabled\", \"hint\":\"Built-in edge fade. Overwrites the color (RGBA) of Text and Image components directly on each pool slot's root SceneObject, reconstructing RGB from a baseline snapshotted at bind time — so RGB changes made after onBindView are clobbered on the next fade tick unless re-snapshotted via invalidate(range, \\\"content\\\"). For nested visuals, animated alpha, or zero-alpha placeholders, install a handler via the itemAlphaHandler setter instead (which transfers color ownership entirely to the consumer).\"}"
+    - '// @input float _fadeDistance = 1 {"label":"Fade Distance", "hint":"Distance in cm from viewport edge where fade begins.", "showIf":"_fadeEnabled", "showIfValue":true}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
+    - '// @ui {"widget":"group_start", "label":"Callbacks"}'
+    - '// @input float _edgeReachedThreshold {"label":"Edge Reached Threshold", "hint":"Distance in cm from the start/end of the content at which onStartReached / onEndReached fire. 0 fires exactly at the edge. Fires once per crossing; re-arms after the viewport leaves the band."}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,99 @@
+- !<Material/3856e968-effc-4e48-8865-b8c23a31cfc2>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> da40f363-8cdd-4d8e-b1d1-c55b90191763
+- !<PassInfo/da40f363-8cdd-4d8e-b1d1-c55b90191763>
+  CachedProperties:
+    - Port_Depth_N014:
+        typeIdx: 1
+        value: 1.000000
+    - Port_FinalColor1_N014:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N014:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N014:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N014:
+        typeIdx: 1
+        value: 0.000000
+    - Port_GSplatRotation_N014:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_GSplatScale_N014:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_PrevWorldPosition_N014:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RayDirection_N014:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N014:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldNormal_N014:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldTangent_N014:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - aaPad:
+        typeIdx: 1
+        value: 0.050000
+    - barOpacity:
+        typeIdx: 1
+        value: 1.000000
+    - barSize:
+        typeIdx: 3
+        value: {x: 6.000000, y: 0.100000}
+    - colorHead:
+        typeIdx: 5
+        value: {x: 0.250000, y: 0.950000, z: 0.850000, w: 1.000000}
+    - colorTail:
+        typeIdx: 5
+        value: {x: 0.180000, y: 0.350000, z: 0.950000, w: 0.000000}
+    - edgeSoftness:
+        typeIdx: 1
+        value: 0.010000
+    - glowShape:
+        typeIdx: 1
+        value: 0.000000
+    - headPos:
+        typeIdx: 1
+        value: 0.700000
+    - headSoftness:
+        typeIdx: 1
+        value: 0.300000
+    - lagSpan:
+        typeIdx: 1
+        value: 0.600000
+    - solid:
+        typeIdx: 1
+        value: 0.000000
+  DepthWrite: false
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Extend
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: PremultipliedAlphaAuto
+  Properties:
+    Port_FinalColor_N016:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_VectorIn_N015:
+      typeIdx: 4
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+  Pass: !<reference> 73ab6b32-45be-4598-b1a0-6385e5ca3600
